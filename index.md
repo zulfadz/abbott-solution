@@ -12,22 +12,29 @@ Solutions that need polishing are marked 🔄 and unfinished solutions are marke
 
 [Chapter 1](#c1)  | Chapter 2 
 :------------ | :-------------
-[1.2.10](#1210) | 
-[1.2.11](#1211) | 
-[1.2.12](#1212) | 
-[1.2.13](#1213) | 
-[1.3.1](#131) | 
-[1.3.2](#132) | 
-[1.3.3](#133) | 
-[1.3.4](#134) | 
-[1.3.5](#135) | 
-[1.3.6](#136) | 
-[1.3.7](#137) | 
-[1.3.8](#138) | 
-[1.3.9](#139) | 
-[1.3.10](#1310) |
-[1.3.11](#1311) | 
-[1.4.1](#141) ❎| 
+[1.2.10](#1210) 🔄 | 
+[1.2.11](#1211) 🔄 | 
+[1.2.12](#1212) 🔄 | 
+[1.2.13](#1213) 🔄 | 
+[1.3.1](#131) 🔄 | 
+[1.3.2](#132) 🔄 | 
+[1.3.3](#133) 🔄 | 
+[1.3.4](#134) 🔄 | 
+[1.3.5](#135) 🔄 | 
+[1.3.6](#136) 🔄 | 
+[1.3.7](#137) 🔄 | 
+[1.3.8](#138) 🔄 | 
+[1.3.9](#139) 🔄 | 
+[1.3.10](#1310) 🔄 |
+[1.3.11](#1311) 🔄 | 
+[1.4.1](#141) | 
+[1.4.2](#142)|
+[1.4.3](#143)|
+[1.4.4](#144)|
+[1.4.5](#145)|
+[1.4.6](#146)|
+[1.4.7](#147)|
+[1.4.8](#148) 🔄 |
 
 
 <a name="c1"></a>
@@ -428,6 +435,136 @@ Recall that $\mathbf{I}$ stands for the set of irrational numbers.
   
 ---
 
-1. Let $a = m/n$ and $b=k/l$, where $m,n$ are integers, and $k,l$ are non-zero integers. $$ab = mk/nl$$ is in $\mathbf{Q}$ because $mk$ is integer given that integer is closed under multiplication. Similarly, $nk$ is integer and nonzero. $$a+b = m/n + k/l= (ml + nk)/(nk)$$ $ml + nk$ is integer, while $nk$ is nonzero integer
+1. Let $a = m/n$ and $b=k/l$, where $m,n$ are integers, and $k,l$ are non-zero integers. $$ab = mk/nl$$ is in $\mathbf{Q}$ because $mk$ is integer given that integer is closed under multiplication. Similarly, $nk$ is integer and nonzero. $$a+b = m/n + k/l= (ml + nk)/(nk)$$ $ml + nk$ is integer, while $nk$ is nonzero integer.
+
+2. Suppose $a + t \in \mathbf{Q}$.
+ Then adding this by $-a$ means that $t \in \mathbf{Q}$ by part 1, which is a contradiction. Similarly, suppose $at \in \mathbf{Q}$, then multiplying this by $1/a$ means that $t \in \mathbf{Q}$ by part 1, which is a contradiction.
+
+ 3. $\sqrt{2} \times \sqrt{2}$ is $2$, so $\mathbf{I}$ is not closed under multiplication. Meanwhile take $s = -t$, then $t+s$ = 0, which is rational. So it is not closed under addition.
+
+<a name="142"></a>
+
+### [Exercise 1.4.2](#toc) 
+
+ Let $A \subseteq \mathbf{R}$ be nonempty and bounded above, and let $s \in \mathbf{R}$ have the property that for all $n \in \mathbf{N}, s+\frac{1}{n}$ is an upper bound for $A$ and $s-\frac{1}{n}$ is not an upper bound for $A$. Show $s=\sup A$.
+
+---
+
+Given arbitrary $\epsilon >0$, there exists a natural number $n$ such that $1/n < \epsilon$ by Archimedean Property. Thus $s - \epsilon<s- 1/n< a$ for some $a \in \mathbf{A}$, where the second equality is given. We are done by Lemma 1.3.8.
+
+<a name="143"></a>
+
+### [Exercise 1.4.3](#toc) 
 
 
+Prove that $\bigcap_{n=1}^{\infty}(0,1 / n)=\emptyset$. Notice that this demonstrates that the intervals in the Nested Interval Property must be closed for the conclusion of the theorem to hold.
+
+
+---
+
+Suppose $k$ is a solution, meaning $k$ is contained in $(0,1/n)$ for all $n$. Meaning $k>0$ and $k<1/n$ for all $n$. But this contradict Archimedean Property.
+
+<a name="144"></a>
+
+### [Exercise 1.4.4](#toc) 
+
+Let $a<b$ be real numbers and consider the set $T=\mathbf{Q} \cap[a, b]$. Show $\sup T=b$
+
+---
+
+$T$ is not empty because by density of $\mathbf{Q}$ in $\mathbf{R}$, there is a rational number between $a$ and $b$. It is also bounded above, thus sup $T$ exists. 
+
+1. Suppose sup $T$ $<$ $b$. Then, there exists rational number $r$ in between, which is larger than sup $T$. Contradiction.
+2. Suppose sup $T > b$. Then there exists rational number $r$ in between, whereby $r$ is smaller than sup $T$ but is an upper bound of $T$. Contradiction.
+
+Thus sup $T = b$.
+
+<a name="145"></a>
+
+### [Exercise 1.4.5](#toc) 
+
+  Using Exercise 1.4.1, supply a proof that $\mathbf{I}$ is dense in $\mathbf{R}$ by considering the real numbers $a-\sqrt{2}$ and $b-\sqrt{2}$. In other words show for every two real numbers $a<b$ there exists an irrational number $t$ with $a<t<b$.
+
+---
+
+Refer to my [blogpost](https://zul.rocks/density-irrational). 
+
+<a name="146"></a>
+
+### [Exercise 1.4.6](#toc) 
+
+  Recall that a set $B$ is dense in $\mathbf{R}$ if an element of $B$ can be found between any two real numbers $a<b$. Which of the following sets are dense in $\mathbf{R}$ ? Take $p \in \mathbf{Z}$ and $q \in \mathbf{N}$ in every case.
+
+ 1. The set of all rational numbers $p / q$ with $q \leq 10$.
+ 
+ 2. The set of all rational numbers $p / q$ with $q$ a power of 2 .
+ 
+ 3. The set of all rational numbers $p / q$ with $10|p| \geq q$.
+
+ ---
+
+ 1. No. The minimum positive is $1/10$. The set cannot be found between $1/11$ and $1/12$.
+
+ 2. <span style="color:red">Yes. The idea is that you can find $1/2^{n}$ so small, such that given $(a,b)$, you can start from origin, and move in step size of $1/2^{n}$ towards $(a,b)$, and eventually falling in between $a$ and $b$.</span> 
+
+ 3. No. $|p|/q \geq 1/10$. The set cannot be found between $1/11$ and $1/12$.
+
+
+<a name="147"></a>
+
+### [Exercise 1.4.7](#toc) 
+
+  Finish the proof of Theorem 1.4.5 by showing that the assumption $\alpha^{2}>2$ leads to a contradiction of the fact that $\alpha=\sup T$.
+
+  ---
+
+Suppose $\alpha^2 >2$. Then
+
+$$\begin{align*}
+(a- 1/n)^{2} &= \alpha^2 - 2\alpha/n + 1/n^2 \\
+
+&> \alpha^2 - 2\alpha/n.
+
+\end{align*}$$
+
+Find $n$ large enough such that $1/n <(\alpha^2 -2)2\alpha$, and such an $n$ exists from Archimedean property. This implies $2\alpha/n <(\alpha^2 -2)$, therefore
+
+$$ (a- 1/n)^{2}> \alpha^2 - 2\alpha/n > \alpha^2 - (\alpha^2-2) = 2.$$
+
+Thus $\alpha - 1/n$ is an upper bound of  $T$, which contradicts the fact that $a$ is the least upper bound.
+
+<a name="148"></a>
+
+### [Exercise 1.4.8](#toc) 
+
+ Give an example of each or state that the request is impossible. When a request is impossible, provide a compelling argument for why this is the case.
+  
+  1. Two sets $A$ and $B$ with $A \cap B=\emptyset, \sup A=\sup B, \sup A \notin A$ and $\sup B \notin B$.
+  
+  2. A sequence of nested open intervals $J_{1} \supseteq J_{2} \supseteq J_{3} \supseteq \cdots$ with $\bigcap_{n=1}^{\infty} J_{n}$ nonempty but containing only a finite number of elements.
+  
+  3. A sequence of nested unbounded closed intervals $L_{1} \supseteq L_{2} \supseteq L_{3} \supseteq \cdots$ with $\bigcap_{n=1}^{\infty} L_{n}=\emptyset$. (An unbounded closed interval has the form $[a, \infty)=$ $\{x \in R: x \geq a\} .)$
+  
+  4. A sequence of closed bounded (not necessarily nested) intervals $I_{1}, I_{2}$, $I_{3}, \ldots$ with the property that $\bigcap_{n=1}^{N} I_{n} \neq \emptyset$ for all $N \in \mathbf{N}$, but $\bigcap_{n=1}^{\infty} I_{n}=\emptyset$.
+
+  ---
+
+  1. <span style="color:red">$\mathbf{Q} \cap (0,1)$ and $\mathbf{I} \cap (0,1)$. This follows from Thereom 1.4.3, Exercise 1.4.4 and Corollary 1.4.4.</span> 
+
+   2. $J_n = (1- 1/n , 1+1/n)$ which mean $\bigcap_{n \in \mathbf{N}} J_n = \{1\}$. Admittedly, I found conflicting [answer](https://uli.rocks/abbott/) online so I may have to dig deeper if my answer is wrong. 
+
+   3. $L_1 = [1, \infty), L_2 = [2, \infty)$ and so on.
+
+  4. Impossible. Let $J_n = (I_1 \cap \cdots \cap 1_n)$. 
+     
+      + Each $J_n$ contains $J_{n+1}$ since $J_n \supseteq J_n \cap (I_1 \cap \cdots \cap 1_{n+1})$. Hence it is a nested sequence.
+      + $J_n$ is nonempty since   $\bigcap_{n=1}^{N} I_{n} \neq \emptyset$ 
+      + $J_n$ is closed interval, since intersection of closed intervals is closed.
+      $$ \bigcap_{n=1}^{\infty} I_{n} = (I_1 \cap \cdots \cap 1_n \cap \cdots)= I_1 \cap (I_1 \cap I_2) \cap (I_1 \cap I_2 \cap I_3) \cdots = \bigcap_{n=1}^{\infty} J_{n} \neq \emptyset$$
+
+      where last inequality is due to Nested Interval Theorem.
+
+      Note: Damn (4) is interesting as hell. what it is saying is that nested interval theorem can apply to non-nested intervals, as long the finite intersections are nonempty.
+     
+
+     
