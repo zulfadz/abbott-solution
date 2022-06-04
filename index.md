@@ -3,6 +3,7 @@ title: "Solutions to Abbott's Understanding Analysis"
 description: "Solutions to analysis"
 author: "Zul "
 ---
+[Home](https://zul.rocks)
 
 Solutions that need polishing are marked 🔄 and unfinished solutions are marked ❎
 
