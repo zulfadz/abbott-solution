@@ -561,7 +561,11 @@ Thus $\alpha - 1/n$ is an upper bound of  $T$, which contradicts the fact that $
       + Each $J_n$ contains $J_{n+1}$ since $J_n \supseteq J_n \cap (I_1 \cap \cdots \cap 1_{n+1})$. Hence it is a nested sequence.
       + $J_n$ is nonempty since   $\bigcap_{n=1}^{N} I_{n} \neq \emptyset$ 
       + $J_n$ is closed interval, since intersection of closed intervals is closed.
-      $$ \bigcap_{n=1}^{\infty} I_{n} = (I_1 \cap \cdots \cap 1_n \cap \cdots)= I_1 \cap (I_1 \cap I_2) \cap (I_1 \cap I_2 \cap I_3) \cdots = \bigcap_{n=1}^{\infty} J_{n} \neq \emptyset$$
+      $$\begin{align*}
+       \bigcap_{n=1}^{\infty} I_{n} &= (I_1 \cap \cdots \cap 1_n \cap \cdots) \\
+       &= I_1 \cap (I_1 \cap I_2) \cap (I_1 \cap I_2 \cap I_3) \cdots \\
+       &= \bigcap_{n=1}^{\infty} J_{n} \neq \emptyset
+       \end{align*}$$
 
       where last inequality is due to Nested Interval Theorem.
 
