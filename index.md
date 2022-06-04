@@ -552,7 +552,7 @@ Thus $\alpha - 1/n$ is an upper bound of  $T$, which contradicts the fact that $
 
   1. <span style="color:red">$\mathbf{Q} \cap (0,1)$ and $\mathbf{I} \cap (0,1)$. This follows from Thereom 1.4.3, Exercise 1.4.4 and Corollary 1.4.4.</span> 
 
-   2. $J_n = (1- 1/n , 1+1/n)$ which mean $\bigcap_{n \in \mathbf{N}} J_n = \{1\}$. Admittedly, I found conflicting [answer](https://uli.rocks/abbott/) online so I may have to dig deeper if my answer is wrong. 
+   2. $J_n = (1- 1/n , 1+1/n)$ which mean $\bigcap_{n \in \mathbf{N}} J_n = \{1\}$. I found conflicting [answer](https://uli.rocks/abbott/) so I may have to dig deeper if my answer is wrong. 
 
    3. $L_1 = [1, \infty), L_2 = [2, \infty)$ and so on.
 
