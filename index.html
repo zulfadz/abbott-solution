@@ -1122,12 +1122,10 @@ contradiction of the fact that <span class="math inline">\alpha=\sup
 T</span>.</p>
 <hr />
 <p>Suppose <span class="math inline">\alpha^2 &gt;2</span>. Then</p>
-<p>$$<span class="math display">\begin{align*}
+<p><span class="math display">\begin{align*}
 (a- 1/n)^{2} &amp;= \alpha^2 - 2\alpha/n + 1/n^2 \\
-
 &amp;&gt; \alpha^2 - 2\alpha/n.
-
-\end{align*}</span>$$</p>
+\end{align*}</span></p>
 <p>Find <span class="math inline">n</span> large enough such that <span
 class="math inline">1/n &lt;(\alpha^2 -2)2\alpha</span>, and such an
 <span class="math inline">n</span> exists from Archimedean property.
@@ -1177,7 +1175,9 @@ This follows from Thereom 1.4.3, Exercise 1.4.4 and Corollary
 mean <span class="math inline">\bigcap_{n \in \mathbf{N}} J_n =
 \{1\}</span>. I found conflicting <a
 href="https://uli.rocks/abbott/">answer</a> so I may have to dig deeper
-if my answer is wrong.</p></li>
+if my answer is wrong. Also I really like the systematic approach given
+<a
+href="https://math.stackexchange.com/questions/223322/give-an-example-of-open-nested-sets-such-that-the-intersection-is-closed-nonemp">here</a>.</p></li>
 <li><p><span class="math inline">L_1 = [1, \infty), L_2 = [2,
 \infty)</span> and so on.</p></li>
 <li><p>Impossible. Let <span class="math inline">J_n = (I_1 \cap \cdots
@@ -1190,14 +1190,14 @@ nested sequence.</li>
 <li><span class="math inline">J_n</span> is nonempty since <span
 class="math inline">\bigcap_{n=1}^{N} I_{n} \neq \emptyset</span></li>
 <li><span class="math inline">J_n</span> is closed interval, since
-intersection of closed intervals is closed. <span
-class="math display">\begin{align*}
+intersection of closed intervals is closed.</li>
+</ul>
+<p><span class="math display">\begin{align*}
   \bigcap_{n=1}^{\infty} I_{n} &amp;= (I_1 \cap \cdots \cap 1_n \cap
 \cdots) \\
   &amp;= I_1 \cap (I_1 \cap I_2) \cap (I_1 \cap I_2 \cap I_3) \cdots \\
   &amp;= \bigcap_{n=1}^{\infty} J_{n} \neq \emptyset
-  \end{align*}</span></li>
-</ul>
+  \end{align*}</span></p>
 <p>where last inequality is due to Nested Interval Theorem.</p>
 <p>Note: Damn (4) is interesting as hell. what it is saying is that
 nested interval theorem can apply to non-nested intervals, as long the

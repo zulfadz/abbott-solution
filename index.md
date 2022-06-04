@@ -523,10 +523,9 @@ Suppose $\alpha^2 >2$. Then
 
 $$\begin{align*}
 (a- 1/n)^{2} &= \alpha^2 - 2\alpha/n + 1/n^2 \\
-
 &> \alpha^2 - 2\alpha/n.
-
 \end{align*}$$
+
 
 Find $n$ large enough such that $1/n <(\alpha^2 -2)2\alpha$, and such an $n$ exists from Archimedean property. This implies $2\alpha/n <(\alpha^2 -2)$, therefore
 
@@ -552,7 +551,7 @@ Thus $\alpha - 1/n$ is an upper bound of  $T$, which contradicts the fact that $
 
   1. <span style="color:red">$\mathbf{Q} \cap (0,1)$ and $\mathbf{I} \cap (0,1)$. This follows from Thereom 1.4.3, Exercise 1.4.4 and Corollary 1.4.4.</span> 
 
-   2. $J_n = (1- 1/n , 1+1/n)$ which mean $\bigcap_{n \in \mathbf{N}} J_n = \{1\}$. I found conflicting [answer](https://uli.rocks/abbott/) so I may have to dig deeper if my answer is wrong. 
+   2. $J_n = (1- 1/n , 1+1/n)$ which mean $\bigcap_{n \in \mathbf{N}} J_n = \{1\}$. I found conflicting [answer](https://uli.rocks/abbott/) so I may have to dig deeper if my answer is wrong. Also I really like the systematic approach given [here](https://math.stackexchange.com/questions/223322/give-an-example-of-open-nested-sets-such-that-the-intersection-is-closed-nonemp).
 
    3. $L_1 = [1, \infty), L_2 = [2, \infty)$ and so on.
 
@@ -561,6 +560,7 @@ Thus $\alpha - 1/n$ is an upper bound of  $T$, which contradicts the fact that $
       + Each $J_n$ contains $J_{n+1}$ since $J_n \supseteq J_n \cap (I_1 \cap \cdots \cap 1_{n+1})$. Hence it is a nested sequence.
       + $J_n$ is nonempty since   $\bigcap_{n=1}^{N} I_{n} \neq \emptyset$ 
       + $J_n$ is closed interval, since intersection of closed intervals is closed.
+
       $$\begin{align*}
        \bigcap_{n=1}^{\infty} I_{n} &= (I_1 \cap \cdots \cap 1_n \cap \cdots) \\
        &= I_1 \cap (I_1 \cap I_2) \cap (I_1 \cap I_2 \cap I_3) \cdots \\
