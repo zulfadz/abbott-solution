@@ -1,7 +1,7 @@
 ---
 title: "Solutions to Abbott's Understanding Analysis"
 description: "Solutions to analysis"
-author: "Zul "
+author: "Zul Fadzli"
 ---
 [Home](https://zul.rocks)
 
