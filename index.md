@@ -600,6 +600,7 @@ The function is onto:
 3. After iteratively removing minimal element by $w-1 \in \mathbf{N}$ steps, $n*$ will be the minimal element. Hence, $g(w) = f(n*) =s$.
 
 The function is 1-1:
+
 1. For $x \neq y$, $g(x)$ corresponds to $f(n_{x})$ while $g(y)$ corresponds to $f(n_y)$.
 2. $n_x \neq n_y$ (because they correspond to unique minimal elements, by construction of $g$).
 3. $f(n_x) \neq f(n_y)$ (because $f$ is 1-1).
