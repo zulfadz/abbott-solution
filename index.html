@@ -284,7 +284,11 @@ are marked ❎</p>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><a href="#148">1.4.8</a> 🔄</td>
+<td style="text-align: left;"><a href="#148">1.4.8</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#151">1.5.1</a></td>
 <td style="text-align: left;"></td>
 </tr>
 </tbody>
@@ -1203,5 +1207,63 @@ intersection of closed intervals is closed.</li>
 nested interval theorem can apply to non-nested intervals, as long the
 finite intersections are nonempty.</p></li>
 </ol>
+<p><a name="151"></a></p>
+<h3 id="exercise-1.5.1"><a href="#toc">Exercise 1.5.1</a></h3>
+<p>Finish the following proof for Theorem 1.5.7</p>
+<p><em>Theorem 1.5.7</em> If <span class="math inline">A \subseteq
+B</span> and <span class="math inline">B</span> is countable, then <span
+class="math inline">A</span> is either countable or finite.</p>
+<p>Assume <span class="math inline">B</span> is a countable set. Thus,
+there exists <span class="math inline">f: \mathbf{N} \rightarrow
+B</span>, which is 1-1 and onto. Let <span class="math inline">A
+\subseteq B</span> be an infinite subset of <span
+class="math inline">B</span>. We must show that <span
+class="math inline">A</span> is countable.</p>
+<p>Let <span class="math inline">n_1 = \text{min}\{n \in \mathbf{N}:
+f(n) \in A\}</span>. As a start to a definition of <span
+class="math inline">g: \mathbf{N} \rightarrow A</span>, set <span
+class="math inline">g(1) =f(n_{1})</span>. Show how to inductively
+continue this process to produce a 1-1 function <span
+class="math inline">g</span> from <span
+class="math inline">\mathbf{N}</span> onto <span
+class="math inline">A</span>.</p>
+<hr />
+<p><span style="color:red">Took me too long to articulate this question,
+I ended up just looking for help online.</span></p>
+<p>Define <span class="math inline">g(2) = f(n_{2})</span> where <span
+class="math inline">n_2 = \text{min}\{n \in \mathbf{N}: f(n) \in
+A/f(n_{1})\}</span>.</p>
+<p>More generally, for <span class="math inline">x&lt;y</span>, we have
+defined <span class="math inline">g(x)</span>, and set <span
+class="math inline">g(y)= f(n_{y})</span> where <span
+class="math inline">n_y = \text{min}\{n \in \mathbf{N}: f(n) \in A/
+\{f(n_{1}), f(n_2), \cdots, f(n_{y-1})\}</span>.</p>
+<p>The function is onto:</p>
+<ol type="1">
+<li>For any <span class="math inline">s \in A</span>, there exists some
+<span class="math inline">n* \in \mathbf{N}</span> such that <span
+class="math inline">f(n*) = s</span> (since <span
+class="math inline">f</span> is onto).</li>
+<li>Therefore <span class="math inline">n* \in \{n \in \mathbf{N}:
+f(n)\in A\}</span>.</li>
+<li>After iteratively removing minimal element by <span
+class="math inline">w-1 \in \mathbf{N}</span> steps, <span
+class="math inline">n*</span> will be the minimal element. Hence, <span
+class="math inline">g(w) = f(n*) =s</span>.</li>
+</ol>
+<p>The function is 1-1: 1. For <span class="math inline">x \neq
+y</span>, <span class="math inline">g(x)</span> corresponds to <span
+class="math inline">f(n_{x})</span> while <span
+class="math inline">g(y)</span> corresponds to <span
+class="math inline">f(n_y)</span>. 2. <span class="math inline">n_x \neq
+n_y</span> (because they correspond to unique minimal elements, by
+construction of <span class="math inline">g</span>). 3. <span
+class="math inline">f(n_x) \neq f(n_y)</span> (because <span
+class="math inline">f</span> is 1-1).</p>
+<p>Note to myself: the construction of <span
+class="math inline">g</span>, by iteratively removing minimal element is
+crucial because it helps to prove 1-1. The assumption that <span
+class="math inline">f</span> is 1-1 and onto also is crucial to prove
+the same for <span class="math inline">g</span>.</p>
 </body>
 </html>
