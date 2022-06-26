@@ -35,7 +35,8 @@ Solutions that need polishing are marked 🔄 and unfinished solutions are marke
 [1.4.5](#145)|
 [1.4.6](#146)|
 [1.4.7](#147)|
-[1.4.8](#148) 🔄 |
+[1.4.8](#148)|
+[1.5.1](#151) |
 
 
 <a name="c1"></a>
@@ -572,4 +573,36 @@ Thus $\alpha - 1/n$ is an upper bound of  $T$, which contradicts the fact that $
       Note: Damn (4) is interesting as hell. what it is saying is that nested interval theorem can apply to non-nested intervals, as long the finite intersections are nonempty.
      
 
+<a name="151"></a>
+
+### [Exercise 1.5.1](#toc) 
+
+Finish the following proof for Theorem 1.5.7
+
+*Theorem 1.5.7* If $A \subseteq B$ and $B$ is countable, then $A$ is either countable or finite.
+
+Assume $B$ is a countable set. Thus, there exists $f: \mathbf{N} \rightarrow B$, which is 1-1 and onto. Let $A \subseteq B$ be an infinite subset of $B$. We must show that $A$ is countable.
+
+Let $n_1 = \text{min}\{n \in \mathbf{N}: f(n) \in A\}$. As a start to a definition of $g: \mathbf{N} \rightarrow A$, set $g(1) =f(n_{1})$. Show how to inductively continue this process to produce a 1-1 function $g$ from $\mathbf{N}$ onto $A$.
+
+---
+
+<span style="color:red">Took me too long to articulate this question, I ended up just looking for help online.</span> 
+
+Define $g(2) = f(n_{2})$ where $n_2 = \text{min}\{n \in \mathbf{N}: f(n) \in A/f(n_{1})\}$. 
+
+More generally, for $x<y$, we have defined $g(x)$, and set $g(y)= f(n_{y})$ where $n_y = \text{min}\{n \in \mathbf{N}: f(n) \in A/ \{f(n_{1}), f(n_2), \cdots, f(n_{y-1})\}$.
+
+The function is onto:
+
+1. For any $s \in A$, there exists some $n* \in \mathbf{N}$ such that $f(n*) = s$ (since $f$ is onto).
+2.  Therefore $n* \in \{n \in \mathbf{N}: f(n)\in A\}$.
+3. After iteratively removing minimal element by $w-1 \in \mathbf{N}$ steps, $n*$ will be the minimal element. Hence, $g(w) = f(n*) =s$.
+
+The function is 1-1:
+1. For $x \neq y$, $g(x)$ corresponds to $f(n_{x})$ while $g(y)$ corresponds to $f(n_y)$.
+2. $n_x \neq n_y$ (because they correspond to unique minimal elements, by construction of $g$).
+3. $f(n_x) \neq f(n_y)$ (because $f$ is 1-1).
+
+Note to myself: the construction of $g$, by iteratively removing minimal element is crucial because it helps to prove 1-1. The assumption that $f$ is 1-1 and onto also is crucial to prove the same for $g$.
      
