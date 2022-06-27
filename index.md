@@ -37,6 +37,7 @@ Solutions that need polishing are marked 🔄 and unfinished solutions are marke
 [1.4.7](#147)|
 [1.4.8](#148)|
 [1.5.1](#151) |
+[1.5.2](#152) |
 
 
 <a name="c1"></a>
@@ -607,9 +608,9 @@ The function is 1-1:
 
 Note to myself: the construction of $g$, by iteratively removing minimal element is crucial because it helps to prove 1-1. The assumption that $f$ is 1-1 and onto also is crucial to prove the same for $g$.
      
-<a name="151"></a>
+<a name="152"></a>
 
-### [Exercise 1.5.1](#toc) 
+### [Exercise 1.5.2](#toc) 
 
 Review the proof of Theorem 1.5.6, part (ii) showing that $\mathbf{R}$ is uncountable, and then find the flaw in the following erroneous proof that $\mathbf{Q}$ is uncountable.
 
