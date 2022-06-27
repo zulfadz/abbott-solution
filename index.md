@@ -607,3 +607,28 @@ The function is 1-1:
 
 Note to myself: the construction of $g$, by iteratively removing minimal element is crucial because it helps to prove 1-1. The assumption that $f$ is 1-1 and onto also is crucial to prove the same for $g$.
      
+<a name="151"></a>
+
+### [Exercise 1.5.1](#toc) 
+
+Review the proof of Theorem 1.5.6, part (ii) showing that $\mathbf{R}$ is uncountable, and then find the flaw in the following erroneous proof that $\mathbf{Q}$ is uncountable.
+
+Assume for contradiction, that $\mathbf{Q}$ is countable. Thus we can write $\mathbf{Q} = \{r_1,r_2,...\}$ and, as before, construct a nested sequence of closed intervals with $r_n \notin I_n$. Our construction implies $\bigcap^{\infty}_{n=1}I_n = \emptyset$ while NIP implies $\bigcap^{\infty}_{n=1} I_{n} \neq \emptyset$. This contradiction implies $\mathbf{Q}$ must therefore be uncountable.
+
+---
+
+It doesn't work because NIP doesn't hold for $\mathbf{Q}$. Namely, the intersection need not have any rational numbers. For example, take the nested, closed intervals around $\pi$, $[3,4],[3.1,3.2],[3.12,3.13],...$, then the infinite intersection is nonempty but the only element it includes is [not rational](https://math.stackexchange.com/questions/1914901/false-proofs-claiming-that-mathbbq-is-uncountable).
+
+_Extra_: Why doesn't the above work for integers? Since a bounded interval in $\mathbf{Z}$ has finite elements, the nested interval $I_n$ will be exhausted after finitely many steps. Thus, the construction [doesn't work](https://math.stackexchange.com/questions/2373901/is-abbotts-proof-of-the-uncountabilty-of-real-numbers-too-strong).
+
+
+ Because if we have closed nested intervals $I_n \supset I_{n+1}$, and $I_i \neq \emptyset$, then there exists an $N$ such that $I_i = I_N$ for all $i>N$. Therefore, the sequence of nested intervals such that $r_n \notin I_n$ cannot be constructured. 
+
+ _Note to myself_: How does the assumption that $\mathbf{R}$ is countable help in the proof of Theorem 1.5.6.? It helps by enabling us to index each real numbers with $n$. With this index in place, we are able to 
+ 
+ 1. construct the nested intervals, such that $r_n \notin I_n$ and 
+ 2. take countable intersection of the nested intervals, 
+ 
+ which are then to show to be empty.
+
+
