@@ -291,6 +291,10 @@ are marked ❎</p>
 <td style="text-align: left;"><a href="#151">1.5.1</a></td>
 <td style="text-align: left;"></td>
 </tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#152">1.5.2</a></td>
+<td style="text-align: left;"></td>
+</tr>
 </tbody>
 </table>
 <p><a name="c1"></a></p>
@@ -1269,5 +1273,55 @@ class="math inline">g</span>, by iteratively removing minimal element is
 crucial because it helps to prove 1-1. The assumption that <span
 class="math inline">f</span> is 1-1 and onto also is crucial to prove
 the same for <span class="math inline">g</span>.</p>
+<p><a name="152"></a></p>
+<h3 id="exercise-1.5.2"><a href="#toc">Exercise 1.5.2</a></h3>
+<p>Review the proof of Theorem 1.5.6, part (ii) showing that <span
+class="math inline">\mathbf{R}</span> is uncountable, and then find the
+flaw in the following erroneous proof that <span
+class="math inline">\mathbf{Q}</span> is uncountable.</p>
+<p>Assume for contradiction, that <span
+class="math inline">\mathbf{Q}</span> is countable. Thus we can write
+<span class="math inline">\mathbf{Q} = \{r_1,r_2,...\}</span> and, as
+before, construct a nested sequence of closed intervals with <span
+class="math inline">r_n \notin I_n</span>. Our construction implies
+<span class="math inline">\bigcap^{\infty}_{n=1}I_n = \emptyset</span>
+while NIP implies <span class="math inline">\bigcap^{\infty}_{n=1} I_{n}
+\neq \emptyset</span>. This contradiction implies <span
+class="math inline">\mathbf{Q}</span> must therefore be uncountable.</p>
+<hr />
+<p>It doesn’t work because NIP doesn’t hold for <span
+class="math inline">\mathbf{Q}</span>. Namely, the intersection need not
+have any rational numbers. For example, take the nested, closed
+intervals around <span class="math inline">\pi</span>, <span
+class="math inline">[3,4],[3.1,3.2],[3.12,3.13],...</span>, then the
+infinite intersection is nonempty but the only element it includes is <a
+href="https://math.stackexchange.com/questions/1914901/false-proofs-claiming-that-mathbbq-is-uncountable">not
+rational</a>.</p>
+<p><em>Extra</em>: Why doesn’t the above work for integers? Since a
+bounded interval in <span class="math inline">\mathbf{Z}</span> has
+finite elements, the nested interval <span
+class="math inline">I_n</span> will be exhausted after finitely many
+steps. Thus, the construction <a
+href="https://math.stackexchange.com/questions/2373901/is-abbotts-proof-of-the-uncountabilty-of-real-numbers-too-strong">doesn’t
+work</a>.</p>
+<p>Because if we have closed nested intervals <span
+class="math inline">I_n \supset I_{n+1}</span>, and <span
+class="math inline">I_i \neq \emptyset</span>, then there exists an
+<span class="math inline">N</span> such that <span
+class="math inline">I_i = I_N</span> for all <span
+class="math inline">i&gt;N</span>. Therefore, the sequence of nested
+intervals such that <span class="math inline">r_n \notin I_n</span>
+cannot be constructured.</p>
+<p><em>Note to myself</em>: How does the assumption that <span
+class="math inline">\mathbf{R}</span> is countable help in the proof of
+Theorem 1.5.6.? It helps by enabling us to index each real numbers with
+<span class="math inline">n</span>. With this index in place, we are
+able to</p>
+<ol type="1">
+<li>construct the nested intervals, such that <span
+class="math inline">r_n \notin I_n</span> and</li>
+<li>take countable intersection of the nested intervals,</li>
+</ol>
+<p>which are then to show to be empty.</p>
 </body>
 </html>
