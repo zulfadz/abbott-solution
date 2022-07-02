@@ -662,19 +662,19 @@ $$\begin{equation}
 
 which are onto and 1-1. We can iteratively do this for $B_{3} \backslash (A_1 \cup A_2)$,... and we are done.
 
-<span style="color:red">Some improvement: I should have started with finite case first. Consider $B_2 = \{b1, \cdots bm \}$. Also given $f: N \rightarrow A_1$. Then define $h: A_1 \cup B_2$ as $$\begin{equation}
+<span style="color:red">Some improvement: I should have started with finite case first. Consider $B_2 = \{b1, \cdots bm \}$. Also given $f: N \rightarrow A_1$. Then define $h: A_1 \cup B_2$ as  $$\begin{equation}
   h(x)=% 
   \begin{cases}
     b(x) &\text{if $x \leq m$} \\
     f(x-m) &\text{if $x > m$}.
   \end{cases}
-\end{equation}$$ 
+\end{equation}$$ </span>
 
-If $B_2$ is infinite, then there exists $g: N \rightarrow B_2$. Then we can define $h$ by assigning odd numbers to function $f$, and even numbers to function $g$
+<span style="color:red">If $B_2$ is infinite, then there exists $g: N \rightarrow B_2$. Then we can define $h$ by assigning odd numbers to function $f$, and even numbers to function $g$</span> 
 
-To generalize to $m$ case, we already know it holds for two cases. Suppose this statement is true for $A_1 \cup A_2 \cup \cdots A_{m-1}$. Then $(A_1 \cup A_2 \cup \cdots A_{m-1}) \cup A_{m}$ is countable. </span> 
+<span style="color:red">To generalize to $m$ case, we already know it holds for two cases. Suppose this statement is true for $A_1 \cup A_2 \cup \cdots A_{m-1}$. Then $(A_1 \cup A_2 \cup \cdots A_{m-1}) \cup A_{m}$ is countable. </span> 
 
-Or we can also use induction, and assume there exist a function that is 1-1 and onto for $A_1 \cup B_2 \cdots B_n $. Besides there exist such a function for $B_{n+1}$. The proof proceeds similarly by expanding the piecewise function.
+
 
 2. Induction is cannot be used for infinite number sets.
 
