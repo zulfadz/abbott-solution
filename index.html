@@ -295,6 +295,10 @@ are marked ❎</p>
 <td style="text-align: left;"><a href="#152">1.5.2</a></td>
 <td style="text-align: left;"></td>
 </tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#153">1.5.3</a></td>
+<td style="text-align: left;"></td>
+</tr>
 </tbody>
 </table>
 <p><a name="c1"></a></p>
@@ -1323,5 +1327,115 @@ class="math inline">r_n \notin I_n</span> and</li>
 <li>take countable intersection of the nested intervals,</li>
 </ol>
 <p>which are then to show to be empty.</p>
+<p><a name="153"></a></p>
+<h3 id="exercise-1.5.3"><a href="#toc">Exercise 1.5.3</a></h3>
+<p>Use the following outline to supply proofs for the statements in
+Theorem 1.5.8.</p>
+<ol type="1">
+<li><p>Prove if <span class="math inline">A_1, \dots, A_m</span> are
+countable sets then <span class="math inline">A_1 \cup \dots \cup
+A_m</span> is countable.</p></li>
+<li><p>Explain why induction <em>cannot</em> be used to prove that if
+each <span class="math inline">A_n</span> is countable, then <span
+class="math inline">\bigcup_{n=1}^\infty A_n</span> is
+countable.</p></li>
+<li><p>Show how arranging <span class="math inline">\mathbf{N}</span>
+into the two-dimensional array <span
+class="math display">\begin{array}{llllll}1 &amp; 3 &amp; 6 &amp; 10
+&amp; 15 &amp; \cdots \\ 2 &amp; 5 &amp; 9 &amp; 14 &amp; \cdots &amp;
+\\ 4 &amp; 8 &amp; 13 &amp; \cdots &amp; &amp; \\ 7 &amp; 12 &amp;
+\cdots &amp; &amp; &amp; \\ 11 &amp; \cdots &amp; &amp; &amp; &amp; \\
+\vdots &amp; &amp; &amp; &amp; &amp; \end{array}</span> leads to a proof
+for the infinite case.</p></li>
+</ol>
+<hr />
+<ol type="1">
+<li>Suppose <span class="math inline">A_1</span> and <span
+class="math inline">A_2</span> are countable. Then there exist functions
+<span class="math inline">f: A_1 \rightarrow N</span> and <span
+class="math inline">g: A_2 \rightarrow N</span>, both of which are onto
+and 1-1. Define <span class="math inline">B_{2} = A_{2}\backslash A_{1}
+= \{x \in A_2: x \notin A_1 \}</span>. This means <span
+class="math inline">A_1 \cup A_2 = A_1 \cup B_2</span>. Define function
+<span class="math inline">h: A_1 \cup B_2 \rightarrow N</span> as:</li>
+</ol>
+<p><span class="math display">\begin{equation}
+  h(x)=%
+  \begin{cases}
+    f(x) &amp;\text{if $x \in A_1$} \\
+    g(x) &amp;\text{if $x \in B_2$}.
+  \end{cases}
+\end{equation}</span></p>
+<p>which are onto and 1-1. We can iteratively do this for <span
+class="math inline">B_{3} \backslash (A_1 \cup A_2)</span>,… and we are
+done.</p>
+<p><span style="color:red">Some improvement: I should have started with
+finite case first. Consider <span class="math inline">B_2 = \{b1, \cdots
+bm \}</span>. Also given <span class="math inline">f: N \rightarrow
+A_1</span>. Then define <span class="math inline">h: A_1 \cup B_2</span>
+as <span class="math display">\begin{equation}
+  h(x)=%
+  \begin{cases}
+    b(x) &amp;\text{if $x \leq m$} \\
+    f(x-m) &amp;\text{if $x &gt; m$}.
+  \end{cases}
+\end{equation}</span></p>
+<p>If <span class="math inline">B_2</span> is infinite, then there
+exists <span class="math inline">g: N \rightarrow B_2</span>. Then we
+can define <span class="math inline">h</span> by assigning odd numbers
+to function <span class="math inline">f</span>, and even numbers to
+function <span class="math inline">g</span></p>
+<p>To generalize to <span class="math inline">m</span> case, we already
+know it holds for two cases. Suppose this statement is true for <span
+class="math inline">A_1 \cup A_2 \cup \cdots A_{m-1}</span>. Then <span
+class="math inline">(A_1 \cup A_2 \cup \cdots A_{m-1}) \cup A_{m}</span>
+is countable. </span></p>
+<p>Or we can also use induction, and assume there exist a function that
+is 1-1 and onto for $A_1 B_2 B_n $. Besides there exist such a function
+for <span class="math inline">B_{n+1}</span>. The proof proceeds
+similarly by expanding the piecewise function.</p>
+<ol start="2" type="1">
+<li><p>Induction is cannot be used for infinite number sets.</p></li>
+<li><p>Each row represents a disjoint countable set. Their union will
+form the natural numbers. Therefore suppose <span
+class="math inline">\{A_n\}</span> are disjoint, then we can arrange
+them as follows:</p></li>
+</ol>
+<p><span class="math display">\begin{array}{llllll}A_1= &amp; a_{11}
+&amp; a_{12} &amp; \cdots &amp; \cdots &amp; \cdots \\
+A_2= &amp; a_{21} &amp; a_{22} &amp; \cdots &amp; \cdots &amp; \\ \vdots
+&amp; &amp; &amp; &amp; &amp; \end{array}</span></p>
+<p>which corresponds to 1-1 and onto mapping from <span
+class="math inline">N</span> to infinite unions of <span
+class="math inline">A_n</span>.</p>
+<p>If <span class="math inline">\{A_n\}</span> are not disjoint,
+iteratively construct <span class="math inline">B_2, B_3 ,
+\cdots</span>. Note that it is important to consider disjoint sets
+otherwise the sets may not be 1-1.</p>
+<p><span style="color:red"> Big pictures:</p>
+<ol type="1">
+<li>Use indexation <span class="math inline">b_1, \cdots b_m</span> when
+constructing the function <span class="math inline">N \rightarrow \text{
+some sets}</span>. In this question, this indexation is used to list
+down finite case for <span class="math inline">B_2</span> and infinite
+case for <span class="math inline">A_1</span>. Besides, as shown in
+Exercise 1.5.2, indexation can also be used to construct an infinite
+case, which then can be used to come up with clever nested sets. Indeed,
+in part (iii) of this exercise, indexation is used to map <span
+class="math inline">N</span> to infinite union of <span
+class="math inline">\{A_n\}</span></li>
+<li>Consider both countable and infinite case.</li>
+<li>It is important to establish disjoint sets to ensure that the
+resulting function is 1-1. The way to do this is by excluding previous
+sets.</li>
+<li>Exploiting the even and odd numbers of natural numbers can provide a
+neat trick to construct a bijection with <span
+class="math inline">N</span>.</li>
+<li>Induction usually uses the same trick: Assume it works for 2 cases,
+assume it works for m cases, then m and m+1 will proceed
+accordingly.</li>
+<li>Laying out disjoint rows of infinite sets can help with infinite
+number of sets, something that induction cannot.</span></li>
+</ol>
 </body>
 </html>

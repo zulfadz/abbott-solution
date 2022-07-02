@@ -38,6 +38,7 @@ Solutions that need polishing are marked 🔄 and unfinished solutions are marke
 [1.4.8](#148)|
 [1.5.1](#151) |
 [1.5.2](#152) |
+[1.5.3](#153) |
 
 
 <a name="c1"></a>
@@ -633,3 +634,64 @@ _Extra_: Why doesn't the above work for integers? Since a bounded interval in $\
  which are then to show to be empty.
 
 
+<a name="153"></a>
+
+### [Exercise 1.5.3](#toc) 
+
+Use the following outline to supply proofs for the statements in Theorem 1.5.8.
+
+1. Prove if $A_1, \dots, A_m$ are countable sets then $A_1 \cup \dots \cup A_m$ is countable.
+
+2. Explain why induction _cannot_ be used to prove that if each $A_n$ is countable, then $\bigcup_{n=1}^\infty A_n$ is countable.
+
+3. Show how arranging $\mathbf{N}$ into the two-dimensional array
+  $$\begin{array}{llllll}1 & 3 & 6 & 10 & 15 & \cdots \\ 2 & 5 & 9 & 14 & \cdots & \\ 4 & 8 & 13 & \cdots & & \\ 7 & 12 & \cdots & & & \\ 11 & \cdots & & & & \\ \vdots & & & & & \end{array}$$
+  leads to a proof for the infinite case.
+
+  ---
+
+1. Suppose $A_1$ and $A_2$ are countable. Then there exist functions $f: A_1 \rightarrow N$ and $g: A_2 \rightarrow N$, both of which are onto and 1-1. Define $B_{2} = A_{2}\backslash A_{1} = \{x \in A_2: x \notin A_1 \}$. This means $A_1 \cup A_2 = A_1 \cup B_2$. Define function $h: A_1 \cup B_2 \rightarrow N$ as:
+
+$$\begin{equation}
+  h(x)=% 
+  \begin{cases}
+    f(x) &\text{if $x \in A_1$} \\
+    g(x) &\text{if $x \in B_2$}.
+  \end{cases}
+\end{equation}$$
+
+which are onto and 1-1. We can iteratively do this for $B_{3} \backslash (A_1 \cup A_2)$,... and we are done.
+
+<span style="color:red">Some improvement: I should have started with finite case first. Consider $B_2 = \{b1, \cdots bm \}$. Also given $f: N \rightarrow A_1$. Then define $h: A_1 \cup B_2$ as $$\begin{equation}
+  h(x)=% 
+  \begin{cases}
+    b(x) &\text{if $x \leq m$} \\
+    f(x-m) &\text{if $x > m$}.
+  \end{cases}
+\end{equation}$$ 
+
+If $B_2$ is infinite, then there exists $g: N \rightarrow B_2$. Then we can define $h$ by assigning odd numbers to function $f$, and even numbers to function $g$
+
+To generalize to $m$ case, we already know it holds for two cases. Suppose this statement is true for $A_1 \cup A_2 \cup \cdots A_{m-1}$. Then $(A_1 \cup A_2 \cup \cdots A_{m-1}) \cup A_{m}$ is countable. </span> 
+
+Or we can also use induction, and assume there exist a function that is 1-1 and onto for $A_1 \cup B_2 \cdots B_n $. Besides there exist such a function for $B_{n+1}$. The proof proceeds similarly by expanding the piecewise function.
+
+2. Induction is cannot be used for infinite number sets.
+
+3. Each row represents a disjoint countable set. Their union will form the natural numbers. Therefore suppose $\{A_n\}$ are disjoint, then we can arrange them as follows:
+
+$$\begin{array}{llllll}A_1= & a_{11} & a_{12} & \cdots & \cdots & \cdots \\ 
+A_2= & a_{21} & a_{22} & \cdots & \cdots & \\ \vdots & & & & & \end{array}$$
+
+which corresponds to 1-1 and onto mapping from $N$ to infinite unions of $A_n$.
+
+If $\{A_n\}$ are not disjoint, iteratively construct $B_2, B_3 , \cdots$. Note that it is important to consider disjoint sets otherwise the sets may not be 1-1.
+
+<span style="color:red"> Big pictures:
+
+1. Use indexation $b_1, \cdots b_m$ when constructing the function $N \rightarrow \text{ some sets}$. In this question, this indexation is used to list down finite case for $B_2$ and infinite case for $A_1$. Besides, as shown in Exercise 1.5.2, indexation can also be used to construct an infinite case, which then can be used to come up with clever nested sets. Indeed, in part (iii) of this exercise, indexation is used to map $N$ to infinite union of $\{A_n\}$
+2. Consider both countable and infinite case.
+3. It is important to establish disjoint sets to ensure that the resulting function is 1-1. The way to do this is by excluding previous sets.
+4. Exploiting the even and odd numbers of natural numbers can provide a neat trick to construct a bijection with $N$. 
+5. Induction usually uses the same trick: Assume it works for 2 cases, assume it works for m cases, then m and m+1 will proceed accordingly.
+6. Laying out disjoint rows of infinite sets can help with infinite number of sets, something that induction cannot.</span>
