@@ -695,3 +695,63 @@ If $\{A_n\}$ are not disjoint, iteratively construct $B_2, B_3 , \cdots$. Note t
 4. Exploiting the even and odd numbers of natural numbers can provide a neat trick to construct a bijection with $N$. 
 5. Induction usually uses the same trick: Assume it works for 2 cases, assume it works for m cases, then m and m+1 will proceed accordingly.
 6. Laying out disjoint rows of infinite sets can help with infinite number of sets, something that induction cannot.</span>
+
+<a name="154"></a>
+
+### [Exercise 1.5.4](#toc) 
+
+1. Show $(a, b) \sim \mathbf{R}$ for any interval $(a, b)$.
+
+2. Show that an unbounded interval like $(a, \infty)=\{x: x>a\}$ has the same cardinality as $\mathbf{R}$ as well.
+
+3. Using open intervals makes it more convenient to produce the required 1-1, onto functions, but it is not really necessary. Show that $[0,1) \sim(0,1)$ by exhibiting a 1-1 onto function between the two sets.
+
+---
+
+1. Note that $(-\pi/2,\pi/2)$ has the same cardinality with $\mathbf{R}$ using function $ \tan x$. The latter is continuous and strictly increasing, $$ \lim_{\pm \pi/2} \tan x = \pm \infty $$ and thus is bijective.
+
+We then need to establish that any open interval $(a,b)$ can be bijectively mapped to $(-\pi/2, \pi/2)$. This can be done by linear transformation as follow:
+
+1. Apply the map $x-a$ so the endpoint is shift to the origin. That is, the image interval is $(0,b-a)$.
+2. Rescale the interval to unit length by dividing $b-a$. The image interval is $(0,1)$.
+3. Scale up the interval by the length $\pi/2 - (-\pi/2)$. The image interval is $(0, \pi)$.
+4. Shift the endpoints by $-\pi/2$, The image interval is $(-\pi/2, \pi/2)$.
+
+Composing these steps result in the bijective function $g(x) = -\pi/2 + \frac{\pi}{b-a}(x-a)$
+
+<span style="color:red"> How do you actually establish cardinality with R? For N, we know we can index them, or lay them out in grid. For real numbers, one way is to use $\tan x$. Or linear transformation from other sets that we know have the same cardinality as R.</span>
+
+Source: [SE1 -open interval with cardinality of $\mathbb R$ without trig identity ](https://math.stackexchange.com/questions/1434479/prove-any-open-interval-has-the-same-cardinality-of-bbb-r-without-using-tri), [SE2](https://math.stackexchange.com/questions/3320437/show-a-b-r-for-any-interval-a-b?rq=1), [Problem 1.5.4](http://www.ms.uky.edu/~ochanine/MA471G/HW_Problems.pdf), [SE3-linear transformation](https://math.stackexchange.com/questions/914823/shift-numbers-into-a-different-range), [Millersville](https://sites.millersville.edu/bikenaga/math-proof/cardinality/cardinality.pdf)
+
+2. We will show this by sequentially mapping from $\mathbb R \to 
+(a, \infty)$ as follows:
+
+$\mathbb R \xrightarrow{f^{-1}} (-\pi/2, \pi/2) \xrightarrow{g} (0,1) \xrightarrow{h} (1, \infty) \xrightarrow{j} (a, \infty)$
+
+From (1), we know that $f^{-1}(x) = \arctan (x)$ is a bijective function mapping $\mathbb R \mapsto (-\pi/2, \pi/2)$.
+
+$g(x) = \dfrac{x + \pi/2}{\pi}$ is a bijection mapping $(-\pi/2, \pi/2) \mapsto (0,1)$.
+
+$h(x) = 1/x$ is a bijection mapping $(0,1) \mapsto (1, \infty)$.
+
+$j(x) = ax$ is a bijection mapping $(1, \infty) \mapsto (a, \infty)$.
+
+Source: [SE1](https://math.stackexchange.com/questions/2283065/prove-that-the-intervals-0-1-and-0-infty-have-the-same-cardinality), [SE2 -open interval with cardinality of $\mathbb R$ without trig identity ](https://math.stackexchange.com/questions/1434479/prove-any-open-interval-has-the-same-cardinality-of-bbb-r-without-using-tri), [SE3 - mapping $(0, \infty)$ to $\mathbb R$](https://math.stackexchange.com/questions/573794/prove-that-mathbbr-and-the-interval-0-infty-have-the-same-cardinality),[Problem 1.5.4](http://www.ms.uky.edu/~ochanine/MA471G/HW_Problems.pdf)
+
+3. Using open intervals makes it more convenient to produce the required 1-1, onto functions, but it is not really necessary. Show that $[0,1) \sim(0,1)$ by exhibiting a 1-1 onto function between the two sets.
+
+Take countably infinite sequence $(x_{n})_{n \geq 1}$ of distinct elements between $0$ and $1$. Define $X$ as the set of the elements of this sequence. Let $x_{0} = 0$. Then we can construct a bijective function mapping $[0,1) \mapsto (0,1)$, $f$ by assigning $f(x_n) = x_{n+1}$ for every $n \geq 0$ and $f(x) = x$ for every $x$ in $(0,1) \backslash X$.
+
+Source: [SE1](https://math.stackexchange.com/questions/160738/how-to-define-a-bijection-between-0-1-and-0-1)
+
+<span style="color:red">Alternative answer:</span> Consider any sequence $0=x_1 < x_2 < \cdots < 1$. For example, consider $x_{n} = 1 - (1/n)$. Then we can define $f: [0,1) \to (0,1)$ by 
+
+$$\begin{equation}
+  f(x)=% 
+  \begin{cases}
+    x_{n+1} &\text{if $x =x_{n}$ for some $n \geq 1$} \\
+    x &\text{if $x \neq x_{n}$}.
+  \end{cases}
+\end{equation}$$
+
+Source: [Problem 1.5.4](http://www.ms.uky.edu/~ochanine/MA471G/HW_Problems.pdf)

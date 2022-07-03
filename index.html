@@ -1435,5 +1435,124 @@ accordingly.</li>
 <li>Laying out disjoint rows of infinite sets can help with infinite
 number of sets, something that induction cannot.</span></li>
 </ol>
+<p><a name="154"></a></p>
+<h3 id="exercise-1.5.4"><a href="#toc">Exercise 1.5.4</a></h3>
+<ol type="1">
+<li><p>Show <span class="math inline">(a, b) \sim \mathbf{R}</span> for
+any interval <span class="math inline">(a, b)</span>.</p></li>
+<li><p>Show that an unbounded interval like <span
+class="math inline">(a, \infty)=\{x: x&gt;a\}</span> has the same
+cardinality as <span class="math inline">\mathbf{R}</span> as
+well.</p></li>
+<li><p>Using open intervals makes it more convenient to produce the
+required 1-1, onto functions, but it is not really necessary. Show that
+<span class="math inline">[0,1) \sim(0,1)</span> by exhibiting a 1-1
+onto function between the two sets.</p></li>
+</ol>
+<hr />
+<ol type="1">
+<li>Note that <span class="math inline">(-\pi/2,\pi/2)</span> has the
+same cardinality with <span class="math inline">\mathbf{R}</span> using
+function $ x$. The latter is continuous and strictly increasing, <span
+class="math display"> \lim_{\pm \pi/2} \tan x = \pm \infty </span> and
+thus is bijective.</li>
+</ol>
+<p>We then need to establish that any open interval <span
+class="math inline">(a,b)</span> can be bijectively mapped to <span
+class="math inline">(-\pi/2, \pi/2)</span>. This can be done by linear
+transformation as follow:</p>
+<ol type="1">
+<li>Apply the map <span class="math inline">x-a</span> so the endpoint
+is shift to the origin. That is, the image interval is <span
+class="math inline">(0,b-a)</span>.</li>
+<li>Rescale the interval to unit length by dividing <span
+class="math inline">b-a</span>. The image interval is <span
+class="math inline">(0,1)</span>.</li>
+<li>Scale up the interval by the length <span class="math inline">\pi/2
+- (-\pi/2)</span>. The image interval is <span class="math inline">(0,
+\pi)</span>.</li>
+<li>Shift the endpoints by <span class="math inline">-\pi/2</span>, The
+image interval is <span class="math inline">(-\pi/2, \pi/2)</span>.</li>
+</ol>
+<p>Composing these steps result in the bijective function <span
+class="math inline">g(x) = -\pi/2 + \frac{\pi}{b-a}(x-a)</span></p>
+<p><span style="color:red"> How do you actually establish cardinality
+with R? For N, we know we can index them, or lay them out in grid. For
+real numbers, one way is to use <span class="math inline">\tan x</span>.
+Or linear transformation from other sets that we know have the same
+cardinality as R.</span></p>
+<p>Source: <a
+href="https://math.stackexchange.com/questions/1434479/prove-any-open-interval-has-the-same-cardinality-of-bbb-r-without-using-tri">SE1
+-open interval with cardinality of <span class="math inline">\mathbb
+R</span> without trig identity</a>, <a
+href="https://math.stackexchange.com/questions/3320437/show-a-b-r-for-any-interval-a-b?rq=1">SE2</a>,
+<a href="http://www.ms.uky.edu/~ochanine/MA471G/HW_Problems.pdf">Problem
+1.5.4</a>, <a
+href="https://math.stackexchange.com/questions/914823/shift-numbers-into-a-different-range">SE3-linear
+transformation</a>, <a
+href="https://sites.millersville.edu/bikenaga/math-proof/cardinality/cardinality.pdf">Millersville</a></p>
+<ol start="2" type="1">
+<li>We will show this by sequentially mapping from <span
+class="math inline">\mathbb R \to (a, \infty)</span> as follows:</li>
+</ol>
+<p><span class="math inline">\mathbb R \xrightarrow{f^{-1}} (-\pi/2,
+\pi/2) \xrightarrow{g} (0,1) \xrightarrow{h} (1, \infty) \xrightarrow{j}
+(a, \infty)</span></p>
+<p>From (1), we know that <span class="math inline">f^{-1}(x) = \arctan
+(x)</span> is a bijective function mapping <span
+class="math inline">\mathbb R \mapsto (-\pi/2, \pi/2)</span>.</p>
+<p><span class="math inline">g(x) = \dfrac{x + \pi/2}{\pi}</span> is a
+bijection mapping <span class="math inline">(-\pi/2, \pi/2) \mapsto
+(0,1)</span>.</p>
+<p><span class="math inline">h(x) = 1/x</span> is a bijection mapping
+<span class="math inline">(0,1) \mapsto (1, \infty)</span>.</p>
+<p><span class="math inline">j(x) = ax</span> is a bijection mapping
+<span class="math inline">(1, \infty) \mapsto (a, \infty)</span>.</p>
+<p>Source: <a
+href="https://math.stackexchange.com/questions/2283065/prove-that-the-intervals-0-1-and-0-infty-have-the-same-cardinality">SE1</a>,
+<a
+href="https://math.stackexchange.com/questions/1434479/prove-any-open-interval-has-the-same-cardinality-of-bbb-r-without-using-tri">SE2
+-open interval with cardinality of <span class="math inline">\mathbb
+R</span> without trig identity</a>, <a
+href="https://math.stackexchange.com/questions/573794/prove-that-mathbbr-and-the-interval-0-infty-have-the-same-cardinality">SE3
+- mapping <span class="math inline">(0, \infty)</span> to <span
+class="math inline">\mathbb R</span></a>,<a
+href="http://www.ms.uky.edu/~ochanine/MA471G/HW_Problems.pdf">Problem
+1.5.4</a></p>
+<ol start="3" type="1">
+<li>Using open intervals makes it more convenient to produce the
+required 1-1, onto functions, but it is not really necessary. Show that
+<span class="math inline">[0,1) \sim(0,1)</span> by exhibiting a 1-1
+onto function between the two sets.</li>
+</ol>
+<p>Take countably infinite sequence <span class="math inline">(x_{n})_{n
+\geq 1}</span> of distinct elements between <span
+class="math inline">0</span> and <span class="math inline">1</span>.
+Define <span class="math inline">X</span> as the set of the elements of
+this sequence. Let <span class="math inline">x_{0} = 0</span>. Then we
+can construct a bijective function mapping <span
+class="math inline">[0,1) \mapsto (0,1)</span>, <span
+class="math inline">f</span> by assigning <span
+class="math inline">f(x_n) = x_{n+1}</span> for every <span
+class="math inline">n \geq 0</span> and <span class="math inline">f(x) =
+x</span> for every <span class="math inline">x</span> in <span
+class="math inline">(0,1) \backslash X</span>.</p>
+<p>Source: <a
+href="https://math.stackexchange.com/questions/160738/how-to-define-a-bijection-between-0-1-and-0-1">SE1</a></p>
+<p><span style="color:red">Alternative answer:</span> Consider any
+sequence <span class="math inline">0=x_1 &lt; x_2 &lt; \cdots &lt;
+1</span>. For example, consider <span class="math inline">x_{n} = 1 -
+(1/n)</span>. Then we can define <span class="math inline">f: [0,1) \to
+(0,1)</span> by</p>
+<p><span class="math display">\begin{equation}
+  f(x)=%
+  \begin{cases}
+    x_{n+1} &amp;\text{if $x =x_{n}$ for some $n \geq 1$} \\
+    x &amp;\text{if $x \neq x_{n}$}.
+  \end{cases}
+\end{equation}</span></p>
+<p>Source: <a
+href="http://www.ms.uky.edu/~ochanine/MA471G/HW_Problems.pdf">Problem
+1.5.4</a></p>
 </body>
 </html>
