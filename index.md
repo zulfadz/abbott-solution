@@ -39,6 +39,10 @@ Solutions that need polishing are marked 🔄 and unfinished solutions are marke
 [1.5.1](#151) |
 [1.5.2](#152) |
 [1.5.3](#153) |
+[1.5.4](#154) |
+[1.5.5](#155) |
+[1.5.6](#156) |
+[1.5.7](#157)🔄 |
 
 
 <a name="c1"></a>
@@ -755,3 +759,66 @@ $$\begin{equation}
 \end{equation}$$
 
 Source: [Problem 1.5.4](http://www.ms.uky.edu/~ochanine/MA471G/HW_Problems.pdf)
+
+
+<a name="155"></a>
+
+### [Exercise 1.5.5](#toc) 
+
+
+1. Why is $A \sim A$ for every set $A$?
+
+2. Given sets $A$ and $B$, explain why $A \sim B$ is equivalent to asserting $B \sim A$.
+
+3. For three sets $A, B$, and $C$, show that $A \sim B$ and $B \sim C$ implies $A \sim C$. These three properties are what is meant by saying that $\sim$ is an \emph{equivalence relation}.
+
+---
+
+1. Because $f(x)=x$ is a bijective function mapping $A \mapsto A$.
+
+2. Trivial. 
+
+3. Suppose $A \sim B$ and $B \sim C$, then there is 1-1, onto $f: A \to B$. Similarly, $g: B \to C$. 
+
+Then if $a_1 \neq a_2$, then $f(a_{1}) \neq f(a_{2})$, which means $g(f(a_{1})) \neq g(f(a_{2}))$. Thus $g \circ f$ is 1-1.
+
+By onto property, for all $c$, there is a $b$ such that $g(b)=c$, and there is $a$  such that $f(a) = b$, which means $g(b) = g(f(a)) = c$. This $g \circ f$ is onto.
+
+
+<a name="156"></a>
+
+### [Exercise 1.5.6](#toc) 
+
+1. Give an example of a countable collection of disjoint open intervals.
+
+2. Give an example of an uncountable collection of disjoint open intervals, or argue that no such collection exists.
+
+---
+
+1. $\{(1,1.5), (2,2.5), \cdots \}$.
+
+2. By contradiction, suppose there is a collection of disjoint open intervals which is uncountable. We also know that each of these open intervals contain distinct element of rational numbers. Which means there are uncountable rational numbers. This contradicts Theorem 1.5.6(a).
+
+<span style=color:red>Note 1: When they are disjoint open intervals, I could index them with $n$, which makes the collection countable. A strategy for this question is to list the elements of the collection, which means it is countable. By why is "disjoint, open" intervals a necessary conditions? What if they are either overlapping or closed? Which part of the proof will break down? </span>
+
+<span style=color:red>Note 2: Think geometrically: There isn't enough room to fit uncountably many open intervals into $\mathbb R$ without some overlap. Source: [SE](https://math.stackexchange.com/questions/2803350/an-example-of-an-uncountable-collection-of-disjoint-open-intervals-possible) </span>
+
+<span style=color:red>Note 3: This statement is unjustified: "Uncountable means in bijection with $\mathbb R$ ". This is essentially the continuum hypothesis, which is known to be neither provable nor disprovable. Source: [SE](https://math.stackexchange.com/questions/2803350/an-example-of-an-uncountable-collection-of-disjoint-open-intervals-possible) </span>
+
+<span style=color:red>[Source](./pdf/mtht430f2019pm2sol.pdf)</span>
+
+<a name="157"></a>
+
+### [Exercise 1.5.7](#toc) 
+
+Consider the open interval $(0,1)$, and let $S$ be the set of points in the open unit square; that is, $S=\{(x, y): 0<x, y<1\}$.
+
+1. Find a 1-1 function that maps $(0,1)$ into, but not necessarily onto, $S$. (This is easy.)
+
+2. Use the fact that every real number has a decimal expansion to produce a $1-1$ function that maps $S$ into $(0,1)$. Discuss whether the formulated function is onto. (Keep in mind that any terminating decimal expansion such as $.235$ represents the same real number as $.234999 \ldots .$)
+
+---
+
+1. $f(x) =(x, 0.5)$
+
+2. 
