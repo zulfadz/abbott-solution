@@ -299,6 +299,22 @@ are marked ❎</p>
 <td style="text-align: left;"><a href="#153">1.5.3</a></td>
 <td style="text-align: left;"></td>
 </tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#154">1.5.4</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#155">1.5.5</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#156">1.5.6</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#157">1.5.7</a>🔄</td>
+<td style="text-align: left;"></td>
+</tr>
 </tbody>
 </table>
 <p><a name="c1"></a></p>
@@ -1554,5 +1570,102 @@ sequence <span class="math inline">0=x_1 &lt; x_2 &lt; \cdots &lt;
 <p>Source: <a
 href="http://www.ms.uky.edu/~ochanine/MA471G/HW_Problems.pdf">Problem
 1.5.4</a></p>
+<p><a name="155"></a></p>
+<h3 id="exercise-1.5.5"><a href="#toc">Exercise 1.5.5</a></h3>
+<ol type="1">
+<li><p>Why is <span class="math inline">A \sim A</span> for every set
+<span class="math inline">A</span>?</p></li>
+<li><p>Given sets <span class="math inline">A</span> and <span
+class="math inline">B</span>, explain why <span class="math inline">A
+\sim B</span> is equivalent to asserting <span class="math inline">B
+\sim A</span>.</p></li>
+<li><p>For three sets <span class="math inline">A, B</span>, and <span
+class="math inline">C</span>, show that <span class="math inline">A \sim
+B</span> and <span class="math inline">B \sim C</span> implies <span
+class="math inline">A \sim C</span>. These three properties are what is
+meant by saying that <span class="math inline">\sim</span> is an
+.</p></li>
+</ol>
+<hr />
+<ol type="1">
+<li><p>Because <span class="math inline">f(x)=x</span> is a bijective
+function mapping <span class="math inline">A \mapsto A</span>.</p></li>
+<li><p>Trivial.</p></li>
+<li><p>Suppose <span class="math inline">A \sim B</span> and <span
+class="math inline">B \sim C</span>, then there is 1-1, onto <span
+class="math inline">f: A \to B</span>. Similarly, <span
+class="math inline">g: B \to C</span>.</p></li>
+</ol>
+<p>Then if <span class="math inline">a_1 \neq a_2</span>, then <span
+class="math inline">f(a_{1}) \neq f(a_{2})</span>, which means <span
+class="math inline">g(f(a_{1})) \neq g(f(a_{2}))</span>. Thus <span
+class="math inline">g \circ f</span> is 1-1.</p>
+<p>By onto property, for all <span class="math inline">c</span>, there
+is a <span class="math inline">b</span> such that <span
+class="math inline">g(b)=c</span>, and there is <span
+class="math inline">a</span> such that <span class="math inline">f(a) =
+b</span>, which means <span class="math inline">g(b) = g(f(a)) =
+c</span>. This <span class="math inline">g \circ f</span> is onto.</p>
+<p><a name="156"></a></p>
+<h3 id="exercise-1.5.6"><a href="#toc">Exercise 1.5.6</a></h3>
+<ol type="1">
+<li><p>Give an example of a countable collection of disjoint open
+intervals.</p></li>
+<li><p>Give an example of an uncountable collection of disjoint open
+intervals, or argue that no such collection exists.</p></li>
+</ol>
+<hr />
+<ol type="1">
+<li><p><span class="math inline">\{(1,1.5), (2,2.5), \cdots
+\}</span>.</p></li>
+<li><p>By contradiction, suppose there is a collection of disjoint open
+intervals which is uncountable. We also know that each of these open
+intervals contain distinct element of rational numbers. Which means
+there are uncountable rational numbers. This contradicts Theorem
+1.5.6(a).</p></li>
+</ol>
+<p><span style="color:red">Note 1: When they are disjoint open
+intervals, I could index them with <span class="math inline">n</span>,
+which makes the collection countable. A strategy for this question is to
+list the elements of the collection, which means it is countable. By why
+is “disjoint, open” intervals a necessary conditions? What if they are
+either overlapping or closed? Which part of the proof will break down?
+</span></p>
+<p><span style="color:red">Note 2: Think geometrically: There isn’t
+enough room to fit uncountably many open intervals into <span
+class="math inline">\mathbb R</span> without some overlap. Source: <a
+href="https://math.stackexchange.com/questions/2803350/an-example-of-an-uncountable-collection-of-disjoint-open-intervals-possible">SE</a>
+</span></p>
+<p><span style="color:red">Note 3: This statement is unjustified:
+“Uncountable means in bijection with <span class="math inline">\mathbb
+R</span>”. This is essentially the continuum hypothesis, which is known
+to be neither provable nor disprovable. Source: <a
+href="https://math.stackexchange.com/questions/2803350/an-example-of-an-uncountable-collection-of-disjoint-open-intervals-possible">SE</a>
+</span></p>
+<p><span style="color:red"><a
+href="./pdf/mtht430f2019pm2sol.pdf">Source</a></span></p>
+<p><a name="157"></a></p>
+<h3 id="exercise-1.5.7"><a href="#toc">Exercise 1.5.7</a></h3>
+<p>Consider the open interval <span class="math inline">(0,1)</span>,
+and let <span class="math inline">S</span> be the set of points in the
+open unit square; that is, <span class="math inline">S=\{(x, y): 0&lt;x,
+y&lt;1\}</span>.</p>
+<ol type="1">
+<li><p>Find a 1-1 function that maps <span
+class="math inline">(0,1)</span> into, but not necessarily onto, <span
+class="math inline">S</span>. (This is easy.)</p></li>
+<li><p>Use the fact that every real number has a decimal expansion to
+produce a <span class="math inline">1-1</span> function that maps <span
+class="math inline">S</span> into <span
+class="math inline">(0,1)</span>. Discuss whether the formulated
+function is onto. (Keep in mind that any terminating decimal expansion
+such as <span class="math inline">.235</span> represents the same real
+number as <span class="math inline">.234999 \ldots .</span>)</p></li>
+</ol>
+<hr />
+<ol type="1">
+<li><p><span class="math inline">f(x) =(x, 0.5)</span></p></li>
+<li></li>
+</ol>
 </body>
 </html>
