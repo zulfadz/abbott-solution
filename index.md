@@ -42,7 +42,8 @@ Solutions that need polishing are marked 🔄 and unfinished solutions are marke
 [1.5.4](#154) |
 [1.5.5](#155) |
 [1.5.6](#156) |
-[1.5.7](#157)🔄 |
+[1.5.7](#157) 🔄|
+[1.5.8](#158) |
 
 
 <a name="c1"></a>
@@ -593,7 +594,7 @@ Let $n_1 = \text{min}\{n \in \mathbf{N}: f(n) \in A\}$. As a start to a definiti
 
 ---
 
-<span style="color:red">Took me too long to articulate this question, I ended up just looking for help online.</span> 
+<span style="color:red">Took me too long to articulate this question, I ended up just looking for help online. Also how does the assumption that $A$ is infinite help in the proof? It helps because it narrows down the search of function to $f: \mathbf{N} \rightarrow B$.</span> 
 
 Define $g(2) = f(n_{2})$ where $n_2 = \text{min}\{n \in \mathbf{N}: f(n) \in A/f(n_{1})\}$. 
 
@@ -669,7 +670,7 @@ which are onto and 1-1. We can iteratively do this for $B_{3} \backslash (A_1 \c
 <span style="color:red">Some improvement: I should have started with finite case first. Consider $B_2 = \{b1, \cdots bm \}$. Also given $f: N \rightarrow A_1$. Then define $h: A_1 \cup B_2$ as  $$\begin{equation}
   h(x)=% 
   \begin{cases}
-    b(x) &\text{if $x \leq m$} \\
+    b_{x} &\text{if $x \leq m$} \\
     f(x-m) &\text{if $x > m$}.
   \end{cases}
 \end{equation}$$ </span>
@@ -821,4 +822,40 @@ Consider the open interval $(0,1)$, and let $S$ be the set of points in the open
 
 1. $f(x) =(x, 0.5)$
 
-2. 
+2. $g(x,y) = \frac{x+y}{2}$ if $x \geq y$ and $\frac{x+y}{3}$ otherwise.
+
+This is wrong because suppose we have $(0.2,0.2) \neq (0.3,0.1)$, but $g$ will map these into the same value. 
+
+<span style=color:red> Answer: Suppose we have $ x  = 0.x_{1}x_{2}\cdots $ and $y = 0.y_{1}y_{2} \cdots $. Then $g(x,y) = 0.x_{1}y_{1}x_{2}y_{2} \cdots$ *(where we use terminating form over repeating 9s)* is 1-1 because given two distinct points $(x,y) \neq (s,t)$, then either $x \neq s$ or $y \neq t$, which means that at least in one decimal place we have $x_{i} \neq s_{i}$ or $y_{i} \neq t_{i}$. This function is not onto. Since the pair $x=0.79999\cdots$ and $y=0.65455\cdots$ are not allowed due to convention of terminating decimals, the point $0.7695949595\cdots$ is not in the range of $g$. Another example is the point $0.1$, which means a pair of $0.1$ and $0$ is needed, the latter is not in the domain $(0,1)$.</span>
+
+<span style=color:red>Not too sure what this second question is trying to get at. My first thought is that given any $x, y$, we can map to $\frac{x+y}{2}$, but this is not unique, because it is equal to $\frac{y+x}{2}$. Or we can assign to $\frac{x+y}{2}$ if $x \geq y$ and $\frac{x+y}{3}$ otherwise (which is wrong due to reasons above). Alternatively, we can assign $f(x,y) = 0.xy$. But this is weird because if $x=0.9, y=0.99$, what does this lead to? (this is almost right, you just have to spell it out)</span>
+
+<a name="158"></a>
+
+### [Exercise 1.5.8](#toc) 
+
+  Let $B$ be a set of positive real numbers with the property that adding together any finite subset of elements from $B$ always gives a sum of 2 or less. Show $B$ must be finite or countable.
+
+---
+
+The idea is to decompose $B$ into a countably many finite sets (i.e. the union of which will form $B$). This is made possible due to this condition:
+
+> any finite subset of elements from $B$ always gives a sum of 2 or less.
+
+The proof then is completed by theorem 1.5.8(ii).
+
+There are a number of ways to show this. One way:
+
+Define $B_{0}= \{x \in B \vert x>1  \}$. For each $n \in \mathbb N$, define $B_{n} = (\frac{1}{n+1},\frac{1}{n}]$. Note that each $B_{i}$ is finite because the number of distinct elements in each of them cannot exceed $2(n+1)$, otherwise the sum of the elements would be at least 2. Moreover, $B = \bigcup_{n \in \mathbb N} B_{i}$, is a union of countably many $B_{i}$. Source: [SE](https://math.stackexchange.com/questions/1724016/countability-of-set-of-positive-reals-with-bounded-sum-for-all-finite-subsets)
+
+Second way:
+
+Define $B_{n}= \{x \in B \vert x \geq \frac{2}{n}  \}$. Each $B_{n}$ is finite because the number of distinct elements cannot exceed $n$, otherwise the sum of the elements would be greater than 2. The proof is completed by noting that $B = \bigcup_{n \in \mathbb N} B_{i}$, is a union of countably many finite $B_{i}$. Source: [SE](https://math.stackexchange.com/questions/1724016/countability-of-set-of-positive-reals-with-bounded-sum-for-all-finite-subsets)
+
+
+
+<span style= color:red> What does "adding together any finite subset of elements from $B$ always gives a sum of 2 or less" mean? My first thought is that given two finite subsets $(x_{1}, x_{2})$ and $(y_{1}, y_{2})$, the addition of these subsets $(x_{1}+y_{1}, x_{2}+y_{2})$ is 2 or less, which doesn't make sense. The more plausible explanation is given any finite subset of $B$, the summation of its elements is 2 or less. </span>
+
+<span style= color:red> Damn this question must have obvious answer. I can't figure it out sigh. The solution is beautiful too. </span>
+
+<span style = color:red> Old answer: Let $B$ be a set of positive real numbers. Assume that given any finite subset of $B$, its elements add to 2 or less. Assume that $B$ is infinite. We must show that $B$ is countable. From Theorem 1.5.8(ii), it suffices to show that each subset of $B$ is countable. </span>
