@@ -1767,5 +1767,129 @@ class="math inline">B</span> is infinite. We must show that <span
 class="math inline">B</span> is countable. From Theorem 1.5.8(ii), it
 suffices to show that each subset of <span class="math inline">B</span>
 is countable. </span></p>
+<p><a name="159"></a></p>
+<h3 id="exercise-1.5.9"><a href="#toc">Exercise 1.5.9</a></h3>
+<p>A real number <span class="math inline">x \in \mathbf{R}</span> is
+called algebraic if there exist integers <span
+class="math inline">a_{0}, a_{1}, a_{2}, \ldots, a_{n} \in
+\mathbf{Z}</span>, not all zero, such that <span class="math display">
+  a_{n} x^{n}+a_{n-1} x^{n-1}+\cdots+a_{1} x+a_{0}=0
+  </span> Said another way, a real number is algebraic if it is the root
+of a polynomial with integer coefficients. Real numbers that are not
+algebraic are called <em>transcendental</em> numbers. Reread the last
+paragraph of Section 1.1. The final question posed here is closely
+related to the question of whether or not transcendental numbers
+exist.</p>
+<ol type="1">
+<li><p>Show that <span class="math inline">\sqrt{2}, \sqrt[3]{2}</span>,
+and <span class="math inline">\sqrt{3}+\sqrt{2}</span> are
+algebraic.</p></li>
+<li><p>Fix <span class="math inline">n \in \mathbf{N}</span>, and let
+<span class="math inline">A_{n}</span> be the algebraic numbers obtained
+as roots of polynomials with integer coefficients that have degree <span
+class="math inline">n</span>. Using the fact that every polynomial has a
+finite number of roots, show that <span class="math inline">A_{n}</span>
+is countable.</p></li>
+<li><p>Now, argue that the set of all algebraic numbers is countable.
+What may we conclude about the set of transcendental numbers?</p></li>
+</ol>
+<hr />
+<ol type="1">
+<li><p><span class="math inline">x^{2} -2=0</span>; <span
+class="math inline">x^{3} -2 =0</span>; <span class="math inline">(x^{2}
+-2)(x^{2}-3)=x^{4}-5x^{2}+6 =0.</span></p></li>
+<li><p>Each polynomial has a finite number <span
+class="math inline">k</span> of roots. Moreover, each polynomial of
+degree <span class="math inline">n</span> can be represented by <span
+class="math inline">(n+1)</span>-tuple of integers. Therefore $ A_{n} =
+k Z^{n+1} $. But we know that <span class="math inline">k \lvert \mathbb
+Z^{n+1} \rvert =k \lvert \mathbb N^{n+1} \rvert = \lvert \mathbb N^{n+1}
+\rvert</span> as natural numbers can be bijectively mapped into
+integers. Finally, <span class="math inline">\lvert \mathbb N^{n+1}
+\rvert = \lvert \mathbb N \rvert</span> because given arbitrary element
+of <span class="math inline">\lvert \mathbb N^{n+1} \rvert</span>,
+(e.g. <span class="math inline">(a_{0}, \cdots, a_{n})</span>), consider
+its sum plus the length, and call this number as the “class” of the
+element. The key observation is that for each <span
+class="math inline">k \in \mathbb N</span>, there are finite number of
+elements of class <span class="math inline">k</span>. This is because
+for the element to have class <span class="math inline">k</span>, the
+length of the element must be <span class="math inline">\leq k</span>,
+and each member of the element must be <span class="math inline">\leq
+k</span>. So there are at most <span class="math inline">k^k</span>
+elements of class <span class="math inline">k</span>. We can construct
+an injective mapping to <span class="math inline">\mathbb N</span>. We
+map each element of class 1 to the lowest natural numbers, then map each
+element of class 2 to the next lowest natural numbers and so on. (This
+last argument is obtained from <a
+href="https://www.nayuki.io/page/countable-sets-and-kleene-star">Nayuki</a>).</p></li>
+</ol>
+<p>Alternative solution: Given a fixed <span class="math inline">n,m \in
+\mathbb N</span>, consider the set of polynomials with integers <span
+class="math inline">a_0, a_1, \cdots a_n</span> such that that the sum
+of the absolute values is less than or equal to <span
+class="math inline">m</span> (alternatively, we can just take <span
+class="math inline">a_0, a_1, \cdots a_n</span> to be natural numbers,
+since <span class="math inline">\mathbb Z</span> map bijectively with
+<span class="math inline">\mathbb N</span>). This set of polynomials of
+degree <span class="math inline">n</span> is finite because each integer
+must have absolute value less than or equal to <span
+class="math inline">m</span>.</p>
+<p>Let <span class="math inline">A_{nm}</span> be the set of roots of
+these polynomials. Since each polynomial of degree <span
+class="math inline">n</span> has at most <span
+class="math inline">n</span> roots, <span class="math inline">\lvert
+A_{nm} \rvert</span> is finite.</p>
+<p>Thus, <span class="math inline">A_{n} = \bigcup_{n=1}^{\infty}
+A_{nm}</span> is a union of finite sets, which by Exercise 1.5.3 implies
+that it is countable.</p>
+<p><span style =color:green></p>
+<p>Reflection: This question teaches me new proving technique. Namely,
+when showing that that a n-tuple consisting of elements of a set <span
+class="math inline">S</span>, is countable, I first must show that the
+that <span class="math inline">S</span> is finite. From which we can
+conclude that for a given <span class="math inline">n</span>, the tuple
+is finite of order $S ^{n} $. If <span class="math inline">S</span> is
+infinite, we can’t do this. What we can, is to look at something else
+such that we can still map them bijectively with natural number. To do
+so, we replace <span class="math inline">S</span> with <span
+class="math inline">N</span> (possible since <span
+class="math inline">S</span> is countable). Then construct a class <span
+class="math inline">k</span> which corresponds to finite set of
+elements. This class <span class="math inline">k</span> can be the sum
+of the member of tuple plus its length. These conditions limit class
+<span class="math inline">k</span> size. Thus, there are <span
+class="math inline">k^k</span> elements. From here, we can simply list
+them and map with natural numbers.</p>
+<p></span></p>
+<p><span style =color:red></p>
+<p>Earlier answer draft:</p>
+<p>Every polynominal has a finite number of roots</p>
+<p><span class="math inline">\implies</span> There are countable
+polynomials with degree <span class="math inline">n</span></p>
+<p><span class="math display">\begin{array}{llllll}A_1= &amp; a_{11}
+&amp; a_{12} &amp; \cdots &amp; \cdots &amp; \cdots \\
+A_2= &amp; a_{21} &amp; a_{22} &amp; \cdots &amp; \cdots &amp; \\ \vdots
+&amp; &amp; &amp; &amp; &amp; \end{array}</span></p>
+<p>First we show that there are countably many polynomials with degree.
+Given <span class="math inline">n</span>, and integer <span
+class="math inline">a_{ij}</span> the following is the list of all
+possible polynomials of degree <span class="math inline">n</span>:</p>
+<p><span class="math display">\begin{array}{llllll}\alpha_1= &amp;
+a_{11} &amp; a_{12} &amp; \cdots &amp; \cdots &amp; a_{1n} \\
+A_2= &amp; a_{21} &amp; a_{22} &amp; \cdots &amp; \cdots &amp; \\ \vdots
+&amp; &amp; &amp; &amp; &amp; \end{array}</span></p>
+<p></span></p>
+<ol start="3" type="1">
+<li>As <span class="math inline">A_n</span> is countable, the infinite
+union of <span class="math inline">A_n</span>, i.e. the set of algebraic
+numbers, is also countable by Exercise 1.5.3.</li>
+</ol>
+<p>Let <span class="math inline">A</span> be the set of algebraic
+numbers, and <span class="math inline">T</span> be the set of
+transcedental numbers. Clearly, <span class="math inline">A \cup T =
+\mathbb R</span>. Thus <span class="math inline">T</span> cannot be
+countable, since otherwise it implies <span class="math inline">R</span>
+is countable.</p>
 </body>
 </html>

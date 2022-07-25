@@ -859,3 +859,59 @@ Define $B_{n}= \{x \in B \vert x \geq \frac{2}{n}  \}$. Each $B_{n}$ is finite b
 <span style= color:red> Damn this question must have obvious answer. I can't figure it out sigh. The solution is beautiful too. </span>
 
 <span style = color:red> Old answer: Let $B$ be a set of positive real numbers. Assume that given any finite subset of $B$, its elements add to 2 or less. Assume that $B$ is infinite. We must show that $B$ is countable. From Theorem 1.5.8(ii), it suffices to show that each subset of $B$ is countable. </span>
+
+<a name="159"></a>
+
+### [Exercise 1.5.9](#toc) 
+
+  A real number $x \in \mathbf{R}$ is called algebraic if there exist integers $a_{0}, a_{1}, a_{2}, \ldots, a_{n} \in \mathbf{Z}$, not all zero, such that
+  $$
+  a_{n} x^{n}+a_{n-1} x^{n-1}+\cdots+a_{1} x+a_{0}=0
+  $$
+  Said another way, a real number is algebraic if it is the root of a polynomial with integer coefficients. Real numbers that are not algebraic are called _transcendental_ numbers. Reread the last paragraph of Section 1.1. The final question posed here is closely related to the question of whether or not transcendental numbers exist.
+
+ 1. Show that $\sqrt{2}, \sqrt[3]{2}$, and $\sqrt{3}+\sqrt{2}$ are algebraic.
+ 
+ 2. Fix $n \in \mathbf{N}$, and let $A_{n}$ be the algebraic numbers obtained as roots of polynomials with integer coefficients that have degree $n$. Using the fact that every polynomial has a finite number of roots, show that $A_{n}$ is countable.
+ 
+ 3. Now, argue that the set of all algebraic numbers is countable. What may we conclude about the set of transcendental numbers?
+  
+  ---
+
+  1. $x^{2} -2=0$; $x^{3} -2 =0$; $(x^{2} -2)(x^{2}-3)=x^{4}-5x^{2}+6 =0.$
+
+  2. Each polynomial has a finite number $k$ of roots. Moreover, each polynomial of degree $n$ can be represented by $(n+1)$-tuple of integers. Therefore $ \lvert A_{n} \rvert = k \lvert \mathbb Z^{n+1} \rvert$. But we know that $k \lvert \mathbb Z^{n+1} \rvert =k \lvert \mathbb N^{n+1} \rvert = \lvert \mathbb N^{n+1} \rvert$ as natural numbers can be bijectively mapped into integers. Finally, $\lvert \mathbb N^{n+1} \rvert = \lvert \mathbb N \rvert$ because given arbitrary element of $\lvert \mathbb N^{n+1} \rvert$, (e.g. $(a_{0}, \cdots, a_{n})$), consider its sum plus the length, and call this number as the "class" of the element. The key observation is that for each $k \in \mathbb N$, there are finite number of elements of class $k$. This is because for the element to have class $k$, the length of the element must be $\leq k$, and each member of the element must be $\leq k$. So there are at most $k^k$ elements of class $k$. We can construct an injective mapping to $\mathbb N$. We map each element of class 1 to the lowest natural numbers, then map each element of class 2 to the next lowest natural numbers and so on. (This last argument is obtained from [Nayuki](https://www.nayuki.io/page/countable-sets-and-kleene-star)).
+
+  Alternative solution: Given a fixed $n,m \in \mathbb N$, consider the set of polynomials with integers $a_0, a_1, \cdots a_n$ such that that the sum of the absolute values is less than or equal to $m$ (alternatively, we can just take $a_0, a_1, \cdots a_n$ to be natural numbers, since $\mathbb Z$ map bijectively with $\mathbb N$). This set of polynomials of degree $n$ is finite because each integer must have absolute value less than or equal to $m$. 
+  
+  Let $A_{nm}$ be the set of roots of these polynomials. Since each polynomial of degree $n$ has at most $n$ roots, $\lvert A_{nm} \rvert$ is finite.
+
+  Thus, $A_{n} = \bigcup_{n=1}^{\infty} A_{nm}$ is a union of finite sets, which by Exercise 1.5.3 implies that it is countable.
+
+  <span style =color:green> 
+
+  Reflection: This question teaches me new proving technique. Namely, when showing that that a n-tuple consisting of elements of a set $S$, is countable, I first must show that the that $S$ is finite. From which we can conclude that for a given $n$, the tuple is finite of order $\lvert S \rvert^{n} $. If $S$ is infinite, we can't do this. What we can, is to look at something else such that we can still map them bijectively with natural number. To do so, we replace $S$ with $N$ (possible since $S$ is countable). Then construct a class $k$ which corresponds to finite set of elements. This class $k$ can be the sum of the member of tuple plus its length. These conditions limit class $k$ size. Thus, there are $k^k$ elements. From here, we can simply list them and map with natural numbers.
+
+  </span>
+
+<span style =color:red> 
+
+Earlier answer draft: 
+
+  Every polynominal has a finite number of roots 
+
+  $\implies$ There are countable polynomials with degree $n$
+
+  $$\begin{array}{llllll}A_1= & a_{11} & a_{12} & \cdots & \cdots & \cdots \\ 
+A_2= & a_{21} & a_{22} & \cdots & \cdots & \\ \vdots & & & & & \end{array}$$
+
+First we show that there are countably many polynomials with degree. Given $n$, and integer $a_{ij}$ the following is the list of all possible polynomials of degree $n$:
+
+ $$\begin{array}{llllll}\alpha_1= & a_{11} & a_{12} & \cdots & \cdots & a_{1n} \\ 
+A_2= & a_{21} & a_{22} & \cdots & \cdots & \\ \vdots & & & & & \end{array}$$
+
+</span>
+
+3. As $A_n$ is countable, the infinite union of $A_n$, i.e. the set of algebraic numbers, is also countable by Exercise 1.5.3. 
+
+Let $A$ be the set of algebraic numbers, and $T$ be the set of transcedental numbers. Clearly, $A \cup T = \mathbb R$. Thus $T$ cannot be countable, since otherwise it implies $R$ is countable.
