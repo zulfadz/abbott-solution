@@ -878,7 +878,7 @@ Define $B_{n}= \{x \in B \vert x \geq \frac{2}{n}  \}$. Each $B_{n}$ is finite b
   
   ---
 
-  1. $x^{2} -2=0$; $x^{3} -2 =0$; $(x^{2} -2)(x^{2}-3)=x^{4}-5x^{2}+6 =0.$
+  1. $x^{2} -2=0$; $x^{3} -2 =0$; $x = \sqrt{3}+\sqrt{2} \implies x^{2} = 5 + 2 \sqrt{6} \implies (x^{2}-5)^{2} = 24 \implies x^{4} -10x^{2} + 1 =0$
 
   2. Each polynomial has a finite number $k$ of roots. Moreover, each polynomial of degree $n$ can be represented by $(n+1)$-tuple of integers. Therefore $ \lvert A_{n} \rvert = k \lvert \mathbb Z^{n+1} \rvert$. But we know that $k \lvert \mathbb Z^{n+1} \rvert =k \lvert \mathbb N^{n+1} \rvert = \lvert \mathbb N^{n+1} \rvert$ as natural numbers can be bijectively mapped into integers. Finally, $\lvert \mathbb N^{n+1} \rvert = \lvert \mathbb N \rvert$ because given arbitrary element of $\lvert \mathbb N^{n+1} \rvert$, (e.g. $(a_{0}, \cdots, a_{n})$), consider its sum plus the length, and call this number as the "class" of the element. The key observation is that for each $k \in \mathbb N$, there are finite number of elements of class $k$. This is because for the element to have class $k$, the length of the element must be $\leq k$, and each member of the element must be $\leq k$. So there are at most $k^k$ elements of class $k$. We can construct an injective mapping to $\mathbb N$. We map each element of class 1 to the lowest natural numbers, then map each element of class 2 to the next lowest natural numbers and so on. (This last argument is obtained from [Nayuki](https://www.nayuki.io/page/countable-sets-and-kleene-star)).
 
