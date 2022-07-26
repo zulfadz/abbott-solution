@@ -953,6 +953,25 @@ Suppose for all $a \in (0,1)$, $C \cap [a,1] = K $ is countable. Thus, there exi
 3. No. Take the sequence $1 = x_{1} > x_{2} > \cdots > 0$. For example, consider the sequence  $x_{n} = (\frac{1}{n})$. Let $X$ be the set of this sequence, and thus $X \subseteq [0,1]$ and it is infinite. It follows that $X \cap [a,1]$ is finite. This is because the intersection is equal to $\{x_{n0}, x_{n0-1}, \cdots, x_{1} = 1\}$ where $x_{n0} \geq a$.
 
 
+<a name="1511"></a>
 
+### [Exercise 1.5.11](#toc) 
+
+Schröder-Bernstein Theorem:
+  Assume there exists a 1-1 function $f: X \rightarrow Y$ and another 1-1 function $g: Y \rightarrow X .$ Follow the steps to show that there exists a 1-1, onto function $h: X \rightarrow Y$ and hence $X \sim Y$.
+  The strategy is to partition $X$ and $Y$ into components
+  $$
+  X=A \cup A^{\prime} \quad \text { and } \quad Y=B \cup B^{\prime}
+  $$
+  with $A \cap A^{\prime}=\emptyset$ and $B \cap B^{\prime}=\emptyset$, in such a way that $f$ maps $A$ onto $B$, and $g$ maps $B^{\prime}$ onto $A^{\prime}$.
+
+  1. Explain how achieving this would lead to a proof that $X \sim Y$.
+
+  2. Set $A_{1}=X \setminus g(Y)=\{x \in X: x \notin g(Y)\}$ (what happens if $\left.A_{1}=\emptyset ?\right)$ and inductively define a sequence of sets by letting $A_{n+1}=g\left(f\left(A_{n}\right)\right)$. Show that $\left\{A_{n}: n \in \mathbf{N}\right\}$ is a pairwise disjoint collection of subsets of $X$, while $\left\{f\left(A_{n}\right): n \in \mathbf{N}\right\}$ is a similar collection in $Y$.
+  
+  3. Let $A=\bigcup_{n=1}^{\infty} A_{n}$ and $B=\bigcup_{n=1}^{\infty} f\left(A_{n}\right)$. Show that $f$ maps $A$ onto $B$.
+  
+  4. Let $A^{\prime}=X \setminus A$ and $B^{\prime}=Y \setminus B$. Show $g$ maps $B^{\prime}$ onto $A^{\prime}$.
+ 
 
  
