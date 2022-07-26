@@ -312,11 +312,19 @@ are marked ❎</p>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><a href="#157">1.5.7</a> 🔄</td>
+<td style="text-align: left;"><a href="#157">1.5.7</a></td>
 <td style="text-align: left;"></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><a href="#158">1.5.8</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#159">1.5.9</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#1510">1.5.10</a></td>
 <td style="text-align: left;"></td>
 </tr>
 </tbody>
@@ -1892,5 +1900,67 @@ transcedental numbers. Clearly, <span class="math inline">A \cup T =
 \mathbb R</span>. Thus <span class="math inline">T</span> cannot be
 countable, since otherwise it implies <span class="math inline">R</span>
 is countable.</p>
+<p><a name="1510"></a></p>
+<h3 id="exercise-1.5.10"><a href="#toc">Exercise 1.5.10</a></h3>
+<ol type="1">
+<li>Let <span class="math inline">C \subseteq[0,1]</span> be
+uncountable. Show that there exists <span class="math inline">a
+\in(0,1)</span> such that <span class="math inline">C \cap[a, 1]</span>
+is uncountable.</li>
+<li>Now let <span class="math inline">A</span> be the set of all <span
+class="math inline">a \in(0,1)</span> such that <span
+class="math inline">C \cap[a, 1]</span> is uncountable, and set <span
+class="math inline">\alpha=\sup A</span>. Is <span class="math inline">C
+\cap[\alpha, 1]</span> an uncountable set?</li>
+<li>Does the statement in (a) remain true if “uncountable” is replaced
+by “infinite”?</li>
+</ol>
+<hr />
+<ol type="1">
+<li>Suppose by contradiction <span class="math inline">\forall a \in
+(0,1), C \cap [a,1]</span> is countable. It follows that <span
+class="math display"> \bigcup_{n \geq 1} C \cap [\frac{1}{n},1]</span>
+is countable by Exercise 1.5.3. But this is equal to <span
+class="math inline">C \cap [0,1]</span>, which is uncountable.</li>
+</ol>
+<p><span style=color:green> Damn I fucked up this question. Took me so
+long to figure out. Anyhow, a lesson here is to look for a special case
+that I can generalize to the question. In this case, using</p>
+<p><span class="math inline">\frac{1}{n}</span>.</p>
+<p></span></p>
+<p><span style=color:red> Earlier draft:</p>
+<p><span class="math inline">C</span> is uncountable <span
+class="math inline">\implies</span> it is not bijectively mapped with
+<span class="math inline">\mathbb N</span></p>
+<p><span class="math inline">C \subseteq [0,1] \implies C = [a,b]</span>
+or <span class="math inline">(a,b)</span> for <span
+class="math inline">a,b \in [0,1]</span>.</p>
+<p>Suppose for all <span class="math inline">a \in (0,1)</span>, $C = K
+$ is countable. Thus, there exist a bijective map <span
+class="math inline">f: \mathbb N \to K</span>. Suppose <span
+class="math inline">C</span> is a closed interval. Then <span
+class="math inline">K</span> is a closed interval. And we know from
+exercise 1.5.4 that a closed interval is uncountable. Similarly, if
+<span class="math inline">K</span> is not a closed interval, then we
+know that is uncountable.</p>
+<p></span></p>
+<ol start="2" type="1">
+<li><p>Suppose <span class="math inline">C \cap [\alpha,1]</span> is
+uncountable. . Given any arbitrary <span class="math inline">\frac{1}{n}
+&gt;0</span>, <span class="math inline">C \cap [\alpha + \frac{1}{n},
+1]</span> is countable. Which means $ _{n } C $ is countable by Exercise
+1.5.3. But this is equal to <span class="math inline">C \cap
+[\alpha,1]</span>, which is uncountable. This is a
+contradiction.</p></li>
+<li><p>No. Take the sequence <span class="math inline">1 = x_{1} &gt;
+x_{2} &gt; \cdots &gt; 0</span>. For example, consider the sequence
+<span class="math inline">x_{n} = (\frac{1}{n})</span>. Let <span
+class="math inline">X</span> be the set of this sequence, and thus <span
+class="math inline">X \subseteq [0,1]</span> and it is infinite. It
+follows that <span class="math inline">X \cap [a,1]</span> is finite.
+This is because the intersection is equal to <span
+class="math inline">\{x_{n0}, x_{n0-1}, \cdots, x_{1} = 1\}</span> where
+<span class="math inline">x_{n0} \geq a</span>.</p></li>
+</ol>
 </body>
 </html>

@@ -42,8 +42,10 @@ Solutions that need polishing are marked 🔄 and unfinished solutions are marke
 [1.5.4](#154) |
 [1.5.5](#155) |
 [1.5.6](#156) |
-[1.5.7](#157) 🔄|
+[1.5.7](#157) |
 [1.5.8](#158) |
+[1.5.9](#159) |
+[1.5.10](#1510) |
 
 
 <a name="c1"></a>
@@ -915,3 +917,42 @@ A_2= & a_{21} & a_{22} & \cdots & \cdots & \\ \vdots & & & & & \end{array}$$
 3. As $A_n$ is countable, the infinite union of $A_n$, i.e. the set of algebraic numbers, is also countable by Exercise 1.5.3. 
 
 Let $A$ be the set of algebraic numbers, and $T$ be the set of transcedental numbers. Clearly, $A \cup T = \mathbb R$. Thus $T$ cannot be countable, since otherwise it implies $R$ is countable.
+
+<a name="1510"></a>
+
+### [Exercise 1.5.10](#toc) 
+
+1. Let $C \subseteq[0,1]$ be uncountable. Show that there exists $a \in(0,1)$ such that $C \cap[a, 1]$ is uncountable.
+2. Now let $A$ be the set of all $a \in(0,1)$ such that $C \cap[a, 1]$ is uncountable, and set $\alpha=\sup A$. Is $C \cap[\alpha, 1]$ an uncountable set?
+3. Does the statement in (a) remain true if "uncountable" is replaced by "infinite"?
+
+---
+
+1. Suppose by contradiction $\forall a \in (0,1), C \cap [a,1]$ is countable. It follows that $$ \bigcup_{n \geq 1} C \cap [\frac{1}{n},1]$$ is countable by Exercise 1.5.3. But this is equal to $C \cap [0,1]$, which is uncountable.
+
+<span style=color:green>
+Damn I fucked up this question. Took me so long to figure out. Anyhow, a lesson here is to look for a special case that I can generalize to the question. In this case, using  
+
+$\frac{1}{n}$.
+
+</span> 
+
+<span style=color:red> 
+Earlier draft:
+
+$C$ is uncountable $\implies$ it is not bijectively mapped with $\mathbb N$
+
+$C \subseteq [0,1] \implies C = [a,b]$ or $(a,b)$ for $a,b \in [0,1]$.
+
+Suppose for all $a \in (0,1)$, $C \cap [a,1] = K $ is countable. Thus, there exist a bijective map $f: \mathbb N \to K$. Suppose $C$ is a closed interval. Then $K$ is a closed interval. And we know from exercise 1.5.4 that a closed interval is uncountable. Similarly, if $K$ is not a closed interval, then we know that is uncountable.
+
+</span>
+
+2. Suppose $C \cap [\alpha,1]$ is uncountable. . Given any arbitrary $\frac{1}{n} >0$, $C \cap [\alpha + \frac{1}{n}, 1]$ is countable. Which means $ \bigcup_{n \geq 1} C \cap [\alpha + \frac{1}{n}, 1]$ is countable by Exercise 1.5.3. But this is equal to $C \cap [\alpha,1]$, which is uncountable. This is a contradiction.
+
+3. No. Take the sequence $1 = x_{1} > x_{2} > \cdots > 0$. For example, consider the sequence  $x_{n} = (\frac{1}{n})$. Let $X$ be the set of this sequence, and thus $X \subseteq [0,1]$ and it is infinite. It follows that $X \cap [a,1]$ is finite. This is because the intersection is equal to $\{x_{n0}, x_{n0-1}, \cdots, x_{1} = 1\}$ where $x_{n0} \geq a$.
+
+
+
+
+ 
