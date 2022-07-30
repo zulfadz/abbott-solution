@@ -46,6 +46,7 @@ Solutions that need polishing are marked 🔄 and unfinished solutions are marke
 [1.5.8](#158) |
 [1.5.9](#159) |
 [1.5.10](#1510) |
+[1.5.11](#1511) |
 
 
 <a name="c1"></a>
@@ -973,5 +974,27 @@ Schröder-Bernstein Theorem:
   
   4. Let $A^{\prime}=X \setminus A$ and $B^{\prime}=Y \setminus B$. Show $g$ maps $B^{\prime}$ onto $A^{\prime}$.
  
+  ---
 
- 
+  1. It will establish that there is a 1-1 function from $A$ onto $B$, and that there is a 1-1 function from $B^{\prime}$ onto $A^{\prime}$. Given that $A \cap A^{\prime}=\emptyset$ and $B \cap B^{\prime}=\emptyset$, we can establish a bijective mapping $A \to B$ as follows:
+  $ h(x) = \begin{cases} 
+      f(x) & x \in A \\
+      g^{-1}(x) & x \in A^{\prime}   
+   \end{cases} $
+
+  2. If $A_{1}$ is empty, then $g(Y)$ bijectively mapped $Y$ to $X$. Suppose $A_{1}$ is not empty. Then for $i \geq 2$, $A_{1} \cap A_{i} = \emptyset$ because $A_{i} \subseteq g(Y)$.
+
+  Given arbitrary $m,n$ and $1 <m < n$, suppose that $A_{m} \cap A_{n} \neq \emptyset$. Let $x$ be an element in both $A_m$ and $A_n$. Namely, $x \in A_m = g(f(A_{m-1}))$ and $x \in A_n = g(f(A_{n-1}))$. It follows that $f^{-1}(g^{-1}(x)) \in A_{m-1}$ and $f^{-1}(g^{-1}(x)) \in A_{n-1}$. Which means that $A_{m-1} \cap A_{n-1} \neq \emptyset$. But if we continue this way, $A_{1} \cap A_{m-n+1} \neq \emptyset$, which is a contradiction.
+
+  Since $f$ is a 1-1 function, it follows that $\left\{f\left(A_{n}\right): n \in \mathbf{N}\right\}$ is also a collection of pairwise disjoint subsets in $Y$.
+
+   <span style=color:green>Reflection: I wasn't too sure how to proceed at first. Mainly because I was trying to rationalize what on earth all these are for. And when I try to show $A_{1}$ and $A_{2}$ are disjoint, I try to visualise these, which make it all the more confusing. What helps is that I took an incremental step by step approach. A key observation is that $A_i$ for $i \geq 2$, these are a subset of $g(Y)$, which simplifies a lot of things. Another key observation is we make use of the fact that $A_{i}$ is built recursively, thus, it makes it easy to start from a general case, and simplifies it to a specific case of $A_{1}$.</span>
+
+   <span style=color:red>Earlier draft: Trying to understand the big picture here. So $A_{1}=X \setminus g(Y)=\{x \in X: x \notin g(Y)\}$ is the set consisting of $x$ which are not paired with any $Y$ under $g$. Then we take these residual $x$, and map them back to $Y$ under $f$. These resulting $y$ are then mapped back to $X$ under $g$. This is called $A_{2}$. Then this is mapped back to $Y$ under $g$, before mapped again to $X$, under $f$. This is called $A_{3}$.... and why are we doing this? I don't understand. Isn't it obvious already $X$ and $Y$ can be bijectively mapped?</span>
+
+  3. Given arbitrary $b \in B$, there is $f(A_{i})$ such that $b \in f(A_{n}) \subseteq B$. Moreover, since all $a \in A$ is in some $A_{n}$, there exist $a$ such that $b = f(a)$.
+
+  4. Let $x \in A^{\prime}$. There exists some $b \in Y$ such that $g(b) = a^{\prime}$ since otherwise $a^{\prime}$ would be in $A_{1}=X \setminus g(Y)$. Suppose $b \in B$. Then $b \in f(A_{n})$ for some $n$. But this means that $a = g(b) \in g(f(A_{n})) = A_{n+1}$, which is a contradiction.
+  
+  <span style = color:green>It's also nice to show that $g$ indeed maps from $B^{\prime}$ to $A^{\prime}$. Suppose $g(b^{\prime}) = a \in A$. It follows that $g(b^{\prime}) \in g(f(A_{n}))$, which means $b^{\prime} \in f(A_{n})$, which is a contradiction. Got help from [SE1](https://math.stackexchange.com/questions/3982170/schröder-bernstein-theorem-proof-help?rq=1) and [SE2](https://math.stackexchange.com/questions/1726578/understanding-a-proof-of-schröder-bernstein-theorem).</span>
+
