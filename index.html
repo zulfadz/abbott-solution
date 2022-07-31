@@ -331,6 +331,22 @@ are marked ❎</p>
 <td style="text-align: left;"><a href="#1511">1.5.11</a></td>
 <td style="text-align: left;"></td>
 </tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#161">1.6.1</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#162">1.6.2</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#163">1.6.3</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#164">1.6.4</a></td>
+<td style="text-align: left;"></td>
+</tr>
 </tbody>
 </table>
 <p><a name="c1"></a></p>
@@ -2112,5 +2128,124 @@ a contradiction. Got help from <a
 href="https://math.stackexchange.com/questions/3982170/schröder-bernstein-theorem-proof-help?rq=1">SE1</a>
 and <a
 href="https://math.stackexchange.com/questions/1726578/understanding-a-proof-of-schröder-bernstein-theorem">SE2</a>.</span></p>
+<p><a name="161"></a></p>
+<h3 id="exercise-1.6.1"><a href="#toc">Exercise 1.6.1</a></h3>
+<p>Show that <span class="math inline">(0,1)</span> is uncountable if
+and only if <span class="math inline">\mathbf{R}</span> is
+uncountable.</p>
+<hr />
+<p><span class="math inline">\mathbb R \xrightarrow{f^{-1}} (-\pi/2,
+\pi/2) \xrightarrow{g} (0,1)</span></p>
+<p>From (1), we know that <span class="math inline">f^{-1}(x) = \arctan
+(x)</span> is a bijective function mapping <span
+class="math inline">\mathbb R \mapsto (-\pi/2, \pi/2)</span>.</p>
+<p><span class="math inline">g(x) = \dfrac{x + \pi/2}{\pi}</span> is a
+bijection mapping <span class="math inline">(-\pi/2, \pi/2) \mapsto
+(0,1)</span>.</p>
+<p>Thus <span class="math inline">\mathbb R \sim (0,1)</span>.</p>
+<p><a name="162"></a></p>
+<h3 id="exercise-1.6.2"><a href="#toc">Exercise 1.6.2</a></h3>
+<p>Let <span class="math inline">f : \mathbf{N} \to \mathbf{R}</span> be
+a way to list every real number (hence show <span
+class="math inline">\mathbf R</span> is countable).</p>
+<p>Define a new number <span class="math inline">x</span> with digits
+<span class="math inline">b_1b_2\ldots</span> given by <span
+class="math display">
+  b_{n}= \begin{cases}2 &amp; \text { if } a_{n n} \neq 2 \\ 3 &amp;
+\text { if } a_{n n}=2\end{cases}
+  </span></p>
+<ol type="1">
+<li>Explain why the real number <span class="math inline">x=. b_{1}
+b_{2} b_{3} b_{4} \ldots</span> cannot be <span
+class="math inline">f(1)</span>.</li>
+<li>Now, explain why <span class="math inline">x \neq f(2)</span>, and
+in general why <span class="math inline">x \neq f(n)</span> for any
+<span class="math inline">n \in \mathbf{N}</span>.</li>
+<li>Point out the contradiction that arises from these observations and
+conclude that <span class="math inline">(0,1)</span> is
+uncountable.</li>
+</ol>
+<hr />
+<ol type="1">
+<li><p>Suppose the first digit in the decimal expansion of <span
+class="math inline">f(1)</span> is 2. Then <span
+class="math inline">f(1)</span> is different from <span
+class="math inline">x</span> because digit <span
+class="math inline">b_{1}</span> is 3. Similarly, if the first digit is
+other than <span class="math inline">2</span>, then <span
+class="math inline">f(1)</span> is different from <span
+class="math inline">x</span> because digit <span
+class="math inline">b_{1}</span> is 2.</p></li>
+<li><p>The same argument as (1) (replace <span
+class="math inline">1</span> with <span
+class="math inline">n</span>).</p></li>
+<li><p><span class="math inline">x</span> is not in the array. This
+contradicts the assumption that every real number is in correspondance
+with <span class="math inline">\mathbb N</span>.</p></li>
+</ol>
+<p><a name="163"></a></p>
+<h3 id="exercise-1.6.3"><a href="#toc">Exercise 1.6.3</a></h3>
+<p>Supply rebuttals to the following complaints about the proof of
+Theorem 1.6.1.</p>
+<ol type="1">
+<li><p>Every rational number has a decimal expansion, so we could apply
+this same argument to show that the set of rational numbers between
+<span class="math inline">0</span> and <span
+class="math inline">1</span> is uncountable. However, because we know
+that any subset of <span class="math inline">\mathbb Q</span> must be
+countable, the proof of Theorem 1.6.1 must be flawed.</p></li>
+<li><p>Some numbers have two different decimal representations.
+Specifically, any decimal expansion that terminates can also be written
+with repeating <span class="math inline">9</span>’s. For instance, <span
+class="math inline">1/2</span> can be written as <span
+class="math inline">.5</span> or as <span class="math inline">.4999
+\cdots</span>. Doesn’t this cause some problems?</p></li>
+</ol>
+<hr />
+<ol type="1">
+<li><p>Decimal expansion of <span class="math inline">\mathbb Q</span>
+is terminating or repeating. Meanwhile the constructed <span
+class="math inline">x</span> is not guaranteed to be of this
+form.</p></li>
+<li><p>Since our options are just <span class="math inline">2</span> and
+<span class="math inline">3</span>, we avoid repeating <span
+class="math inline">9</span>’s.</p></li>
+</ol>
+<p><a name="164"></a></p>
+<h3 id="exercise-1.6.4"><a href="#toc">Exercise 1.6.4</a></h3>
+<p>Let S be the set consisting of all sequences of <span
+class="math inline">0</span>’s and <span class="math inline">1</span>’s.
+Observe that S is not a particular sequence, but rather a large set
+whose elements are sequences; namely, <span class="math display"> S =
+\{(a_{1}, a_{2}, a_{3}, \cdots) : a_{n} = 0 \text{ or } 1\}.</span> As
+an example, the sequence <span
+class="math inline">(1,0,1,0,1,0,1,0,\cdots)</span> is an element of
+<span class="math inline">S</span>, as is the sequence <span
+class="math inline">(1,1,1,1,1,1,\cdots)</span>. Give a rigorous
+argument showing that <span class="math inline">S</span> is
+uncountable.</p>
+<hr />
+<p>Proceeding with Cantor’s approach, we assume that there is a
+bijective correspondance with <span class="math inline">\mathbb
+N</span>, and lay out all the elements in the following array, say,</p>
+<p><span class="math display">\begin{array}{lllll}f(1)= &amp; 0 &amp; 1
+&amp; \cdots &amp; \cdots  \\
+f(2)= &amp; 1&amp; 1 &amp; \cdots &amp; \cdots \\ \vdots &amp; &amp;
+&amp; &amp;  \end{array},</span></p>
+<p>which can be generalized to a doubly indexed array</p>
+<p><span class="math display">\begin{array}{lllll}f(1)= &amp; a_{11}
+&amp; a_{12} &amp; \cdots &amp; \cdots  \\
+f(2)= &amp; a_{21} &amp; a_{22} &amp; \cdots &amp; \cdots \\ \vdots
+&amp; &amp; &amp; &amp;  \end{array}</span></p>
+<p>Define <span class="math inline">x = b_{1}b_{2} \cdots</span> such
+that:</p>
+$ b_{n} =
+<span class="math display">\begin{cases}
+      1 &amp; a_{nn} = 0 \\
+      0 &amp; a_{nn} = 1.   
+   \end{cases}</span>
+<p>$</p>
+<p>Thus, <span class="math inline">x</span> is not in the array, which
+is a contradiction.</p>
 </body>
 </html>
