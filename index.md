@@ -47,6 +47,10 @@ Solutions that need polishing are marked 🔄 and unfinished solutions are marke
 [1.5.9](#159) |
 [1.5.10](#1510) |
 [1.5.11](#1511) |
+[1.6.1](#161) |
+[1.6.2](#162) |
+[1.6.3](#163) |
+[1.6.4](#164) |
 
 
 <a name="c1"></a>
@@ -997,4 +1001,88 @@ Schröder-Bernstein Theorem:
   4. Let $x \in A^{\prime}$. There exists some $b \in Y$ such that $g(b) = a^{\prime}$ since otherwise $a^{\prime}$ would be in $A_{1}=X \setminus g(Y)$. Suppose $b \in B$. Then $b \in f(A_{n})$ for some $n$. But this means that $a = g(b) \in g(f(A_{n})) = A_{n+1}$, which is a contradiction.
   
   <span style = color:green>It's also nice to show that $g$ indeed maps from $B^{\prime}$ to $A^{\prime}$. Suppose $g(b^{\prime}) = a \in A$. It follows that $g(b^{\prime}) \in g(f(A_{n}))$, which means $b^{\prime} \in f(A_{n})$, which is a contradiction. Got help from [SE1](https://math.stackexchange.com/questions/3982170/schröder-bernstein-theorem-proof-help?rq=1) and [SE2](https://math.stackexchange.com/questions/1726578/understanding-a-proof-of-schröder-bernstein-theorem).</span>
+
+<a name="161"></a>
+
+### [Exercise 1.6.1](#toc)
+
+ Show that $(0,1)$ is uncountable if and only if $\mathbf{R}$ is uncountable.
+
+ ---
+
+ $\mathbb R \xrightarrow{f^{-1}} (-\pi/2, \pi/2) \xrightarrow{g} (0,1)$
+
+From (1), we know that $f^{-1}(x) = \arctan (x)$ is a bijective function mapping $\mathbb R \mapsto (-\pi/2, \pi/2)$.
+
+$g(x) = \dfrac{x + \pi/2}{\pi}$ is a bijection mapping $(-\pi/2, \pi/2) \mapsto (0,1)$.
+
+Thus $\mathbb R \sim (0,1)$.
+
+<a name="162"></a>
+
+### [Exercise 1.6.2](#toc)
+
+ Let $f : \mathbf{N} \to \mathbf{R}$ be a way to list every real number (hence show $\mathbf R$ is countable).
+
+  Define a new number $x$ with digits $b_1b_2\ldots$ given by
+  $$
+  b_{n}= \begin{cases}2 & \text { if } a_{n n} \neq 2 \\ 3 & \text { if } a_{n n}=2\end{cases}
+  $$
+
+  1. Explain why the real number $x=. b_{1} b_{2} b_{3} b_{4} \ldots$ cannot be $f(1)$.
+  2. Now, explain why $x \neq f(2)$, and in general why $x \neq f(n)$ for any $n \in \mathbf{N}$.
+  3. Point out the contradiction that arises from these observations and conclude that $(0,1)$ is uncountable.
+
+  ---
+
+  1. Suppose the first digit in the decimal expansion of $f(1)$ is 2. Then $f(1)$ is different from $x$ because digit $b_{1}$ is 3. Similarly, if the first digit is other than $2$, then $f(1)$ is different from $x$ because digit $b_{1}$ is 2.
+
+  2. The same argument as (1) (replace $1$ with $n$).
+
+  3. $x$ is not in the array. This contradicts the assumption that every real number is in correspondance with $\mathbb N$.
+
+<a name="163"></a>
+
+### [Exercise 1.6.3](#toc)
+
+Supply rebuttals to the following complaints about the proof
+of Theorem 1.6.1.
+
+1. Every rational number has a decimal expansion, so we could apply this same argument to show that the set of rational numbers between $0$ and $1$ is uncountable. However, because we know that any subset of $\mathbb Q$ must be countable, the proof of Theorem 1.6.1 must be flawed.
+
+2. Some numbers have two different decimal representations. Specifically, any decimal expansion that terminates can also be written with repeating $9$’s. For instance, $1/2$ can be written as $.5$ or as $.4999 \cdots$. Doesn’t this cause some problems?
+
+---
+
+1. Decimal expansion of $\mathbb Q$ is terminating or repeating. Meanwhile the constructed $x$ is not guaranteed to be of this form.
+
+2. Since our options are just $2$ and $3$, we avoid repeating $9$'s.
+
+
+<a name="164"></a>
+
+### [Exercise 1.6.4](#toc)
+
+Let S be the set consisting of all sequences of $0$’s and $1$’s. Observe that S is not a particular sequence, but rather a large set whose elements are sequences; namely, $$ S = \{(a_{1}, a_{2}, a_{3}, \cdots) : a_{n} = 0 \text{ or } 1\}.$$ As an example, the sequence $(1,0,1,0,1,0,1,0,\cdots)$ is an element of $S$, as is the sequence $(1,1,1,1,1,1,\cdots)$. Give a rigorous argument showing that $S$ is uncountable.
+
+---
+
+Proceeding with Cantor's approach, we assume that there is a bijective correspondance with $\mathbb N$, and lay out all the elements in the following array, say,
+
+$$\begin{array}{lllll}f(1)= & 0 & 1 & \cdots & \cdots  \\ 
+f(2)= & 1& 1 & \cdots & \cdots \\ \vdots & & & &  \end{array},$$
+
+which can be generalized to a doubly indexed array
+
+$$\begin{array}{lllll}f(1)= & a_{11} & a_{12} & \cdots & \cdots  \\ 
+f(2)= & a_{21} & a_{22} & \cdots & \cdots \\ \vdots & & & &  \end{array}$$
+
+Define $x = b_{1}b_{2} \cdots$ such that:
+
+$ b_{n} = \begin{cases} 
+      1 & a_{nn} = 0 \\
+      0 & a_{nn} = 1.   
+   \end{cases} $
+
+Thus, $x$ is not in the array, which is a contradiction.
 
