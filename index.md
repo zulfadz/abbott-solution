@@ -51,6 +51,10 @@ Solutions that need polishing are marked 🔄 and unfinished solutions are marke
 [1.6.2](#162) |
 [1.6.3](#163) |
 [1.6.4](#164) |
+[1.6.5](#165) |
+[1.6.6](#166) |
+[1.6.7](#167) |
+[1.6.8](#168) |
 
 
 <a name="c1"></a>
@@ -1086,3 +1090,70 @@ $ b_{n} = \begin{cases}
 
 Thus, $x$ is not in the array, which is a contradiction.
 
+<a name="165"></a>
+
+### [Exercise 1.6.5](#toc)
+
+1. Let $A = \{a, b, c\}$. List the eight elements of $P(A)$. (Do not forget that $\emptyset$ is considered to be a subset of every set.)
+
+2. If $A$ is finite with $n$ elements, show that $P(A)$ has $2^n$ elements.
+
+---
+
+1. $\{ \emptyset, \{a\}, \{b\}, \{c\}, \{a,b\}, \{a,c\},\{b,c\}, \{a,b,c\} \}$
+
+2. For each element in $A$, it can either be in a subset or not. Since there are $n$ elements, there are $2^{n}$ possible combinations of distinct subsets.
+
+<span style = color:red>Each subset is associated with a sequence of length $n$ of Yes or No</span>
+
+<a name="166"></a>
+
+### [Exercise 1.6.6](#toc)
+
+1. Using the particular set $A = \{a, b, c\}$, exhibit two different 1–1 mappings from $A$ into $P(A)$.
+
+2. Letting $C = \{1,2,3,4\}$, produce an example of a 1–1 map $g : C \to P(C)$.
+
+3. Explain why, in parts (a) and (b), it is impossible to construct mappings that are _onto_.
+
+---
+
+1. Mapping 1: $a \to \{a\}$; $b \to \{b\}$; $c \to \{c\}$
+
+Mapping 2: $a \to \{a,b\}$; $b \to \{b,c\}$; $c \to \{a,c\}$
+
+2. $1 \to \{1\}$; $2 \to \{2\}$; $3 \to \{3\}$; $4 \to \{4\}$
+
+3. Because there are more elements in $P(A)$ and $P(C)$ than $A$ and $C$.
+
+
+
+<a name="167"></a>
+
+### [Exercise 1.6.7](#toc)
+
+Cantor's Theorem. Given any set $A$, there does not exist a function $f: A \to P(A)$ that is onto. For each element $a \in A$, $f(a)$ is a particular subset of $A$. The assumption that $f$ is onto means that every subset of $A$ appears as $f(a)$ for some $a \in A$. To arrive at a contradiction, we will produce a subset $B \subseteq A$ that is not equal to $f(a)$ for any $a \in A$.
+
+Construct $B$ using the following rule. For each element $a \in A$, consider the subset $f(a)$. This subset of $A$ may contain the element $a$ or it may not. This depends on the function f. If $f(a)$ does not contain a, then we include $a$ in our set $B$. More precisely, let $$B = \{ a \in A : a \notin f ( a ) \}$$ .
+
+Return to the particular functions constructed in Exercise 1.6.6 and construct the subset $B$ that results using the preceding rule. In each case, note that $B$ is not in the range of the function used.
+
+---
+
+$B = \{\emptyset\}$
+
+<a name="168"></a>
+
+### [Exercise 1.6.8](#toc)
+
+We now focus on the general argument. Because we have assumed that our function $f : A \to P(A)$ is onto, it must be that $B = f(a^{\prime})$ for some $a^{\prime} \in A$. The contradiction arises when we consider whether or not $a^{\prime}$ is an element of $B$.
+
+1. First, show that the case $a^{\prime} \in B$ leads to a contradiction.
+
+2. Now, finish the argument by showing that the case $a^{\prime} \notin B$ is equally unacceptable.
+
+---
+
+1. Suppose $a^{\prime} \in B$. But this contradicts the definition of $B$ which excludes any $a \in f (a)$.
+
+2. Suppose $a^{\prime} \notin B$. Which means $a^{\prime} \notin f(a^{\prime}$. But by definition of $B$, $a^{\prime} \in B$.
