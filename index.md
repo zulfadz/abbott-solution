@@ -1156,4 +1156,4 @@ We now focus on the general argument. Because we have assumed that our function 
 
 1. Suppose $a^{\prime} \in B$. But this contradicts the definition of $B$ which excludes any $a \in f (a)$.
 
-2. Suppose $a^{\prime} \notin B$. Which means $a^{\prime} \notin f(a^{\prime}$. But by definition of $B$, $a^{\prime} \in B$.
+2. Suppose $a^{\prime} \notin B$. Which means $a^{\prime} \notin f(a^{\prime})$. But by definition of $B$, $a^{\prime} \in B$.
