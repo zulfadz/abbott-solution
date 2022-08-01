@@ -1083,10 +1083,10 @@ f(2)= & a_{21} & a_{22} & \cdots & \cdots \\ \vdots & & & &  \end{array}$$
 
 Define $x = b_{1}b_{2} \cdots$ such that:
 
-$ b_{n} = \begin{cases} 
+$$b_{n} = \begin{cases} 
       1 & a_{nn} = 0 \\
       0 & a_{nn} = 1.   
-   \end{cases} $
+   \end{cases}$$
 
 Thus, $x$ is not in the array, which is a contradiction.
 
