@@ -347,6 +347,22 @@ are marked ❎</p>
 <td style="text-align: left;"><a href="#164">1.6.4</a></td>
 <td style="text-align: left;"></td>
 </tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#165">1.6.5</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#166">1.6.6</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><a href="#167">1.6.7</a></td>
+<td style="text-align: left;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><a href="#168">1.6.8</a></td>
+<td style="text-align: left;"></td>
+</tr>
 </tbody>
 </table>
 <p><a name="c1"></a></p>
@@ -2247,5 +2263,118 @@ $ b_{n} =
 <p>$</p>
 <p>Thus, <span class="math inline">x</span> is not in the array, which
 is a contradiction.</p>
+<p><a name="165"></a></p>
+<h3 id="exercise-1.6.5"><a href="#toc">Exercise 1.6.5</a></h3>
+<ol type="1">
+<li><p>Let <span class="math inline">A = \{a, b, c\}</span>. List the
+eight elements of <span class="math inline">P(A)</span>. (Do not forget
+that <span class="math inline">\emptyset</span> is considered to be a
+subset of every set.)</p></li>
+<li><p>If <span class="math inline">A</span> is finite with <span
+class="math inline">n</span> elements, show that <span
+class="math inline">P(A)</span> has <span class="math inline">2^n</span>
+elements.</p></li>
+</ol>
+<hr />
+<ol type="1">
+<li><p><span class="math inline">\{ \emptyset, \{a\}, \{b\}, \{c\},
+\{a,b\}, \{a,c\},\{b,c\}, \{a,b,c\} \}</span></p></li>
+<li><p>For each element in <span class="math inline">A</span>, it can
+either be in a subset or not. Since there are <span
+class="math inline">n</span> elements, there are <span
+class="math inline">2^{n}</span> possible combinations of distinct
+subsets.</p></li>
+</ol>
+<p><span style="color:red">Each subset is associated with a sequence of
+length <span class="math inline">n</span> of Yes or No</span></p>
+<p><a name="166"></a></p>
+<h3 id="exercise-1.6.6"><a href="#toc">Exercise 1.6.6</a></h3>
+<ol type="1">
+<li><p>Using the particular set <span class="math inline">A = \{a, b,
+c\}</span>, exhibit two different 1–1 mappings from <span
+class="math inline">A</span> into <span
+class="math inline">P(A)</span>.</p></li>
+<li><p>Letting <span class="math inline">C = \{1,2,3,4\}</span>, produce
+an example of a 1–1 map <span class="math inline">g : C \to
+P(C)</span>.</p></li>
+<li><p>Explain why, in parts (a) and (b), it is impossible to construct
+mappings that are <em>onto</em>.</p></li>
+</ol>
+<hr />
+<ol type="1">
+<li>Mapping 1: <span class="math inline">a \to \{a\}</span>; <span
+class="math inline">b \to \{b\}</span>; <span class="math inline">c \to
+\{c\}</span></li>
+</ol>
+<p>Mapping 2: <span class="math inline">a \to \{a,b\}</span>; <span
+class="math inline">b \to \{b,c\}</span>; <span class="math inline">c
+\to \{a,c\}</span></p>
+<ol start="2" type="1">
+<li><p><span class="math inline">1 \to \{1\}</span>; <span
+class="math inline">2 \to \{2\}</span>; <span class="math inline">3 \to
+\{3\}</span>; <span class="math inline">4 \to \{4\}</span></p></li>
+<li><p>Because there are more elements in <span
+class="math inline">P(A)</span> and <span
+class="math inline">P(C)</span> than <span class="math inline">A</span>
+and <span class="math inline">C</span>.</p></li>
+</ol>
+<p><a name="167"></a></p>
+<h3 id="exercise-1.6.7"><a href="#toc">Exercise 1.6.7</a></h3>
+<p>Cantor’s Theorem. Given any set <span class="math inline">A</span>,
+there does not exist a function <span class="math inline">f: A \to
+P(A)</span> that is onto. For each element <span class="math inline">a
+\in A</span>, <span class="math inline">f(a)</span> is a particular
+subset of <span class="math inline">A</span>. The assumption that <span
+class="math inline">f</span> is onto means that every subset of <span
+class="math inline">A</span> appears as <span
+class="math inline">f(a)</span> for some <span class="math inline">a \in
+A</span>. To arrive at a contradiction, we will produce a subset <span
+class="math inline">B \subseteq A</span> that is not equal to <span
+class="math inline">f(a)</span> for any <span class="math inline">a \in
+A</span>.</p>
+<p>Construct <span class="math inline">B</span> using the following
+rule. For each element <span class="math inline">a \in A</span>,
+consider the subset <span class="math inline">f(a)</span>. This subset
+of <span class="math inline">A</span> may contain the element <span
+class="math inline">a</span> or it may not. This depends on the function
+f. If <span class="math inline">f(a)</span> does not contain a, then we
+include <span class="math inline">a</span> in our set <span
+class="math inline">B</span>. More precisely, let <span
+class="math display">B = \{ a \in A : a \notin f ( a ) \}</span> .</p>
+<p>Return to the particular functions constructed in Exercise 1.6.6 and
+construct the subset <span class="math inline">B</span> that results
+using the preceding rule. In each case, note that <span
+class="math inline">B</span> is not in the range of the function
+used.</p>
+<hr />
+<p><span class="math inline">B = \{\emptyset\}</span></p>
+<p><a name="168"></a></p>
+<h3 id="exercise-1.6.8"><a href="#toc">Exercise 1.6.8</a></h3>
+<p>We now focus on the general argument. Because we have assumed that
+our function <span class="math inline">f : A \to P(A)</span> is onto, it
+must be that <span class="math inline">B = f(a^{\prime})</span> for some
+<span class="math inline">a^{\prime} \in A</span>. The contradiction
+arises when we consider whether or not <span
+class="math inline">a^{\prime}</span> is an element of <span
+class="math inline">B</span>.</p>
+<ol type="1">
+<li><p>First, show that the case <span class="math inline">a^{\prime}
+\in B</span> leads to a contradiction.</p></li>
+<li><p>Now, finish the argument by showing that the case <span
+class="math inline">a^{\prime} \notin B</span> is equally
+unacceptable.</p></li>
+</ol>
+<hr />
+<ol type="1">
+<li><p>Suppose <span class="math inline">a^{\prime} \in B</span>. But
+this contradicts the definition of <span class="math inline">B</span>
+which excludes any <span class="math inline">a \in f
+(a)</span>.</p></li>
+<li><p>Suppose <span class="math inline">a^{\prime} \notin B</span>.
+Which means <span class="math inline">a^{\prime} \notin
+f(a^{\prime}</span>. But by definition of <span
+class="math inline">B</span>, <span class="math inline">a^{\prime} \in
+B</span>.</p></li>
+</ol>
 </body>
 </html>
