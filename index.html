@@ -2374,5 +2374,187 @@ f(a^{\prime})</span>. But by definition of <span
 class="math inline">B</span>, <span class="math inline">a^{\prime} \in
 B</span>.</p></li>
 </ol>
+<p><a name="169"></a></p>
+<h3 id="exercise-1.6.9"><a href="#toc">Exercise 1.6.9</a></h3>
+<p>Using the various tools and techniques developed in the last two
+sections (including the exercises from Section 1.5), give a compelling
+argument showing that <span class="math inline">P (N) \sim R</span>.</p>
+<hr />
+<p>We use the fact that <span class="math inline">(0,1)</span> has the
+same cardinality as <span class="math inline">\mathbb R</span>. We also
+will use the fact that <span class="math inline">P(\mathbb N)</span> has
+the same cardinality as the set <span class="math inline">S</span> of
+all sequences of <span class="math inline">0</span>’s and <span
+class="math inline">1</span>’s, namely <span class="math display">S =
+\{(a_{1},a_{2},a_{3},\cdots) : a_{n} = 0 \text{ or } 1\}.</span> To
+prove the latter, for each <span class="math inline">x \in P(\mathbb
+N)</span>, define an element of <span class="math inline">s = (s_{1},
+s_{2}, s_{3} \cdots)</span> such that:</p>
+<p><span class="math display">s_{n} = \begin{cases}
+      1 &amp; n \in x \\
+      0 &amp; n \notin x.
+    \end{cases}</span></p>
+<p>(or alternatively, define <span class="math inline">f(x) = \sum_{n\in
+x} 10^{-n}</span>).</p>
+<p>This correspondance is 1-1 because given different elements <span
+class="math inline">x_{1}, x_{2} \in P(\mathbb N)</span>, there will be
+at least one natural number <span class="math inline">n</span> that is
+in one but not the other. It follows that the resulting <span
+class="math inline">s</span>’s will differ in at least one position,
+<span class="math inline">s_n</span>.</p>
+<p>It is also onto because given any <span class="math inline">s \in
+S</span>, it corresponds to a unique subset of natural numbers,
+consisting of <span class="math inline">n</span>th position of the
+non-zero elements.</p>
+<p>We next show that there is a 1-1 correspondance from <span
+class="math inline">S</span> to <span class="math inline">(0,1)</span>.
+Given <span class="math inline">s = (s_{1}, s_{2}, s_{3}, \cdots)</span>
+define <span class="math inline">f(s) = .s_{1}s_{2}s_{3} \cdots</span>.
+Given <span class="math inline">s \neq s^{\prime}</span>, they differ in
+at least one position <span class="math inline">s_{i} \neq
+s_{i}^{\prime}</span>, which means <span class="math inline">f(s) \neq
+f(s^{\prime})</span>. (Why is it not onto? Take <span
+class="math inline">0.12344</span>. Then there is no corresponding
+element in <span class="math inline">s</span>, which consists of only
+<span class="math inline">1</span>’s and <span
+class="math inline">0</span>’s)</p>
+<p>Next we show that there is a 1-1 corresponding from <span
+class="math inline">(0,1)</span> to <span class="math inline">S</span>.
+Given <span class="math inline">x \in (0,1)</span>, we ascertain whether
+<span class="math inline">x</span> is in the bottom half <span
+class="math inline">(0,0.5]</span> or top half <span
+class="math inline">(0.5,1)</span>. If it is in top half, define <span
+class="math inline">s_{1} =1</span>, and <span
+class="math inline">0</span> otherwise. WLOG, suppose <span
+class="math inline">x</span> is in bottom half, identify whether <span
+class="math inline">x</span> is in the bottom half <span
+class="math inline">(0,0.25]</span> or the top half <span
+class="math inline">(0.25, 0.5)</span>. If it is in the top half, let
+<span class="math inline">s_{2} = 1</span>, and <span
+class="math inline">0</span> otherwise. Continuing with this, we obtain
+a 1-1 correspondance because <span class="math inline">s</span> is
+uniquely determined for each <span class="math inline">x</span>.</p>
+<p>Our proof is completed using Schröder-Bernstein Theorem.</p>
+<p><span style="color:green">The mapping from <span
+class="math inline">P(\mathbb N)</span> and <span
+class="math inline">S</span> is interesting because one is a set (order
+or repetition doesn’t matter) and the other is a tuple (order and
+repetition matter). So to ensure consistency, we use the <span
+class="math inline">n</span>th position of the tuple, in which case we
+don’t allow for any repetition, and there is only one unique order. This
+is different from the mapping from <span class="math inline">S</span> to
+<span class="math inline">(0,1)</span>, because in both, repetition and
+order matter. Although the complication with <span
+class="math inline">(0,1)</span> is that a number can be represented
+differently in the form of repeating <span
+class="math inline">9</span>’s, but this is not an issue here because we
+are dealing with <span class="math inline">0</span>’s and <span
+class="math inline">1</span>’s only. </span></p>
+<p><span style =color:red>Wrong answer: Let an element of <span
+class="math inline">P(\mathbb N)</span> be <span
+class="math inline">x=\{n_{1}, n_{2}, n_{3}, \cdots \}</span>. Establish
+a map <span class="math inline">f: P(\mathbb N) \to (0,1)</span> by
+setting <span class="math inline">f(x) = .n_{1}n_{2}n_{3}\cdots</span>.
+<span class="math inline">f</span> is 1-1 because given two distinct
+elements of <span class="math inline">P(\mathbb N)</span>, <span
+class="math inline">f(x)</span> will differ in at least one decimal
+place. <span class="math inline">f</span> is onto because given any
+<span class="math inline">y=.n_{1}n_{2}n_{3}\cdots</span>, it
+corresponds to <span class="math inline">x = \{n_{1}, n_{2}, n_{3},
+\cdots\}</span> thus <span class="math inline">f(x) = y</span>. We also
+know that <span class="math inline">(0,1)</span> bijectively mapped to
+<span class="math inline">\mathbb R</span>.</p>
+<p><span style="color:red">This is wrong. Think about <span
+class="math inline">y_{1} = 0.442</span> and <span
+class="math inline">y_{2} = 0.422</span>. Both corresponds to <span
+class="math inline">x = \{4,2\}</span>, which means <span
+class="math inline">f(x)</span> could have two images, therefore this is
+not a well-defined function. Similarly <span
+class="math inline">f(x)</span> can also equal <span
+class="math inline">0.42</span> or <span
+class="math inline">0.24</span>.</span></p>
+<p><span style="color:red"> Discarded answer. Next we show that there is
+a 1-1 corresponding from <span class="math inline">(0,1)</span> to <span
+class="math inline">S</span>. Given <span class="math inline">x \in
+(0,1)</span>, we ascertain whether <span class="math inline">x</span> is
+in the bottom half <span class="math inline">(0,0.5]</span> or top half
+<span class="math inline">(0.5,1)</span>. If it is in top half, define
+<span class="math inline">s_{1} =1</span>, and <span
+class="math inline">0</span> otherwise. WLOG, suppose <span
+class="math inline">x</span> is in bottom half, identify whether <span
+class="math inline">x</span> is in the bottom half <span
+class="math inline">(0,0.25]</span> or the top half <span
+class="math inline">(0.25, 0.5)</span>. If it is in the top half, let
+<span class="math inline">s_{2} = 1</span>, and <span
+class="math inline">0</span> otherwise. <span style="color:yellow">The
+next sentences are discarded because it doesn’t take into account the
+top half. Also, we can simply assert 1-1 correspondance by stressing how
+<span class="math inline">s</span> is uniquely determined. </span> More
+generally, suppose after <span class="math inline">n-1</span> steps,
+identify whether whether <span class="math inline">x</span> is in the
+bottom half <span class="math inline">(0, \frac{1}{2^{n}}]</span> or the
+top half <span class="math inline">(\frac{1}{2^{n}}{1})</span>, in which
+case <span class="math inline">s_{n}</span> is assigned <span
+class="math inline">1</span> if it’s in the top half, and <span
+class="math inline">0</span> otherwise. This correspondence is 1-1
+because given different <span class="math inline">x</span>’s, after some
+finite steps of the iteration, one will be in the top while the other in
+the bottom half </span></p>
+<p><a name="1610"></a></p>
+<h3 id="exercise-1.6.10"><a href="#toc">Exercise 1.6.10</a></h3>
+<p>As a final exercise, answer each of the following by establishing a
+1–1 correspondence with a set of known cardinality.</p>
+<ol type="1">
+<li>Is the set of all functions from <span class="math inline">\{0,
+1\}</span> to <span class="math inline">\mathbb N</span> countable or
+uncountable?</li>
+<li>Is the set of all functions from <span class="math inline">\mathbb
+N</span> to <span class="math inline">\{0, 1\}</span> countable or
+uncountable?</li>
+<li>Given a set <span class="math inline">B</span>, a subset <span
+class="math inline">A</span> of <span class="math inline">P (B)</span>
+is called an antichain if no element of <span
+class="math inline">A</span> is a subset of any other element of <span
+class="math inline">A</span>. Does <span class="math inline">P (\mathbb
+N)</span> contain an uncountable antichain?</li>
+</ol>
+<hr />
+<ol type="1">
+<li><p>For preimage <span class="math inline">0</span>, it can be mapped
+to <span class="math inline">\mathbb N</span> elements, and the same for
+preimage <span class="math inline">1</span>. Thus there are <span
+class="math inline">\mathbb N \times \mathbb N</span> possibilities,
+which has the same cardinality as <span class="math inline">\mathbb
+N</span>. This is countable.</p></li>
+<li><p>For preimage <span class="math inline">1</span>, it can be mapped
+to <span class="math inline">2</span> elements, and the same for
+preimage <span class="math inline">2</span>, <span
+class="math inline">3</span>, and so on. Thus there are <span
+class="math inline">2^{\mathbb N}</span> possibilities. But this is the
+same cardinality as <span class="math inline">P(\mathbb N)</span>, which
+are uncountable.</p></li>
+<li><p>To construct an element of antichain, we can consider each
+element <span class="math inline">P(\mathbb N)</span> and categorize it
+into “include” or “exclude”. Thus each element of antichain can be
+represented by a sequence of length <span class="math inline">2^{\mathbb
+N}</span> of “include” or “exclude”. This implies <span
+class="math inline">2^{2^{\mathbb N}}</span> possibilities which
+therefore is not countable.</p></li>
+</ol>
+<p><span style="color:green">Note to self: Antichain is the collection
+of subsets of <span class="math inline">B</span> which are not a subset
+of any other subsets in the collection. For <span
+class="math inline">\mathbb N</span>, an example of antichain is <span
+class="math inline">\{\{a\}\}, \{\{b\}\},\{\{a\}, \{b\}\}, \cdots</span>
+</span></p>
+<p><span style=color:red>Early draft: Funny thing is that I don’t even
+know what the question means. Given a well-defined function <span
+class="math inline">f</span>, it can be either many-1 – in which case
+both <span class="math inline">0</span> and <span
+class="math inline">1</span> are mapped into the same <span
+class="math inline">n \in \mathbb N</span>, which means there can be
+<span class="math inline">\mathbb N</span> such functions – </red></p>
+<p><span style=color:red>Early draft 2: Isn’t this the same as 1…
+</red></p>
 </body>
 </html>
