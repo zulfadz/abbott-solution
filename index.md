@@ -1157,3 +1157,64 @@ We now focus on the general argument. Because we have assumed that our function 
 1. Suppose $a^{\prime} \in B$. But this contradicts the definition of $B$ which excludes any $a \in f (a)$.
 
 2. Suppose $a^{\prime} \notin B$. Which means $a^{\prime} \notin f(a^{\prime})$. But by definition of $B$, $a^{\prime} \in B$.
+
+<a name="169"></a>
+
+### [Exercise 1.6.9](#toc)
+
+Using the various tools and techniques developed in the last two sections (including the exercises from Section 1.5), give a compelling argument showing that $P (N) \sim R$.
+
+---
+
+We use the fact that $(0,1)$ has the same cardinality as $\mathbb R$. We also will use the fact that $P(\mathbb N)$ has the same cardinality as the set $S$ of all sequences of $0$'s and $1$'s, namely $$S = \{(a_{1},a_{2},a_{3},\cdots) : a_{n} = 0 \text{ or } 1\}.$$ To prove the latter, for each $x \in P(\mathbb N)$, define an element of $s = (s_{1}, s_{2}, s_{3} \cdots)$ such that:
+
+$$s_{n} = \begin{cases}
+      1 & n \in x \\
+      0 & n \notin x.
+    \end{cases}$$
+
+(or alternatively, define $f(x) = \sum_{n\in x} 10^{-n}$).
+
+This correspondance is 1-1 because given different elements $x_{1}, x_{2} \in P(\mathbb N)$, there will be at least one natural number $n$ that is in one but not the other. It follows that the resulting $s$'s will differ in at least  one position, $s_n$.
+
+It is also onto because given any $s \in S$, it corresponds to a unique subset of natural numbers, consisting of $n$th position of the non-zero elements.
+
+
+We next show that there is a 1-1 correspondance from $S$ to $(0,1)$. Given $s = (s_{1}, s_{2}, s_{3}, \cdots)$ define $f(s) = .s_{1}s_{2}s_{3} \cdots$. Given $s \neq s^{\prime}$, they differ in at least one position $s_{i} \neq s_{i}^{\prime}$, which means $f(s) \neq f(s^{\prime})$. (Why is it not onto? Take $0.12344$. Then there is no corresponding element in $s$, which consists of only $1$'s and $0$'s)
+
+Next we show that there is a 1-1 corresponding from $(0,1)$ to $S$. Given $x \in (0,1)$, we ascertain whether $x$ is in the bottom half $(0,0.5]$ or top half $(0.5,1)$. If it is in top half, define $s_{1} =1$, and $0$ otherwise. WLOG, suppose $x$ is in bottom half, identify whether $x$ is in the bottom half $(0,0.25]$ or the top half $(0.25, 0.5)$. If it is in the top half, let $s_{2} = 1$, and $0$ otherwise.  Continuing with this, we obtain a 1-1 correspondance because $s$ is uniquely determined for each $x$.
+
+Our proof is completed using Schröder-Bernstein Theorem.
+
+<span style = color:green>The mapping from $P(\mathbb N)$ and $S$ is interesting because one is a set (order or repetition doesn't matter) and the other is a tuple (order and repetition matter). So to ensure consistency, we use the $n$th position of the tuple, in which case we don't allow for any repetition, and there is only one unique order. This is different from the mapping from $S$ to $(0,1)$, because in both, repetition and order matter. Although the complication with $(0,1)$ is that a number can be represented differently in the form of repeating $9$'s, but this is not an issue here because we are dealing with $0$'s and $1$'s only. </span>
+
+<span style =color:red>Wrong answer: Let an element of $P(\mathbb N)$ be $x=\{n_{1}, n_{2}, n_{3}, \cdots \}$. Establish a map $f: P(\mathbb N) \to (0,1)$ by setting $f(x) = .n_{1}n_{2}n_{3}\cdots$. $f$ is 1-1 because given two distinct elements of $P(\mathbb N)$, $f(x)$ will differ in at least one decimal place. $f$ is onto because given any $y=.n_{1}n_{2}n_{3}\cdots$, it corresponds to $x = \{n_{1}, n_{2}, n_{3}, \cdots\}$ thus $f(x) = y$. We also know that $(0,1)$ bijectively mapped to $\mathbb R$.
+
+<span style=color:red>This is wrong. Think about $y_{1} = 0.442$ and $y_{2} = 0.422$. Both corresponds to $x = \{4,2\}$, which means $f(x)$ could have two images, therefore this is not a well-defined function. Similarly $f(x)$ can also equal $0.42$ or $0.24$.</span>
+
+<span style = color:red> Discarded answer. Next we show that there is a 1-1 corresponding from $(0,1)$ to $S$. Given $x \in (0,1)$, we ascertain whether $x$ is in the bottom half $(0,0.5]$ or top half $(0.5,1)$. If it is in top half, define $s_{1} =1$, and $0$ otherwise. WLOG, suppose $x$ is in bottom half, identify whether $x$ is in the bottom half $(0,0.25]$ or the top half $(0.25, 0.5)$. If it is in the top half, let $s_{2} = 1$, and $0$ otherwise.  <span style = color:yellow>The next sentences are discarded because it doesn't take into account the top half. Also, we can simply assert 1-1 correspondance by stressing how $s$ is uniquely determined. </span> More generally, suppose after $n-1$ steps, identify whether whether $x$ is in the bottom half $(0, \frac{1}{2^{n}}]$ or the top half $(\frac{1}{2^{n}}{1})$, in which case $s_{n}$ is assigned $1$ if it's in the top half, and $0$ otherwise. This correspondence is 1-1 because given different $x$'s, after some finite steps of the iteration, one will be in the top while the other in the bottom half </span>
+
+<a name="1610"></a>
+
+### [Exercise 1.6.10](#toc)
+
+As a final exercise, answer each of the following by establishing a 1–1 correspondence with a set of known cardinality.
+
+1. Is the set of all functions from $\{0, 1\}$ to $\mathbb N$ countable or uncountable? 
+2. Is the set of all functions from $\mathbb N$ to $\{0, 1\}$ countable or uncountable?
+3. Given a set $B$, a subset $A$ of $P (B)$ is called an antichain if no element of $A$ is a subset of any other element of $A$. Does $P (\mathbb N)$ contain an uncountable antichain?
+
+---
+1. For preimage $0$, it can be mapped to $\mathbb N$ elements, and the same for preimage $1$. Thus there are $\mathbb N \times \mathbb N$ possibilities, which has the same cardinality as $\mathbb N$. This is countable.
+
+2. For preimage $1$, it can be mapped to $2$ elements, and the same for preimage $2$, $3$, and so on. Thus there are $2^{\mathbb N}$ possibilities. But this is the same cardinality as $P(\mathbb N)$, which are uncountable.
+
+3. To construct an element of antichain, we can consider each element  $P(\mathbb N)$ and categorize it into "include" or "exclude". Thus each element of antichain can be represented by a sequence of length $2^{\mathbb N}$ of "include" or "exclude". This implies $2^{2^{\mathbb N}}$ possibilities which therefore is not countable.
+
+<span style=color:green>Note to self: Antichain is the collection of subsets of $B$ which are not a subset of any other subsets in the collection. For $\mathbb N$, an example of antichain is $\{\{a\}\}, \{\{b\}\},\{\{a\}, \{b\}\}, \cdots$ </span>
+
+
+
+<span style=color:red>Early draft: Funny thing is that I don't even know what the question means. Given a well-defined function $f$, it can be either many-1 -- in which case both $0$ and $1$ are mapped into the same $n \in \mathbb N$, which means there can be $\mathbb N$ such functions --  </red>
+
+<span style=color:red>Early draft 2: Isn't this the same as 1...  </red>
