@@ -1209,7 +1209,7 @@ As a final exercise, answer each of the following by establishing a 1–1 corres
 
 2. For preimage $1$, it can be mapped to $2$ elements, and the same for preimage $2$, $3$, and so on. Thus there are $2^{\mathbb N}$ possibilities. But this is the same cardinality as $P(\mathbb N)$, which are uncountable.
 
-3. To construct an element of antichain, we can consider each element  $P(\mathbb N)$ and categorize it into "include" or "exclude". Thus each element of antichain can be represented by a sequence of length $2^{\mathbb N}$ of "include" or "exclude". This implies $2^{2^{\mathbb N}}$ possibilities which therefore is not countable.
+3. To construct an element of antichain, we can consider each element  $P(\mathbb N)$ and categorize it into "include" or "exclude". Thus each element of antichain can be represented by a sequence of length $2^{\mathbb N}$ of "include" or "exclude". We also note that each element of $P(\mathbb N)$ is also an antichain of size 1. This implies cardinality of at least $2^{\mathbb N}$, which therefore is not countable.
 
 <span style=color:green>Note to self: Antichain is the collection of subsets of $B$ which are not a subset of any other subsets in the collection. For $\mathbb N$, an example of antichain is $\{\{a\}\}, \{\{b\}\},\{\{a\}, \{b\}\}, \cdots$ </span>
 

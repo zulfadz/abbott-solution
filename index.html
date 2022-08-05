@@ -150,10 +150,15 @@
     }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: 1;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
   </style>
   <script defer=""
   src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
@@ -2537,9 +2542,11 @@ are uncountable.</p></li>
 element <span class="math inline">P(\mathbb N)</span> and categorize it
 into “include” or “exclude”. Thus each element of antichain can be
 represented by a sequence of length <span class="math inline">2^{\mathbb
-N}</span> of “include” or “exclude”. This implies <span
-class="math inline">2^{2^{\mathbb N}}</span> possibilities which
-therefore is not countable.</p></li>
+N}</span> of “include” or “exclude”. We also note that each element of
+<span class="math inline">P(\mathbb N)</span> is also an antichain of
+size 1. This implies cardinality of at least <span
+class="math inline">2^{\mathbb N}</span>, which therefore is not
+countable.</p></li>
 </ol>
 <p><span style="color:green">Note to self: Antichain is the collection
 of subsets of <span class="math inline">B</span> which are not a subset
