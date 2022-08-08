@@ -1221,9 +1221,15 @@ As a final exercise, answer each of the following by establishing a 1–1 corres
 
 <span style=color:red>Early draft: Funny thing is that I don't even know what the question means. Given a well-defined function $f$, it can be either many-1 -- in which case both $0$ and $1$ are mapped into the same $n \in \mathbb N$, which means there can be $\mathbb N$ such functions --  </span>
 
-<span style=color:red>Early draft 2: Isn't this the same as 1...  </span>
 
-<a name="c2"></a>
 
-## Chapter 2 
+
+<a name="1611"></a>
+
+### [Exercise 1.6.11](#toc)
+
+As a final exercise, answer each of the following by establishing a 1–1 correspondence with a set of known cardinality.
+
+
+
 
