@@ -2586,11 +2586,11 @@ vercongent sequence that is divergent? Can a sequence verconge to two
 different values? What exactly is being described in this strange
 definition?</p>
 <hr />
-<p>Take the sequence $ x_{n} =(1/n)_{n }$. And consider <span
-class="math inline">\epsilon =10</span>. Then for all <span
-class="math inline">N \in \mathbb N</span>, <span class="math inline">n
-\geq N</span> implies <span class="math inline">|x_{n} - 0| \leq
-10</span>.</p>
+<p>Take the sequence <span class="math inline">x_{n} =(1/n)_{n \geq
+1}</span>. And consider <span class="math inline">\epsilon =10</span>.
+Then for all <span class="math inline">N \in \mathbb N</span>, <span
+class="math inline">n \geq N</span> implies <span
+class="math inline">|x_{n} - 0| \leq 10</span>.</p>
 <p>Take the sequence <span class="math inline">(1, -1, 1, -1,
 \cdots)</span> and <span class="math inline">\epsilon = 10</span>.
 Again, it verconges to <span class="math inline">0</span>.</p>
@@ -2614,7 +2614,12 @@ following sequences converge to the proposed limit.</p>
 </ol>
 <hr />
 <ol type="1">
-<li>$ | - | = | | = ||= &lt; \ &lt; 25n+20\ 25n&gt;3-20\ n&gt; $</li>
+<li><span class="math inline">|\frac{2n+1}{5n+4} - \frac{2}{5} | =
+|\frac{10n+5-10n -8}{25n+20} | = |\frac{-3}{25n+20}|=
+\frac{3}{25n+20}&lt; \epsilon</span>, which is equivalent to saying
+<span class="math inline">3 &lt; 25n \epsilon +20\epsilon \iff
+25n\epsilon &gt;3-20\epsilon \iff n &gt;
+\frac{3-20\epsilon}{25\epsilon}.</span></li>
 </ol>
 <p>Thus given any <span class="math inline">\epsilon&gt;0</span>, let
 <span class="math inline">N = \frac{3-20\epsilon}{25\epsilon}</span>.
