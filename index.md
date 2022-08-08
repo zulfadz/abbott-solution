@@ -1273,6 +1273,43 @@ Thus given any $\epsilon$, let $N = \frac{2}{\epsilon}$. For any $n \geq N$, $|\
 
 Thus given any $\epsilon>0$, let $N = \frac{1}{\epsilon^{3}}$, then for $n \geq N$, $|\frac{\sin(n^{2})}{\sqrt[3]{n}}| \leq \frac{1}{\sqrt[3]{n}} < \epsilon.$ 
 
+<a name="223"></a>
+
+### [Exercise 2.2.3](#toc)
+
+Describe what we would have to demonstrate in order to disprove each of the following statements.
+
+- At every college in the United States, there is a student who is at least seven feet tall.
+- For all colleges in the United States, there exists a professor who gives every student a grade of either A or B.
+- There exists a college in the United States where every student is at least six feet tall.
+
+***
+
+- There exists a college in the United States such that all students are less than seven feet tall.
+- There exists a college in the United States such that all professors don't give every student a grade of either A or B. (ie such at all professors gives some students a grade other than A or B)
+- For all colleges in the United States, there exists a student who is less than six feet tall. 
+
+<a name="224"></a>
+
+### [Exercise 2.2.4](#toc)
+
+Give an example of each or state that the request is impossible. For any that are impossible, give a compelling argument for why that is the case.
+
+1. A sequence with an infinite number of ones that does not converge to one.
+
+2. A sequence with an infinite number of ones that converges to a limit not equal to one.
+
+3. A divergent sequence such that for every $n \in \mathbb N$ it is possible to find n consecutive ones somewhere in the sequence.
+
+***
+
+1. $(1, -1, 1, -1, \cdots)$
+
+2. Impossible. Suppose the limit is some real number $k \neq 1$. Then for all $N \in \mathbb N$, there exist sequence terms $x_{n}$, $ n \geq N$ such that $|x_{n} - k| >0$. Setting $\epsilon = |x_{n} - k|/2$, these terms fall outside the $\epsilon$-neighborhood of $k$, $V_{\epsilon}(k)$.
+
+3. $(1,-1,1,1,-1,1,1,1,-1, \cdots)$
+
+
 
 
 
