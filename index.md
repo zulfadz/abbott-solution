@@ -11,12 +11,12 @@ Solutions that need polishing are marked 🔄 and unfinished solutions are marke
 
 # Table of contents
 
-[Chapter 1](#c1)  | Chapter 2 
-:------------ | :-------------
-[1.2.10](#1210) 🔄 | 
-[1.2.11](#1211) 🔄 | 
-[1.2.12](#1212) 🔄 | 
-[1.2.13](#1213) 🔄 | 
+[Chapter 1](#c1)  | Chapter 2 | Chapter 3
+:------------ | :------------- | :-------------
+[1.2.10](#1210) 🔄 | [2.1.1](#211)|
+[1.2.11](#1211) 🔄 | [2.1.2](#212)|
+[1.2.12](#1212) 🔄 | [2.1.3](#213)|
+[1.2.13](#1213) 🔄 | [2.1.4](#214)|
 [1.3.1](#131) 🔄 | 
 [1.3.2](#132) 🔄 | 
 [1.3.3](#133) 🔄 | 
@@ -55,6 +55,8 @@ Solutions that need polishing are marked 🔄 and unfinished solutions are marke
 [1.6.6](#166) |
 [1.6.7](#167) |
 [1.6.8](#168) |
+[1.6.9](#169) |
+[1.6.10](#1610) |
 
 
 <a name="c1"></a>
@@ -1218,3 +1220,86 @@ As a final exercise, answer each of the following by establishing a 1–1 corres
 <span style=color:red>Early draft: Funny thing is that I don't even know what the question means. Given a well-defined function $f$, it can be either many-1 -- in which case both $0$ and $1$ are mapped into the same $n \in \mathbb N$, which means there can be $\mathbb N$ such functions --  </red>
 
 <span style=color:red>Early draft 2: Isn't this the same as 1...  </red>
+
+<a name="221"></a>
+
+### [Exercise 2.2.1](#toc)
+
+What happens if we reverse the order of the quantifiers in Definition 2.2.3?
+
+_Definition: A sequence $(x_{n})$ verconges to $x$ if there exists an $\epsilon > 0$ such that for all $N \in \mathbb N$ it is true that $n \geq N$ implies $|x_{n} −x|< \epsilon$._
+
+Give an example of a vercongent sequence. Is there an example of a vercongent sequence that is divergent? Can a sequence verconge to two different values? What exactly is being described in this strange definition?
+
+---
+
+Take the sequence $ x_{n} =(1/n)_{n \geq 1}$. And consider $\epsilon =10$. Then for all $N \in \mathbb N$, $n \geq N$ implies $|x_{n} - 0| \leq 10$.
+
+Take the sequence $(1, -1, 1, -1, \cdots)$ and $\epsilon = 10$. Again, it verconges to $0$.
+
+It can converge to different value.  In the example above, the sequence also verconges to 2 for instance.
+
+This resembles a bounded sequence such that there exists a positive number $\epsilon$ whereby $|x_{n} - x| < \epsilon$ for all $n \in \mathbb N$.
+
+<a name="222"></a>
+
+### [Exercise 2.2.2](#toc)
+
+Verify, using the definition of convergence of a sequence, that the following sequences converge to the proposed limit.
+
+1. $\lim \frac{2n+1}{5n+4} = \frac{2}{5}$
+
+2. $\lim \frac{2n^{2}}{n^{3} +3}=0$
+
+3. $\lim \frac{\sin (n^{2})}{\sqrt[3]{n}}=0$
+
+---
+
+1. $ | \frac{2n+1}{5n+4} - \frac{2}{5} | = |\frac{10n+5-10n -8}{25n+20} | = |\frac{-3}{25n+20}|= \frac{3}{25n+20}< \epsilon  \\ 
+ \iff 3 < 25n\epsilon +20\epsilon \\ \iff 25n\epsilon>3-20\epsilon \\ \iff n> \frac{3-20\epsilon}{25\epsilon}$ 
+
+Thus given any $\epsilon>0$, let $N = \frac{3-20\epsilon}{25\epsilon}$. For $n \geq N$, $| \frac{2n+1}{5n+4} - \frac{2}{5} | = \frac{3}{25n+20} < \epsilon$.
+
+2. $|\frac{2n^{2}}{n^{3}+3}|< \frac{2n^{2}}{n^{3}} = \frac{2}{n} < \epsilon \iff n > \frac{2}{\epsilon}.$
+
+Thus given any $\epsilon$, let $N = \frac{2}{\epsilon}$. For any $n \geq N$, $|\frac{2n^{2}}{n^{3}+3}| < \epsilon.$
+
+3. $|\frac{\sin(n^{2})}{\sqrt[3]{n}}| \leq \frac{1}{\sqrt[3]{n}}<\epsilon \iff n > \frac{1}{\epsilon^{3}}$.
+
+Thus given any $\epsilon>0$, let $N = \frac{1}{\epsilon^{3}}$, then for $n \geq N$, $|\frac{\sin(n^{2})}{\sqrt[3]{n}}| \leq \frac{1}{\sqrt[3]{n}} < \epsilon.$ 
+
+
+<a name="223"></a>
+
+### [Exercise 2.2.3](#toc)
+
+Describe what we would have to demonstrate in order to disprove each of the following statements.
+
+- At every college in the United States, there is a student who is at least seven feet tall.
+- For all colleges in the United States, there exists a professor who gives every student a grade of either A or B.
+- There exists a college in the United States where every student is at least six feet tall.
+
+---
+- There exists a college in the United States such that all students are less than seven feet tall.
+- There exists a college in the United States such that all professors don't give every student a grade of either A or B. (ie such at all professors gives some students a grade other than A or B)
+- For all colleges in the United States, there exists a student who is less than six feet tall. 
+
+<a name="224"></a>
+
+### [Exercise 2.2.4](#toc)
+
+Give an example of each or state that the request is impossible. For any that are impossible, give a compelling argument for why that is the case.
+
+1. A sequence with an infinite number of ones that does not converge to one.
+
+2. A sequence with an infinite number of ones that converges to a limit not equal to one.
+
+3. A divergent sequence such that for every $n \in \mathbb N$ it is possible to find n consecutive ones somewhere in the sequence.
+
+---
+
+1. $(1, -1, 1, -1, \cdots)$
+
+2. Impossible. Suppose the limit is some real number $k \neq 1$. Then for all $N \in \mathbb N$, there exist sequence terms $x_{n}$, $ n \geq N$ such that $|x_{n} - k| >0$. Setting $\epsilon = |x_{n} - k|/2$, these terms fall outside the $\epsilon$-neighborhood of $k$, $V_{\epsilon}(k)$.
+
+3. $(1,-1,1,1,-1,1,1,1,-1, \cdots)$
