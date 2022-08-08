@@ -1231,7 +1231,7 @@ As a final exercise, answer each of the following by establishing a 1–1 corres
 
 ### [Exercise 2.2.1](#toc)
 
-What happens if we reverse the order of the quantifiers in Definition 2.2.3?
+What the fuck this is not working
 
 
 ---
