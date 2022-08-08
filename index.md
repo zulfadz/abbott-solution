@@ -1223,15 +1223,12 @@ As a final exercise, answer each of the following by establishing a 1–1 corres
 
 <span style=color:red>Early draft 2: Isn't this the same as 1...  </span>
 
-<a name="c2"></a>
 
-## Chapter 2 
+<a name="1610"></a>
 
-<a name="221"></a>
+### [Exercise 1.6.10](#toc)
 
-### [Exercise 2.2.1](#toc)
-
-What the fuck this is not working
+As a final exercise, answer each of the following by establishing a 1–1 correspondence with a set of known cardinality.
 
 
 ---
