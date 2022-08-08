@@ -1238,7 +1238,7 @@ Give an example of a vercongent sequence. Is there an example of a vercongent se
 
 ***
 
-Take the sequence $ x_{n} =(1/n)_{n \geq 1}$. And consider $\epsilon =10$. Then for all $N \in \mathbb N$, $n \geq N$ implies $|x_{n} - 0| \leq 10$.
+Take the sequence $x_{n} =(1/n)_{n \geq 1}$. And consider $\epsilon =10$. Then for all $N \in \mathbb N$, $n \geq N$ implies $|x_{n} - 0| \leq 10$.
 
 Take the sequence $(1, -1, 1, -1, \cdots)$ and $\epsilon = 10$. Again, it verconges to $0$.
 
@@ -1261,8 +1261,7 @@ Verify, using the definition of convergence of a sequence, that the following se
 
 ***
 
-1. $ | \frac{2n+1}{5n+4} - \frac{2}{5} | = |\frac{10n+5-10n -8}{25n+20} | = |\frac{-3}{25n+20}|= \frac{3}{25n+20}< \epsilon  \\ 
- \iff 3 < 25n\epsilon +20\epsilon \\ \iff 25n\epsilon>3-20\epsilon \\ \iff n> \frac{3-20\epsilon}{25\epsilon}$ 
+1. $|\frac{2n+1}{5n+4} - \frac{2}{5} | = |\frac{10n+5-10n -8}{25n+20} | = |\frac{-3}{25n+20}|= \frac{3}{25n+20}< \epsilon$, which is equivalent to saying $3 < 25n \epsilon +20\epsilon \iff 25n\epsilon >3-20\epsilon \iff n > \frac{3-20\epsilon}{25\epsilon}.$ 
 
 Thus given any $\epsilon>0$, let $N = \frac{3-20\epsilon}{25\epsilon}$. For $n \geq N$, $| \frac{2n+1}{5n+4} - \frac{2}{5} | = \frac{3}{25n+20} < \epsilon$.
 
