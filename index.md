@@ -1204,28 +1204,6 @@ This resembles a bounded sequence such that there exists a positive number $\eps
 
 ### [Exercise 2.2.2](#toc)
 
-Verify, using the definition of convergence of a sequence, that the following sequences converge to the proposed limit.
-
-1. $\lim \frac{2n+1}{5n+4} = \frac{2}{5}$
-
-2. $\lim \frac{2n^{2}}{n^{3} +3}=0$
-
-3. $\lim \frac{\sin (n^{2})}{\sqrt[3]{n}}=0$
-
----
-
-1. $ | \frac{2n+1}{5n+4} - \frac{2}{5} | = |\frac{10n+5-10n -8}{25n+20} | = |\frac{-3}{25n+20}|= \frac{3}{25n+20}< \epsilon  \\ 
- \iff 3 < 25n\epsilon +20\epsilon \\ \iff 25n\epsilon>3-20\epsilon \\ \iff n> \frac{3-20\epsilon}{25\epsilon}$ 
-
-Thus given any $\epsilon>0$, let $N = \frac{3-20\epsilon}{25\epsilon}$. For $n \geq N$, $| \frac{2n+1}{5n+4} - \frac{2}{5} | = \frac{3}{25n+20} < \epsilon$.
-
-2. $|\frac{2n^{2}}{n^{3}+3}|< \frac{2n^{2}}{n^{3}} = \frac{2}{n} < \epsilon \iff n > \frac{2}{\epsilon}.$
-
-Thus given any $\epsilon$, let $N = \frac{2}{\epsilon}$. For any $n \geq N$, $|\frac{2n^{2}}{n^{3}+3}| < \epsilon.$
-
-3. $|\frac{\sin(n^{2})}{\sqrt[3]{n}}| \leq \frac{1}{\sqrt[3]{n}}<\epsilon \iff n > \frac{1}{\epsilon^{3}}$.
-
-Thus given any $\epsilon>0$, let $N = \frac{1}{\epsilon^{3}}$, then for $n \geq N$, $|\frac{\sin(n^{2})}{\sqrt[3]{n}}| \leq \frac{1}{\sqrt[3]{n}} < \epsilon.$ 
 
 
 <a name="223"></a>
