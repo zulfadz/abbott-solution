@@ -1221,7 +1221,9 @@ As a final exercise, answer each of the following by establishing a 1–1 corres
 
 <span style=color:red>Early draft: Funny thing is that I don't even know what the question means. Given a well-defined function $f$, it can be either many-1 -- in which case both $0$ and $1$ are mapped into the same $n \in \mathbb N$, which means there can be $\mathbb N$ such functions --  </span>
 
+<a name="c2"></a>
 
+## Chapter 2 
 
 
 <a name="221"></a>
@@ -1233,6 +1235,8 @@ What happens if we reverse the order of the quantifiers in Definition 2.2.3?
 _Definition: A sequence $(x_{n})$ verconges to $x$ if there exists an $\epsilon > 0$ such that for all $N \in \mathbb N$ it is true that $n \geq N$ implies $|x_{n} −x|< \epsilon$._
 
 Give an example of a vercongent sequence. Is there an example of a vercongent sequence that is divergent? Can a sequence verconge to two different values? What exactly is being described in this strange definition?
+
+***
 
 
 
