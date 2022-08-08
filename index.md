@@ -1231,11 +1231,7 @@ As a final exercise, answer each of the following by establishing a 1–1 corres
 
 ### [Exercise 2.2.1](#toc)
 
-What happens if we reverse the order of the quantifiers in Definition 2.2.3?
 
-
-
-Give an example of a vercongent sequence. Is there an example of a vercongent sequence that is divergent? Can a sequence verconge to two different values? What exactly is being described in this strange definition?
 
 ---
 
