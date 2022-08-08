@@ -2586,5 +2586,59 @@ vercongent sequence that is divergent? Can a sequence verconge to two
 different values? What exactly is being described in this strange
 definition?</p>
 <hr />
+<p>Take the sequence $ x_{n} =(1/n)_{n }$. And consider <span
+class="math inline">\epsilon =10</span>. Then for all <span
+class="math inline">N \in \mathbb N</span>, <span class="math inline">n
+\geq N</span> implies <span class="math inline">|x_{n} - 0| \leq
+10</span>.</p>
+<p>Take the sequence <span class="math inline">(1, -1, 1, -1,
+\cdots)</span> and <span class="math inline">\epsilon = 10</span>.
+Again, it verconges to <span class="math inline">0</span>.</p>
+<p>It can converge to different value. In the example above, the
+sequence also verconges to 2 for instance.</p>
+<p>This resembles a bounded sequence such that there exists a positive
+number <span class="math inline">\epsilon</span> whereby <span
+class="math inline">|x_{n} - x| &lt; \epsilon</span> for all <span
+class="math inline">n \in \mathbb N</span>.</p>
+<p><a name="222"></a></p>
+<h3 id="exercise-2.2.2"><a href="#toc">Exercise 2.2.2</a></h3>
+<p>Verify, using the definition of convergence of a sequence, that the
+following sequences converge to the proposed limit.</p>
+<ol type="1">
+<li><p><span class="math inline">\lim \frac{2n+1}{5n+4} =
+\frac{2}{5}</span></p></li>
+<li><p><span class="math inline">\lim \frac{2n^{2}}{n^{3}
++3}=0</span></p></li>
+<li><p><span class="math inline">\lim \frac{\sin
+(n^{2})}{\sqrt[3]{n}}=0</span></p></li>
+</ol>
+<hr />
+<ol type="1">
+<li>$ | - | = | | = ||= &lt; \ &lt; 25n+20\ 25n&gt;3-20\ n&gt; $</li>
+</ol>
+<p>Thus given any <span class="math inline">\epsilon&gt;0</span>, let
+<span class="math inline">N = \frac{3-20\epsilon}{25\epsilon}</span>.
+For <span class="math inline">n \geq N</span>, <span
+class="math inline">| \frac{2n+1}{5n+4} - \frac{2}{5} | =
+\frac{3}{25n+20} &lt; \epsilon</span>.</p>
+<ol start="2" type="1">
+<li><span class="math inline">|\frac{2n^{2}}{n^{3}+3}|&lt;
+\frac{2n^{2}}{n^{3}} = \frac{2}{n} &lt; \epsilon \iff n &gt;
+\frac{2}{\epsilon}.</span></li>
+</ol>
+<p>Thus given any <span class="math inline">\epsilon</span>, let <span
+class="math inline">N = \frac{2}{\epsilon}</span>. For any <span
+class="math inline">n \geq N</span>, <span
+class="math inline">|\frac{2n^{2}}{n^{3}+3}| &lt; \epsilon.</span></p>
+<ol start="3" type="1">
+<li><span class="math inline">|\frac{\sin(n^{2})}{\sqrt[3]{n}}| \leq
+\frac{1}{\sqrt[3]{n}}&lt;\epsilon \iff n &gt;
+\frac{1}{\epsilon^{3}}</span>.</li>
+</ol>
+<p>Thus given any <span class="math inline">\epsilon&gt;0</span>, let
+<span class="math inline">N = \frac{1}{\epsilon^{3}}</span>, then for
+<span class="math inline">n \geq N</span>, <span
+class="math inline">|\frac{\sin(n^{2})}{\sqrt[3]{n}}| \leq
+\frac{1}{\sqrt[3]{n}} &lt; \epsilon.</span></p>
 </body>
 </html>

@@ -1238,6 +1238,42 @@ Give an example of a vercongent sequence. Is there an example of a vercongent se
 
 ***
 
+Take the sequence $ x_{n} =(1/n)_{n \geq 1}$. And consider $\epsilon =10$. Then for all $N \in \mathbb N$, $n \geq N$ implies $|x_{n} - 0| \leq 10$.
+
+Take the sequence $(1, -1, 1, -1, \cdots)$ and $\epsilon = 10$. Again, it verconges to $0$.
+
+It can converge to different value.  In the example above, the sequence also verconges to 2 for instance.
+
+This resembles a bounded sequence such that there exists a positive number $\epsilon$ whereby $|x_{n} - x| < \epsilon$ for all $n \in \mathbb N$.
+
+
+<a name="222"></a>
+
+### [Exercise 2.2.2](#toc)
+
+Verify, using the definition of convergence of a sequence, that the following sequences converge to the proposed limit.
+
+1. $\lim \frac{2n+1}{5n+4} = \frac{2}{5}$
+
+2. $\lim \frac{2n^{2}}{n^{3} +3}=0$
+
+3. $\lim \frac{\sin (n^{2})}{\sqrt[3]{n}}=0$
+
+***
+
+1. $ | \frac{2n+1}{5n+4} - \frac{2}{5} | = |\frac{10n+5-10n -8}{25n+20} | = |\frac{-3}{25n+20}|= \frac{3}{25n+20}< \epsilon  \\ 
+ \iff 3 < 25n\epsilon +20\epsilon \\ \iff 25n\epsilon>3-20\epsilon \\ \iff n> \frac{3-20\epsilon}{25\epsilon}$ 
+
+Thus given any $\epsilon>0$, let $N = \frac{3-20\epsilon}{25\epsilon}$. For $n \geq N$, $| \frac{2n+1}{5n+4} - \frac{2}{5} | = \frac{3}{25n+20} < \epsilon$.
+
+2. $|\frac{2n^{2}}{n^{3}+3}|< \frac{2n^{2}}{n^{3}} = \frac{2}{n} < \epsilon \iff n > \frac{2}{\epsilon}.$
+
+Thus given any $\epsilon$, let $N = \frac{2}{\epsilon}$. For any $n \geq N$, $|\frac{2n^{2}}{n^{3}+3}| < \epsilon.$
+
+3. $|\frac{\sin(n^{2})}{\sqrt[3]{n}}| \leq \frac{1}{\sqrt[3]{n}}<\epsilon \iff n > \frac{1}{\epsilon^{3}}$.
+
+Thus given any $\epsilon>0$, let $N = \frac{1}{\epsilon^{3}}$, then for $n \geq N$, $|\frac{\sin(n^{2})}{\sqrt[3]{n}}| \leq \frac{1}{\sqrt[3]{n}} < \epsilon.$ 
+
 
 
 
