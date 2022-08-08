@@ -1233,7 +1233,7 @@ As a final exercise, answer each of the following by establishing a 1–1 corres
 
 What happens if we reverse the order of the quantifiers in Definition 2.2.3?
 
-_Definition: A sequence $(x_{n})$ verconges to $x$ if there exists an $\epsilon > 0$ such that for all $N \in \mathbb N$ it is true that $n \geq N$ implies $|x_{n} −x|< \epsilon$._
+
 
 Give an example of a vercongent sequence. Is there an example of a vercongent sequence that is divergent? Can a sequence verconge to two different values? What exactly is being described in this strange definition?
 
