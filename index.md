@@ -1239,11 +1239,4 @@ Give an example of a vercongent sequence. Is there an example of a vercongent se
 
 ---
 
-Take the sequence $ x_{n} =(1/n)_{n \geq 1}$. And consider $\epsilon =10$. Then for all $N \in \mathbb N$, $n \geq N$ implies $|x_{n} - 0| \leq 10$.
-
-Take the sequence $(1, -1, 1, -1, \cdots)$ and $\epsilon = 10$. Again, it verconges to $0$.
-
-It can converge to different value.  In the example above, the sequence also verconges to 2 for instance.
-
-This resembles a bounded sequence such that there exists a positive number $\epsilon$ whereby $|x_{n} - x| < \epsilon$ for all $n \in \mathbb N$.
 
