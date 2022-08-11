@@ -1310,7 +1310,59 @@ Give an example of each or state that the request is impossible. For any that ar
 3. $(1,-1,1,1,-1,1,1,1,-1, \cdots)$
 
 
+<a name="225"></a>
+
+### [Exercise 2.2.5](#toc)
+
+Let $[[x]]$ be the greatest integer less than or equal to $x$. For example, $[[\pi]] = 3$ and $[[3]] = 3$. For each sequence, find $\lim_{a_{n}}$ and verify it with the definition of convergence.
+
+1. $a_{n} = [[5/n]]$,
+2. $a_{n} = [[(12 + 4n)/3n]]$.
+
+Reflecting on these examples, comment on the statement following Definition 2.2.3 that “the smaller the $\epsilon$-neighborhood, the larger $N$ may have to be.”
+
+***
+
+1. The sequence is $(5, 3, 2, 2,1,1,1, \cdots)$. For any $epsilon>0$, let $N = 5$. Thus for all $n \geq N$, $[[5/n]]=1$, which means $|a_{n} -1|=0 < \epsilon$. The limit is therefore $1$.
+
+2. $a_{n} = [[4/n + 4/3]]$, thus the sequence would be an infinite sequence of $2$'s for $n \geq 6$. The limit is $2$.
+
+<a name="226"></a>
+
+### [Exercise 2.2.6](#toc)
 
 
+Prove Theorem 2.2.7. To get started, assume $(a_{n}) \to a$ and also that $(a_{n}) \to b$. Now argue $a = b$.
 
+***
+
+For all $\epsilon>0$, there exists $N_{1}$ such that $|a_{n} -a| < \epsilon$ for $n \geq N_{1}$. 
+
+Similarly, $|a_{n}-b| < \epsilon$ for $n \geq N_{2}$ for some $N_{2}$. 
+
+Let $N = \max \{N_{1}, N_{2}\}$. Suppose $a \neq b$, and let  $\epsilon = |b-a|/100$.
+
+$|b-a|= |b-a_{n} + a_{n} -a| = |(b-a_{n}) + (a_{n} -a)| \leq |b-a_{n}| + |a_{n} -a| < 2\epsilon = 2\epsilon/100$, where the first inequality use Triangle Inequality. But this is a contradiction.
+
+<a name="227"></a>
+
+### [Exercise 2.2.7](#toc)
+
+Here are two useful definitions:
+
+1. A sequence $(a_{n})$ is eventually in a set $A \subseteq \mathbb R$ if there exists an $N \in \mathbb N$ such that $a_{n} \in A$ for all $n \geq \mathbb N$.
+
+2. A sequence $(a_{n})$ is frequently in a set $A \subseteq \mathbb R$ if, for every $N \in \mathbb N$, there exists an $n\geq\mathbb N$ such that $a_{n} \in A$.
+
+- Is the sequence $(−1)^{n}$ eventually or frequently in the set $\{1\}$?
+- Which definition is stronger? Does frequently imply eventually or does eventually imply frequently?
+- Give an alternate rephrasing of Definition 2.2.3B using either frequently or eventually. Which is the term we want?
+- Suppose an infinite number of terms of a sequence $(x_{n})$ are equal to $2$. Is $(x_{n})$ necessarily eventually in the interval $(1.9,2.1)$? Is it frequently in $(1.9, 2.1)$?
+
+***
+
+- Frequently
+- Eventually is stronger. It implies frequently
+- A sequence $(a_{n})$ converges to $a$, if it is is eventually in any given $\epsilon$-neighborhood $V_{\epsilon}(a)$.
+- It is not necessarily eventually, for example the sequence $(1,2,1,2, \cdots)$ has infinitely many $2$. It is frequently.
 

@@ -2696,5 +2696,97 @@ class="math inline">V_{\epsilon}(k)</span>.</p></li>
 <li><p><span class="math inline">(1,-1,1,1,-1,1,1,1,-1,
 \cdots)</span></p></li>
 </ol>
+<p><a name="225"></a></p>
+<h3 id="exercise-2.2.5"><a href="#toc">Exercise 2.2.5</a></h3>
+<p>Let <span class="math inline">[[x]]</span> be the greatest integer
+less than or equal to <span class="math inline">x</span>. For example,
+<span class="math inline">[[\pi]] = 3</span> and <span
+class="math inline">[[3]] = 3</span>. For each sequence, find <span
+class="math inline">\lim_{a_{n}}</span> and verify it with the
+definition of convergence.</p>
+<ol type="1">
+<li><span class="math inline">a_{n} = [[5/n]]</span>,</li>
+<li><span class="math inline">a_{n} = [[(12 + 4n)/3n]]</span>.</li>
+</ol>
+<p>Reflecting on these examples, comment on the statement following
+Definition 2.2.3 that “the smaller the <span
+class="math inline">\epsilon</span>-neighborhood, the larger <span
+class="math inline">N</span> may have to be.”</p>
+<hr />
+<ol type="1">
+<li><p>The sequence is <span class="math inline">(5, 3, 2, 2,1,1,1,
+\cdots)</span>. For any <span class="math inline">epsilon&gt;0</span>,
+let <span class="math inline">N = 5</span>. Thus for all <span
+class="math inline">n \geq N</span>, <span
+class="math inline">[[5/n]]=1</span>, which means <span
+class="math inline">|a_{n} -1|=0 &lt; \epsilon</span>. The limit is
+therefore <span class="math inline">1</span>.</p></li>
+<li><p><span class="math inline">a_{n} = [[4/n + 4/3]]</span>, thus the
+sequence would be an infinite sequence of <span
+class="math inline">2</span>’s for <span class="math inline">n \geq
+6</span>. The limit is <span class="math inline">2</span>.</p></li>
+</ol>
+<p><a name="226"></a></p>
+<h3 id="exercise-2.2.6"><a href="#toc">Exercise 2.2.6</a></h3>
+<p>Prove Theorem 2.2.7. To get started, assume <span
+class="math inline">(a_{n}) \to a</span> and also that <span
+class="math inline">(a_{n}) \to b</span>. Now argue <span
+class="math inline">a = b</span>.</p>
+<hr />
+<p>For all <span class="math inline">\epsilon&gt;0</span>, there exists
+<span class="math inline">N_{1}</span> such that <span
+class="math inline">|a_{n} -a| &lt; \epsilon</span> for <span
+class="math inline">n \geq N_{1}</span>.</p>
+<p>Similarly, <span class="math inline">|a_{n}-b| &lt; \epsilon</span>
+for <span class="math inline">n \geq N_{2}</span> for some <span
+class="math inline">N_{2}</span>.</p>
+<p>Let <span class="math inline">N = \max \{N_{1}, N_{2}\}</span>.
+Suppose <span class="math inline">a \neq b</span>, and let <span
+class="math inline">\epsilon = |b-a|/100</span>.</p>
+<p><span class="math inline">|b-a|= |b-a_{n} + a_{n} -a| = |(b-a_{n}) +
+(a_{n} -a)| \leq |b-a_{n}| + |a_{n} -a| &lt; 2\epsilon =
+2\epsilon/100</span>, where the first inequality use Triangle
+Inequality. But this is a contradiction.</p>
+<p><a name="227"></a></p>
+<h3 id="exercise-2.2.7"><a href="#toc">Exercise 2.2.7</a></h3>
+<p>Here are two useful definitions:</p>
+<ol type="1">
+<li><p>A sequence <span class="math inline">(a_{n})</span> is eventually
+in a set <span class="math inline">A \subseteq \mathbb R</span> if there
+exists an <span class="math inline">N \in \mathbb N</span> such that
+<span class="math inline">a_{n} \in A</span> for all <span
+class="math inline">n \geq \mathbb N</span>.</p></li>
+<li><p>A sequence <span class="math inline">(a_{n})</span> is frequently
+in a set <span class="math inline">A \subseteq \mathbb R</span> if, for
+every <span class="math inline">N \in \mathbb N</span>, there exists an
+<span class="math inline">n\geq\mathbb N</span> such that <span
+class="math inline">a_{n} \in A</span>.</p></li>
+</ol>
+<ul>
+<li>Is the sequence <span class="math inline">(−1)^{n}</span> eventually
+or frequently in the set <span class="math inline">\{1\}</span>?</li>
+<li>Which definition is stronger? Does frequently imply eventually or
+does eventually imply frequently?</li>
+<li>Give an alternate rephrasing of Definition 2.2.3B using either
+frequently or eventually. Which is the term we want?</li>
+<li>Suppose an infinite number of terms of a sequence <span
+class="math inline">(x_{n})</span> are equal to <span
+class="math inline">2</span>. Is <span
+class="math inline">(x_{n})</span> necessarily eventually in the
+interval <span class="math inline">(1.9,2.1)</span>? Is it frequently in
+<span class="math inline">(1.9, 2.1)</span>?</li>
+</ul>
+<hr />
+<ul>
+<li>Frequently</li>
+<li>Eventually is stronger. It implies frequently</li>
+<li>A sequence <span class="math inline">(a_{n})</span> converges to
+<span class="math inline">a</span>, if it is is eventually in any given
+<span class="math inline">\epsilon</span>-neighborhood <span
+class="math inline">V_{\epsilon}(a)</span>.</li>
+<li>It is not necessarily eventually, for example the sequence <span
+class="math inline">(1,2,1,2, \cdots)</span> has infinitely many <span
+class="math inline">2</span>. It is frequently.</li>
+</ul>
 </body>
 </html>
