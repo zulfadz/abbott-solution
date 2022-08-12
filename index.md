@@ -1366,3 +1366,23 @@ Here are two useful definitions:
 - A sequence $(a_{n})$ converges to $a$, if it is is eventually in any given $\epsilon$-neighborhood $V_{\epsilon}(a)$.
 - It is not necessarily eventually, for example the sequence $(1,2,1,2, \cdots)$ has infinitely many $2$. It is frequently.
 
+<a name="228"></a>
+
+### [Exercise 2.2.8](#toc)
+
+For some additional practice with nested quantifiers, consider the following invented definition:
+    Let’s call a sequence $(x_{n})$ zero-heavy if there exists $M \in \mathbb N$ such that for all $N \in \mathbb N$ there exists $n$ satisfying $N \leq n \leq N + M$ where $x_{n} = 0$.
+
+1. Is the sequence $(0, 1, 0, 1, 0, 1, \cdots)$ zero heavy?
+2. If a sequence is zero-heavy does it necessarily contain an infinite number
+of zeros? If not, provide a counterexample.
+3. If a sequence contains an infinite number of zeros, is it necessarily zero- heavy? If not, provide a counterexample.
+4. Form the logical negation of the above definition. That is, complete the sentence: A sequence is not zero-heavy if $\cdots$
+
+***
+
+1. Yup.
+2. Yup. Suppose it does not contain an infinite number of zeros. Then for some $K \in \mathbb N$, $a_{n} \neq 0$ for all $n \geq K$.
+3. Yup. <span style=color:red>Wrong. Let's rephrase this to disprove this statement: given any $M$, there exists $N$ such that for all $n$ satisfying $N \leq n \leq N + M$,  $x_{n} \neq 0$. Then it's clear that we can simply create a sequence of infinite $0$, with growing gaps between them; e.g. $(1,0,1,1,0,1,1,1,0,1,1,1,1, \cdots)$, or sequence of $(a_{n})$ such that $a_{n} =0$ if $n = 2^{k}$ for $k \in \mathbb N$, and $0$ otherwise. In the latter case, given any $M$, we pick $k$ such that $2^{k+1} - (2^{k}+1)>M$. It follows that $\{x_{n} | (2^{k}+1) \leq n \leq (2^{k}+1)+M\}$ are not zero.</span>
+4. A sequence is not zero-heavy if for all $M \in \mathbb N$, there exists $N \in \mathbb N$ such that no $n$ satisfies $N \leq n \leq N+M$ where $x_{0}=0$.
+

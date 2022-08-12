@@ -2788,5 +2788,56 @@ class="math inline">V_{\epsilon}(a)</span>.</li>
 class="math inline">(1,2,1,2, \cdots)</span> has infinitely many <span
 class="math inline">2</span>. It is frequently.</li>
 </ul>
+<p><a name="228"></a></p>
+<h3 id="exercise-2.2.8"><a href="#toc">Exercise 2.2.8</a></h3>
+<p>For some additional practice with nested quantifiers, consider the
+following invented definition: Let’s call a sequence <span
+class="math inline">(x_{n})</span> zero-heavy if there exists <span
+class="math inline">M \in \mathbb N</span> such that for all <span
+class="math inline">N \in \mathbb N</span> there exists <span
+class="math inline">n</span> satisfying <span class="math inline">N \leq
+n \leq N + M</span> where <span class="math inline">x_{n} =
+0</span>.</p>
+<ol type="1">
+<li>Is the sequence <span class="math inline">(0, 1, 0, 1, 0, 1,
+\cdots)</span> zero heavy?</li>
+<li>If a sequence is zero-heavy does it necessarily contain an infinite
+number of zeros? If not, provide a counterexample.</li>
+<li>If a sequence contains an infinite number of zeros, is it
+necessarily zero- heavy? If not, provide a counterexample.</li>
+<li>Form the logical negation of the above definition. That is, complete
+the sentence: A sequence is not zero-heavy if <span
+class="math inline">\cdots</span></li>
+</ol>
+<hr />
+<ol type="1">
+<li>Yup.</li>
+<li>Yup. Suppose it does not contain an infinite number of zeros. Then
+for some <span class="math inline">K \in \mathbb N</span>, <span
+class="math inline">a_{n} \neq 0</span> for all <span
+class="math inline">n \geq K</span>.</li>
+<li>Yup. <span style="color:red">Wrong. Let’s rephrase this to disprove
+this statement: given any <span class="math inline">M</span>, there
+exists <span class="math inline">N</span> such that for all <span
+class="math inline">n</span> satisfying <span class="math inline">N \leq
+n \leq N + M</span>, <span class="math inline">x_{n} \neq 0</span>. Then
+it’s clear that we can simply create a sequence of infinite <span
+class="math inline">0</span>, with growing gaps between them; e.g. <span
+class="math inline">(1,0,1,1,0,1,1,1,0,1,1,1,1, \cdots)</span>, or
+sequence of <span class="math inline">(a_{n})</span> such that <span
+class="math inline">a_{n} =0</span> if <span class="math inline">n =
+2^{k}</span> for <span class="math inline">k \in \mathbb N</span>, and
+<span class="math inline">0</span> otherwise. In the latter case, given
+any <span class="math inline">M</span>, we pick <span
+class="math inline">k</span> such that <span class="math inline">2^{k+1}
+- (2^{k}+1)&gt;M</span>. It follows that <span
+class="math inline">\{x_{n} | (2^{k}+1) \leq n \leq (2^{k}+1)+M\}</span>
+are not zero.</span></li>
+<li>A sequence is not zero-heavy if for all <span class="math inline">M
+\in \mathbb N</span>, there exists <span class="math inline">N \in
+\mathbb N</span> such that no <span class="math inline">n</span>
+satisfies <span class="math inline">N \leq n \leq N+M</span> where <span
+class="math inline">x_{0}=0</span>.</li>
+</ol>
 </body>
 </html>
