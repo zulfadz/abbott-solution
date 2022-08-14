@@ -1397,7 +1397,7 @@ Let $x_{n} \geq 0$ for all $n \in \mathbb N$.
 
 ***
 
-1. $|x_{n}-0| = x_{n} < \epsilon^{2}$ for all $n \geq N$, for some $N$. Which implies $ \sqrt{x_{n}} = |\sqrt{x_{n}}-0| <\epsilon $.
+1. $|x_{n}-0| = x_{n} < \epsilon^{2}$ for all $n \geq N$, for some $N$. Which implies $\sqrt{x_{n}} = |\sqrt{x_{n}}-0| <\epsilon$.
 
 <span style="color:green"> Important concept: Applying increasing function to both sides of inequality preserves it, while applying decreasing function to both sides reverses it. </span>
 
