@@ -17,11 +17,11 @@ Solutions that need polishing are marked 🔄 and unfinished solutions are marke
 [1.2.11](#1211) 🔄 | [2.2.2](#222)|
 [1.2.12](#1212) 🔄 | [2.2.3](#223)|
 [1.2.13](#1213) 🔄 | [2.2.4](#224)|
-[1.3.1](#131) 🔄 | |
-[1.3.2](#132) 🔄 | |
-[1.3.3](#133) 🔄 | |
-[1.3.4](#134) 🔄 | |
-[1.3.5](#135) 🔄 | |
+[1.3.1](#131) 🔄 | | [2.2.5](#225)|
+[1.3.2](#132) 🔄 | | [2.2.6](#226)|
+[1.3.3](#133) 🔄 | | [2.2.7](#227)|
+[1.3.4](#134) 🔄 | | [2.2.8](#228)|
+[1.3.5](#135) 🔄 | | [2.3.1](#231)|
 [1.3.6](#136) 🔄 | |
 [1.3.7](#137) 🔄 | |
 [1.3.8](#138) 🔄 | |
@@ -1386,3 +1386,34 @@ of zeros? If not, provide a counterexample.
 3. Yup. <span style=color:red>Wrong. Let's rephrase this to disprove this statement: given any $M$, there exists $N$ such that for all $n$ satisfying $N \leq n \leq N + M$,  $x_{n} \neq 0$. Then it's clear that we can simply create a sequence of infinite $0$, with growing gaps between them; e.g. $(1,0,1,1,0,1,1,1,0,1,1,1,1, \cdots)$, or sequence of $(a_{n})$ such that $a_{n} =0$ if $n = 2^{k}$ for $k \in \mathbb N$, and $0$ otherwise. In the latter case, given any $M$, we pick $k$ such that $2^{k+1} - (2^{k}+1)>M$. It follows that $\{x_{n} | (2^{k}+1) \leq n \leq (2^{k}+1)+M\}$ are not zero.</span>
 4. A sequence is not zero-heavy if for all $M \in \mathbb N$, there exists $N \in \mathbb N$ such that no $n$ satisfies $N \leq n \leq N+M$ where $x_{0}=0$.
 
+<a name="231"></a>
+
+### [Exercise 2.3.1](#toc)
+
+Let $x_{n} \geq 0$ for all $n \in \mathbb N$.
+
+1. If $(x_{n}) \to 0$, show that $(\sqrt{x_{n}}) \to 0$. 
+2. If $(x_{n}) \to x$, show that $(\sqrt{x_{n}}) \to \sqrt{x}$.
+
+***
+
+1. $|x_{n}-0| = x_{n} < \epsilon^{2}$ for all $n \geq N$, for some $N$. Which implies $ \sqrt{x_{n}} = |\sqrt{x_{n}}-0| <\epsilon $.
+
+<span style="color:green"> Important concept: Applying increasing function to both sides of inequality preserves it, while applying decreasing function to both sides reverses it. </span>
+
+<span style="color:red"> Wrong answer. $x_{n}^{2} \to 0$ by algebraic limit theorem (iii). And $\lim (\frac{x_{n}}{x_{n}^{2}}) =0/0$. But $b = 0$ though. </span>
+
+2. Assume $x>0$, as otherwise this statement reduces to exercise (i). We want to show that  $|\sqrt{x_{n}}-\sqrt{x}| < \epsilon $ for all $n \geq N$ for some $N$.. 
+
+ Note that $|x_{n}-x|=|\sqrt{x_{n}}-\sqrt{x}||\sqrt{x_{n}}+\sqrt{x}|$, which implies $|\sqrt{x_{n}}-\sqrt{x}|=\frac{|x_{n}-x|}{|\sqrt{x_{n}}+\sqrt{x}|}$.
+
+Since $|\sqrt{x_{n}}+\sqrt{x}|=\sqrt{x_{n}}+\sqrt{x}\geq \sqrt{x}$, this implies $|\sqrt{x_{n}}-\sqrt{x}|\leq \frac{|x_{n}-x|}{\sqrt{x}}$.
+
+As $(x_{n}) \to x$, there exists some $N$ such that $|x_{n}-x| < \epsilon \sqrt{x}$ for all $n \geq N$. It follows that $|\sqrt{x_{n}}-\sqrt{x}|< \frac{\epsilon \sqrt{x}}{\sqrt{x}} =\epsilon$ for all $n \geq N$.
+
+
+<span style="color:green"> Damn, all these basic identities which idc about are KEY to these qestions... ie $a^{2}-b^{2} = (a-b)(a+b)$. </span>
+
+<span style="color:red"> Early draft: We know $x$ is positive from limit theorem. $|x_{n}-x| < \epsilon \implies |x_{n}| < |x| + \epsilon \implies  x_{n}<x+\epsilon \implies \sqrt{x_{n}} < \sqrt{x + \epsilon}$</span>
+
+<span style="color:red">To find appropriate value of $\epsilon$, $x+ k = \epsilon^{2} \implies k = \epsilon^{2}-x$, but this is not necessarily positive for all $k$</span>
