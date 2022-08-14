@@ -2839,5 +2839,64 @@ are not zero.</span></li>
 satisfies <span class="math inline">N \leq n \leq N+M</span> where <span
 class="math inline">x_{0}=0</span>.</li>
 </ol>
+<p><a name="231"></a></p>
+<h3 id="exercise-2.3.1"><a href="#toc">Exercise 2.3.1</a></h3>
+<p>Let <span class="math inline">x_{n} \geq 0</span> for all <span
+class="math inline">n \in \mathbb N</span>.</p>
+<ol type="1">
+<li>If <span class="math inline">(x_{n}) \to 0</span>, show that <span
+class="math inline">(\sqrt{x_{n}}) \to 0</span>.</li>
+<li>If <span class="math inline">(x_{n}) \to x</span>, show that <span
+class="math inline">(\sqrt{x_{n}}) \to \sqrt{x}</span>.</li>
+</ol>
+<hr />
+<ol type="1">
+<li><span class="math inline">|x_{n}-0| = x_{n} &lt; \epsilon^{2}</span>
+for all <span class="math inline">n \geq N</span>, for some <span
+class="math inline">N</span>. Which implies $ = |-0| &lt;$.</li>
+</ol>
+<p><span style="color:green"> Important concept: Applying increasing
+function to both sides of inequality preserves it, while applying
+decreasing function to both sides reverses it. </span></p>
+<p><span style="color:red"> Wrong answer. <span
+class="math inline">x_{n}^{2} \to 0</span> by algebraic limit theorem
+(iii). And <span class="math inline">\lim (\frac{x_{n}}{x_{n}^{2}})
+=0/0</span>. But <span class="math inline">b = 0</span> though.
+</span></p>
+<ol start="2" type="1">
+<li>Assume <span class="math inline">x&gt;0</span>, as otherwise this
+statement reduces to exercise (i). We want to show that $|-| &lt; $ for
+all <span class="math inline">n \geq N</span> for some <span
+class="math inline">N</span>..</li>
+</ol>
+<p>Note that <span
+class="math inline">|x_{n}-x|=|\sqrt{x_{n}}-\sqrt{x}||\sqrt{x_{n}}+\sqrt{x}|</span>,
+which implies <span
+class="math inline">|\sqrt{x_{n}}-\sqrt{x}|=\frac{|x_{n}-x|}{|\sqrt{x_{n}}+\sqrt{x}|}</span>.</p>
+<p>Since <span
+class="math inline">|\sqrt{x_{n}}+\sqrt{x}|=\sqrt{x_{n}}+\sqrt{x}\geq
+\sqrt{x}</span>, this implies <span
+class="math inline">|\sqrt{x_{n}}-\sqrt{x}|\leq
+\frac{|x_{n}-x|}{\sqrt{x}}</span>.</p>
+<p>As <span class="math inline">(x_{n}) \to x</span>, there exists some
+<span class="math inline">N</span> such that <span
+class="math inline">|x_{n}-x| &lt; \epsilon \sqrt{x}</span> for all
+<span class="math inline">n \geq N</span>. It follows that <span
+class="math inline">|\sqrt{x_{n}}-\sqrt{x}|&lt; \frac{\epsilon
+\sqrt{x}}{\sqrt{x}} =\epsilon</span> for all <span class="math inline">n
+\geq N</span>.</p>
+<p><span style="color:green"> Damn, all these basic identities which idc
+about are KEY to these qestions… ie <span
+class="math inline">a^{2}-b^{2} = (a-b)(a+b)</span>. </span></p>
+<p><span style="color:red"> Early draft: We know <span
+class="math inline">x</span> is positive from limit theorem. <span
+class="math inline">|x_{n}-x| &lt; \epsilon \implies |x_{n}| &lt; |x| +
+\epsilon \implies x_{n}&lt;x+\epsilon \implies \sqrt{x_{n}} &lt; \sqrt{x
++ \epsilon}</span></span></p>
+<p><span style="color:red">To find appropriate value of <span
+class="math inline">\epsilon</span>, <span class="math inline">x+ k =
+\epsilon^{2} \implies k = \epsilon^{2}-x</span>, but this is not
+necessarily positive for all <span
+class="math inline">k</span></span></p>
 </body>
 </html>
