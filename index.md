@@ -1340,9 +1340,9 @@ For all $\epsilon>0$, there exists $N_{1}$ such that $|a_{n} -a| < \epsilon$ for
 
 Similarly, $|a_{n}-b| < \epsilon$ for $n \geq N_{2}$ for some $N_{2}$. 
 
-Let $N = \max \{N_{1}, N_{2}\}$. Suppose $a \neq b$, and let  $\epsilon = |b-a|/100$.
+Let $N = \max \{N_{1}, N_{2}\}$. Suppose $a \neq b$, and let  $\epsilon = |b-a|/2$.
 
-$|b-a|= |b-a_{n} + a_{n} -a| = |(b-a_{n}) + (a_{n} -a)| \leq |b-a_{n}| + |a_{n} -a| < 2\epsilon = 2\epsilon/100$, where the first inequality use Triangle Inequality. But this is a contradiction.
+$|b-a|= |b-a_{n} + a_{n} -a| = |(b-a_{n}) + (a_{n} -a)| \leq |b-a_{n}| + |a_{n} -a| < 2\epsilon = 2|b-a|/2$, where the first inequality use Triangle Inequality. But this is a contradiction.
 
 <a name="227"></a>
 
