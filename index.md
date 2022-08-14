@@ -1403,7 +1403,7 @@ Let $x_{n} \geq 0$ for all $n \in \mathbb N$.
 
 <span style="color:red"> Wrong answer. $x_{n}^{2} \to 0$ by algebraic limit theorem (iii). And $\lim (\frac{x_{n}}{x_{n}^{2}}) =0/0$. But $b = 0$ though. </span>
 
-2. Assume $x>0$, as otherwise this statement reduces to exercise (i). We want to show that  $|\sqrt{x_{n}}-\sqrt{x}| < \epsilon $ for all $n \geq N$ for some $N$.. 
+2. Assume $x>0$, as otherwise this statement reduces to exercise (i). We want to show that  $|\sqrt{x_{n}}-\sqrt{x}|<\epsilon$ for all $n \geq N$ for some $N$. 
 
  Note that $|x_{n}-x|=|\sqrt{x_{n}}-\sqrt{x}||\sqrt{x_{n}}+\sqrt{x}|$, which implies $|\sqrt{x_{n}}-\sqrt{x}|=\frac{|x_{n}-x|}{|\sqrt{x_{n}}+\sqrt{x}|}$.
 
