@@ -17,11 +17,11 @@ Solutions that need polishing are marked 🔄 and unfinished solutions are marke
 [1.2.11](#1211) 🔄 | [2.2.2](#222)|
 [1.2.12](#1212) 🔄 | [2.2.3](#223)|
 [1.2.13](#1213) 🔄 | [2.2.4](#224)|
-[1.3.1](#131) 🔄 | | [2.2.5](#225)|
-[1.3.2](#132) 🔄 | | [2.2.6](#226)|
-[1.3.3](#133) 🔄 | | [2.2.7](#227)|
-[1.3.4](#134) 🔄 | | [2.2.8](#228)|
-[1.3.5](#135) 🔄 | | [2.3.1](#231)|
+[1.3.1](#131) 🔄 | [2.2.5](#225)| |
+[1.3.2](#132) 🔄 | [2.2.6](#226)| |
+[1.3.3](#133) 🔄 |[2.2.7](#227) | |
+[1.3.4](#134) 🔄 | [2.2.8](#228)| |
+[1.3.5](#135) 🔄 | [2.3.1](#231)| |
 [1.3.6](#136) 🔄 | |
 [1.3.7](#137) 🔄 | |
 [1.3.8](#138) 🔄 | |
@@ -1417,3 +1417,43 @@ As $(x_{n}) \to x$, there exists some $N$ such that $|x_{n}-x| < \epsilon \sqrt{
 <span style="color:red"> Early draft: We know $x$ is positive from limit theorem. $|x_{n}-x| < \epsilon \implies |x_{n}| < |x| + \epsilon \implies  x_{n}<x+\epsilon \implies \sqrt{x_{n}} < \sqrt{x + \epsilon}$</span>
 
 <span style="color:red">To find appropriate value of $\epsilon$, $x+ k = \epsilon^{2} \implies k = \epsilon^{2}-x$, but this is not necessarily positive for all $k$</span>
+
+<a name="232"></a>
+
+### [Exercise 2.3.2](#toc)
+
+Using only Definition 2.2.3, prove that if $(x_{n}) \to 2$, then 
+1.  $\frac{2x_{n}−1}{3} \to 1$;
+2. $\frac{1}{x_{n}} \to \frac{1}{2}$
+
+(For this exercise the Algebraic Limit Theorem is off-limits, so to speak.)
+
+***
+
+1. The goal is to find $N$ such that
+
+$|\frac{2x_{n}-1}{3}-1| = |\frac{2x_{n}}{3}-\frac{4}{3}|=\frac{2}{3}|x_{n}-2|<\epsilon$ for all $n \geq N$.
+
+But we know that $|x_{n}-2|<3\epsilon$/2 for all $n \geq N$ for some $N$. Plugging this in, we are done.
+
+2. Similarly, $|\frac{1}{x_{n}}- \frac{1}{2}|=|\frac{2-x_{n}}{2x_{n}}|=|\frac{1}{2x_{n}}||2-x_{n}|$.
+
+
+Since $x_{n}$ is convergent, it is bounded $|x_{n}| \leq M$, where $M>0$. Thus selecting $N$ such that $|2-x_{n}|<2\epsilon M$ for all $n \geq N$, we finish the proof by noting that $\frac{1}{2x_{n}}||2-x_{n}| < |\frac{1}{2M}||2\epsilon M| = \epsilon$
+
+
+<a name="233"></a>
+
+### [Exercise 2.3.3](#toc)
+
+(Squeeze Theorem). Show that if $x_{n} \leq y_{n} \leq z_{n}$ for all $n \in \mathbb N$, and if $\lim x_{n} =\lim z_{n} =l$,then $\lim y_{n} =l$ as well.
+
+***
+
+By order limit theorem:
+
+$x_{n} \leq y_{n}$ for all $n \in \mathbb N$ implies $\lim x_{n}=l \leq \lim y_{n}$.
+
+$y_{n} \leq z_{n}$ for all $n \in \mathbb N$ implies $\lim y_{n} \leq \lim z_{n}=1$.
+
+Thus $l \leq \lim y_{n} \leq l$, therefore $\lim y_{n}=l$
