@@ -22,11 +22,11 @@ Solutions that need polishing are marked 🔄 and unfinished solutions are marke
 [1.3.3](#133) 🔄 |[2.2.7](#227) | |
 [1.3.4](#134) 🔄 | [2.2.8](#228)| |
 [1.3.5](#135) 🔄 | [2.3.1](#231)| |
-[1.3.6](#136) 🔄 | |
-[1.3.7](#137) 🔄 | |
-[1.3.8](#138) 🔄 | |
-[1.3.9](#139) 🔄 | |
-[1.3.10](#1310) 🔄 ||
+[1.3.6](#136) 🔄 |[2.3.2](#232) |
+[1.3.7](#137) 🔄 |[2.3.3](#233) |
+[1.3.8](#138) 🔄 | [2.3.4](#234)|
+[1.3.9](#139) 🔄 | [2.3.5](#235)|
+[1.3.10](#1310) 🔄 |[2.3.1](#236)|
 [1.3.11](#1311) 🔄 | |
 [1.4.1](#141) | |
 [1.4.2](#142)||
@@ -1457,3 +1457,48 @@ $x_{n} \leq y_{n}$ for all $n \in \mathbb N$ implies $\lim x_{n}=l \leq \lim y_{
 $y_{n} \leq z_{n}$ for all $n \in \mathbb N$ implies $\lim y_{n} \leq \lim z_{n}=1$.
 
 Thus $l \leq \lim y_{n} \leq l$, therefore $\lim y_{n}=l$
+
+<a name="234"></a>
+
+### [Exercise 2.3.4](#toc)
+Let $(a_{n}) \to 0$, and use the Algebraic Limit Theorem to compute each of the following limits (assuming the fractions are always defined):
+
+1. $\lim (\frac{1+2a_{n}}{1+3a_{n}-4a_{n}^{2}})$
+2. $\lim \frac{(a_{n}+2)^{2}-4}{a_{n{}}}$
+3. $\lim (\frac{\frac{2}{a_{n}}+3}{\frac{1}{a_{n}}+5})$
+
+***
+
+1. 1
+2. $\frac{(a_{n}+2-2)(a_{n}+2+2)}{a_{n}}=a_{n}+4 \to 4$
+3. $\frac{2+3a_{n}}{1+5a_{n}} \to 2$
+
+<a name="235"></a>
+
+### [Exercise 2.3.5](#toc)
+
+Let $(x_{n})$ and $(y_{n})$ be given, and define $(z_{n})$ to be the “shuffled” sequence $(x_{1}, y_{1}, x_{2}, y_{2}, x_{3}, y_{3}, \cdots , x_{n}, y_{n}, \cdots)$. Prove that $(z_{n})$ is convergent if and only if $(x_{n})$ and $(y_{n})$ are both convergent with $\lim x_{n} = \lim y_{n}$.
+
+***
+
+Suppose $(x_{n})$ and $(y_{n})$ are both convergent to the same limit $l$. Then there exists $N_{x}$ and $N_{y}$ such that for any given $\epsilon>0$, $x_{n}$ and $y_{n}$ will be in the neighborhood $V_{e}(l)$ for all $n \geq N_{x}$ and $N_{y}$ (respectively). Take $N = \max\{N_{x}, N_{y}\}$.  It follows that both $x_{n}$ and $y_{n}$ will be in $V_{e}(l)$ for all $n \geq N$, thus $z_{n}$ converges to $l$.
+
+Conversely, suppose $z_{n}$ converges to some limit $l$. Then given any $\epsilon>0$, there exists some point in the sequence, either $x_{N}$ or $y_{N}$, after which all the subsequent $x_{n}$'s and $y_{n}$'s is in $V_{e}(k)$. That is, both $x_{n}$ and $y_{n}$ are in $V_{e}(k)$ for all $n > N$. Hence each converges to $l$.
+
+<a name="236"></a>
+
+### [Exercise 2.3.6](#toc)
+
+Consider the sequence given by $b_{n} = n − \sqrt{n^{2} + 2n}$. Taking $(1/n) \to 0$ as given, and using both the Algebraic Limit Theorem and the result in Exercise 2.3.1, show $\lim b_{n}$ exists and find the value of the limit.
+
+***
+
+$(n − \sqrt{n^{2} + 2n})(n + \sqrt{n^{2} + 2n}) =n^{2} -n^{2}-2n = -2n$.
+
+Thus, $b_{n} = n − \sqrt{n^{2} + 2n}= \frac{-2n}{n+\sqrt{n^{2}+2n}}= \frac{-2}{1+ \sqrt{1+2/n}}$.
+
+Therefore, $\lim b_{n} = \frac{-2}{1+ \sqrt{1+\lim 2/n}} = -1$.
+
+
+
+<span style="color:red">Early draft: $b_{n} \leq n+1 − \sqrt{n^{2} + 2n+1}=n+1-(n+1) = 0$ and $b_{n} \geq n − \sqrt{n^{2} + 2n+1}=n-(n+1) = -1$</span>
