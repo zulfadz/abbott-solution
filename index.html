@@ -238,23 +238,23 @@ are marked ❎</p>
 </tr>
 <tr class="even">
 <td><a href="#136">1.3.6</a> 🔄</td>
-<td></td>
+<td><a href="#232">2.3.2</a></td>
 </tr>
 <tr class="odd">
 <td><a href="#137">1.3.7</a> 🔄</td>
-<td></td>
+<td><a href="#233">2.3.3</a></td>
 </tr>
 <tr class="even">
 <td><a href="#138">1.3.8</a> 🔄</td>
-<td></td>
+<td><a href="#234">2.3.4</a></td>
 </tr>
 <tr class="odd">
 <td><a href="#139">1.3.9</a> 🔄</td>
-<td></td>
+<td><a href="#235">2.3.5</a></td>
 </tr>
 <tr class="even">
 <td><a href="#1310">1.3.10</a> 🔄</td>
-<td></td>
+<td><a href="#236">2.3.1</a></td>
 </tr>
 <tr class="odd">
 <td><a href="#1311">1.3.11</a> 🔄</td>
@@ -2950,5 +2950,87 @@ class="math inline">n \in \mathbb N</span> implies <span
 class="math inline">\lim y_{n} \leq \lim z_{n}=1</span>.</p>
 <p>Thus <span class="math inline">l \leq \lim y_{n} \leq l</span>,
 therefore <span class="math inline">\lim y_{n}=l</span></p>
+<p><a name="234"></a></p>
+<h3 id="exercise-2.3.4"><a href="#toc">Exercise 2.3.4</a></h3>
+<p>Let <span class="math inline">(a_{n}) \to 0</span>, and use the
+Algebraic Limit Theorem to compute each of the following limits
+(assuming the fractions are always defined):</p>
+<ol type="1">
+<li><span class="math inline">\lim
+(\frac{1+2a_{n}}{1+3a_{n}-4a_{n}^{2}})</span></li>
+<li><span class="math inline">\lim
+\frac{(a_{n}+2)^{2}-4}{a_{n{}}}</span></li>
+<li><span class="math inline">\lim
+(\frac{\frac{2}{a_{n}}+3}{\frac{1}{a_{n}}+5})</span></li>
+</ol>
+<hr />
+<ol type="1">
+<li>1</li>
+<li><span
+class="math inline">\frac{(a_{n}+2-2)(a_{n}+2+2)}{a_{n}}=a_{n}+4 \to
+4</span></li>
+<li><span class="math inline">\frac{2+3a_{n}}{1+5a_{n}} \to
+2</span></li>
+</ol>
+<p><a name="235"></a></p>
+<h3 id="exercise-2.3.5"><a href="#toc">Exercise 2.3.5</a></h3>
+<p>Let <span class="math inline">(x_{n})</span> and <span
+class="math inline">(y_{n})</span> be given, and define <span
+class="math inline">(z_{n})</span> to be the “shuffled” sequence <span
+class="math inline">(x_{1}, y_{1}, x_{2}, y_{2}, x_{3}, y_{3}, \cdots ,
+x_{n}, y_{n}, \cdots)</span>. Prove that <span
+class="math inline">(z_{n})</span> is convergent if and only if <span
+class="math inline">(x_{n})</span> and <span
+class="math inline">(y_{n})</span> are both convergent with <span
+class="math inline">\lim x_{n} = \lim y_{n}</span>.</p>
+<hr />
+<p>Suppose <span class="math inline">(x_{n})</span> and <span
+class="math inline">(y_{n})</span> are both convergent to the same limit
+<span class="math inline">l</span>. Then there exists <span
+class="math inline">N_{x}</span> and <span
+class="math inline">N_{y}</span> such that for any given <span
+class="math inline">\epsilon&gt;0</span>, <span
+class="math inline">x_{n}</span> and <span
+class="math inline">y_{n}</span> will be in the neighborhood <span
+class="math inline">V_{e}(l)</span> for all <span class="math inline">n
+\geq N_{x}</span> and <span class="math inline">N_{y}</span>
+(respectively). Take <span class="math inline">N = \max\{N_{x},
+N_{y}\}</span>. It follows that both <span
+class="math inline">x_{n}</span> and <span
+class="math inline">y_{n}</span> will be in <span
+class="math inline">V_{e}(l)</span> for all <span class="math inline">n
+\geq N</span>, thus <span class="math inline">z_{n}</span> converges to
+<span class="math inline">l</span>.</p>
+<p>Conversely, suppose <span class="math inline">z_{n}</span> converges
+to some limit <span class="math inline">l</span>. Then given any <span
+class="math inline">\epsilon&gt;0</span>, there exists some point in the
+sequence, either <span class="math inline">x_{N}</span> or <span
+class="math inline">y_{N}</span>, after which all the subsequent <span
+class="math inline">x_{n}</span>’s and <span
+class="math inline">y_{n}</span>’s is in <span
+class="math inline">V_{e}(k)</span>. That is, both <span
+class="math inline">x_{n}</span> and <span
+class="math inline">y_{n}</span> are in <span
+class="math inline">V_{e}(k)</span> for all <span class="math inline">n
+&gt; N</span>. Hence each converges to <span
+class="math inline">l</span>.</p>
+<p><a name="236"></a></p>
+<h3 id="exercise-2.3.6"><a href="#toc">Exercise 2.3.6</a></h3>
+<p>Consider the sequence given by <span class="math inline">b_{n} = n −
+\sqrt{n^{2} + 2n}</span>. Taking <span class="math inline">(1/n) \to
+0</span> as given, and using both the Algebraic Limit Theorem and the
+result in Exercise 2.3.1, show <span class="math inline">\lim
+b_{n}</span> exists and find the value of the limit.</p>
+<hr />
+<p><span class="math inline">(n − \sqrt{n^{2} + 2n})(n + \sqrt{n^{2} +
+2n}) =n^{2} -n^{2}-2n = -2n</span>.</p>
+<p>Thus, <span class="math inline">b_{n} = n − \sqrt{n^{2} + 2n}=
+\frac{-2n}{n+\sqrt{n^{2}+2n}}= \frac{-2}{1+ \sqrt{1+2/n}}</span>.</p>
+<p>Therefore, <span class="math inline">\lim b_{n} = \frac{-2}{1+
+\sqrt{1+\lim 2/n}} = -1</span>.</p>
+<p><span style="color:red">Early draft: <span class="math inline">b_{n}
+\leq n+1 − \sqrt{n^{2} + 2n+1}=n+1-(n+1) = 0</span> and <span
+class="math inline">b_{n} \geq n − \sqrt{n^{2} + 2n+1}=n-(n+1) =
+-1</span></span></p>
 </body>
 </html>
