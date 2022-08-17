@@ -3032,5 +3032,46 @@ b_{n}</span> exists and find the value of the limit.</p>
 \leq n+1 − \sqrt{n^{2} + 2n+1}=n+1-(n+1) = 0</span> and <span
 class="math inline">b_{n} \geq n − \sqrt{n^{2} + 2n+1}=n-(n+1) =
 -1</span></span></p>
+<p><a name="237"></a></p>
+<h3 id="exercise-2.3.7"><a href="#toc">Exercise 2.3.7</a></h3>
+<p>Give an example of each of the following, or state that such a
+request is impossible by referencing the proper theorem(s):</p>
+<ol type="1">
+<li>sequences <span class="math inline">(x_{n})</span> and <span
+class="math inline">(y{n})</span>, which both diverge, but whose sum
+<span class="math inline">(x_{n} + y_{n)}</span> converges;</li>
+<li>sequences <span class="math inline">(x_{n})</span> and <span
+class="math inline">(y{n})</span>, where <span
+class="math inline">(x_{n})</span> converges, <span
+class="math inline">(y_{n})</span> diverges, and <span
+class="math inline">(x_{n}+y_{n})</span> converges;</li>
+<li></li>
+<li></li>
+</ol>
+<hr />
+<ol type="1">
+<li><p><span class="math inline">(x_{n}) = (1,-1,1,-1,\cdots)</span> and
+<span class="math inline">(y_{n}) = (-1,1,-1,1,\cdots)</span> sum up to
+a sequence of zeros.</p></li>
+<li><p>Impossible. Suppose the sum converges. Then <span
+class="math inline">y_{n} = (x_{n} + y_{n}) - x_{n}</span> converges to
+<span class="math inline">\lim(x_{n}+y_{n}) - \lim(x_{n})</span> by
+algebraic limit theorem.</p></li>
+</ol>
+<p><span style="color:red">Suppose the sum converges to <span
+class="math inline">l</span>, i.e. there exists <span
+class="math inline">N_{1}</span> such that <span
+class="math inline">|x_{n}+y_{n} - l|&lt;\epsilon</span>, for all <span
+class="math inline">n \geq N_{1}</span>. At the same time, there exists
+<span class="math inline">N_{2}</span> such <span
+class="math inline">|x_{n} -x|&lt;\epsilon^{\prime}</span>, for all
+<span class="math inline">n \geq N_{1}</span>, where <span
+class="math inline">x</span> is the limit. Take <span
+class="math inline">N = \max \{N_{1},N_{2}\}</span>. Then, for any given
+<span class="math inline">\epsilon,\epsilon^{\prime}&gt;0</span>, <span
+class="math inline">|x_{n}+y_{n} - l|\leq |y_{n} + x+ \epsilon^{prime} -
+l|&lt;\epsilon</span>, for all <span class="math inline">n\geq N</span>.
+This contradicts the assumption that <span
+class="math inline">(y_{n})</span> is divergent.</span></p>
 </body>
 </html>
