@@ -1502,3 +1502,26 @@ Therefore, $\lim b_{n} = \frac{-2}{1+ \sqrt{1+\lim 2/n}} = -1$.
 
 
 <span style="color:red">Early draft: $b_{n} \leq n+1 − \sqrt{n^{2} + 2n+1}=n+1-(n+1) = 0$ and $b_{n} \geq n − \sqrt{n^{2} + 2n+1}=n-(n+1) = -1$</span>
+
+<a name="237"></a>
+
+### [Exercise 2.3.7](#toc)
+
+
+Give an example of each of the following, or state that such a request is impossible by referencing the proper theorem(s):
+
+1. sequences $(x_{n})$ and $(y{n})$, which both diverge, but whose sum $(x_{n} + y_{n)}$ converges;
+2. sequences $(x_{n})$ and $(y{n})$, where $(x_{n})$ converges, $(y_{n})$ diverges, and $(x_{n}+y_{n})$ converges;
+3.
+4.
+
+***
+
+1. $(x_{n}) = (1,-1,1,-1,\cdots)$ and $(y_{n}) = (-1,1,-1,1,\cdots)$ sum up to a sequence of zeros.
+
+2. Impossible. Suppose the sum converges. Then $y_{n} = (x_{n} + y_{n}) - x_{n}$ converges to $\lim(x_{n}+y_{n}) - \lim(x_{n})$ by algebraic limit theorem.
+
+<span style="color:red">Suppose the sum converges to $l$, i.e. there exists $N_{1}$ such that $|x_{n}+y_{n} - l|<\epsilon$, for all $n \geq N_{1}$. At the same time, there exists $N_{2}$ such $|x_{n} -x|<\epsilon^{\prime}$, for all $n \geq N_{1}$, where $x$ is the limit. Take $N = \max \{N_{1},N_{2}\}$. Then, for any given $\epsilon,\epsilon^{\prime}>0$, $|x_{n}+y_{n} - l|\leq |y_{n} + x+ \epsilon^{prime} - l|<\epsilon$, for all $n\geq N$. This contradicts the assumption that $(y_{n})$ is divergent.</span>
+
+
+
