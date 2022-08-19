@@ -26,10 +26,10 @@ Solutions that need polishing are marked 🔄 and unfinished solutions are marke
 [1.3.7](#137) 🔄 |[2.3.3](#233) |
 [1.3.8](#138) 🔄 | [2.3.4](#234)|
 [1.3.9](#139) 🔄 | [2.3.5](#235)|
-[1.3.10](#1310) 🔄 |[2.3.1](#236)|
-[1.3.11](#1311) 🔄 | |
-[1.4.1](#141) | |
-[1.4.2](#142)||
+[1.3.10](#1310) 🔄 |[2.3.6](#236)|
+[1.3.11](#1311) 🔄 |[2.3.7](#237) |
+[1.4.1](#141) | [2.3.8](#238)|
+[1.4.2](#142)|[2.3.9](#239)|
 [1.4.3](#143)||
 [1.4.4](#144)||
 [1.4.5](#145)||
@@ -1512,8 +1512,8 @@ Give an example of each of the following, or state that such a request is imposs
 
 1. sequences $(x_{n})$ and $(y{n})$, which both diverge, but whose sum $(x_{n} + y_{n)}$ converges;
 2. sequences $(x_{n})$ and $(y{n})$, where $(x_{n})$ converges, $(y_{n})$ diverges, and $(x_{n}+y_{n})$ converges;
-3.
-4.
+3. a convergent sequence $(b_{n})$ with $b_{n} \neq 0$ for all $n$ such that $(1/b_{n})$ diverges;
+4. two sequences $(a_{n})$ and $(b_{n})$, where $(a_{n}b_{n})$ and $(a_{n})$ converge but $(b_{n})$ does not.
 
 ***
 
@@ -1523,5 +1523,74 @@ Give an example of each of the following, or state that such a request is imposs
 
 <span style="color:red">Suppose the sum converges to $l$, i.e. there exists $N_{1}$ such that $|x_{n}+y_{n} - l|<\epsilon$, for all $n \geq N_{1}$. At the same time, there exists $N_{2}$ such $|x_{n} -x|<\epsilon^{\prime}$, for all $n \geq N_{1}$, where $x$ is the limit. Take $N = \max \{N_{1},N_{2}\}$. Then, for any given $\epsilon,\epsilon^{\prime}>0$, $|x_{n}+y_{n} - l|\leq |y_{n} + x+ \epsilon^{prime} - l|<\epsilon$, for all $n\geq N$. This contradicts the assumption that $(y_{n})$ is divergent.</span>
 
+3. $(1/n)_{n \geq 1}$, the reciprocal of which $(n)$ is divergent.
+
+4. Suppose $a_{n}=0$ for all $n$, and $b_{n}=n$. Then the product is a sequence of zeros which  converges.
 
 
+<a name="238"></a>
+
+### [Exercise 2.3.8](#toc)
+
+Let $(x_{n}) \to x$ and let $p(x)$ be a polynomial.
+
+1. Show $p(x_{n}) \to p(x)$
+2. Find an example of a function $f(x)$ and a convergent sequence $(x_{n}) \to x$ where the sequence $f(x_{n})$ converges, but not to $f(x)$.
+
+***
+
+1. Given any polynomial $p(x) = a_{m}x_{n}^{m} + a_{m-1}x_{n-1}^{m-1} + \cdots + a_{0}$, algebraic limit theorem implies it converges to a_{m}x^{m} + a_{m-1}x^{m-1} + \cdots + a_{0}$.
+
+2. Let $x_{n}=0$ for all $n$ and $f(x_{n}) = x_{n}+1$. Then $f(x_{n}) \to 1$.
+
+<a name="239"></a>
+
+### [Exercise 2.3.9](#toc)
+
+1. Let $(a_{n})$ be a bounded (not necessarily convergent) sequence, and assume $\lim b_{n} = 0$. Show that $\lim(a_{n}b_{n}) = 0$. Why are we not allowed to use the Algebraic Limit Theorem to prove this?
+
+2. Can we conclude anything about the convergence of $(a_{n}b_{n})$ if we assume that $(b_{n})$ converges to some nonzero limit $b$?
+
+3. Use (1) to prove Theorem 2.3.3, part (iii), for the case when $a = 0$.
+
+***
+
+1. $|a_{n}| \leq M, M>0$, for all $n \in \mathbb N$. Given any $\epsilon/M>0$, $|b_{n}|<\epsilon/M$ for $n \geq N$ for some $N$. Thus, $|a_{n}b_{n}|=|a_{n}||b_{n}|<(\epsilon/M)M=\epsilon$ for all $n \geq N$.
+
+We cannot use algebraic limit theoroem because $(a_{n})$ diverges.
+
+2. No. suppose $(a_{n})= (5,-5,5,-5,\cdots)$. Hence it's bounded $|a_{n}| \leq 5$ for all $n$. If we assume that $(b_{n})$ converges to some nonzero limit $b$ (e.g. $(b_{n})$ is a sequence of $1$), then for all $n \geq N$ for some $N$, the terms in the sequence will continue to be oscilating, hence not converging. 
+
+<span style="color:red"> Early draft:
+For some limit $K \neq 0$, $|b_{n}-K|<\epsilon$ for $n \geq N$ for some $N$. Thus $|b_{n}|< |K|+\epsilon$. Hence $|a_{n}b_{n}|=|a_{n}||b_{n}|<(|K| + \epsilon)/M$ for all $n \geq N$.
+
+$$\begin{align*}
+|a_{n}b_{n}| &\leq |a_{n}b_{n}-Mb_{n}|+|Mb_{n}-Mb| \\
+&\leq |b_{n}||a_{n}-M|+M|b_{n}-b| \\
+&< X|a_{n}-M|+MK \text{, where $X>0$ due to bounded property} \\
+\end{align*}$$
+</span>
+
+3. This is too trivial, I'm legitimately wondering if I'm understanding this wrong. But, the theorem states $\lim (a_{n}b_{n}) = ab$. We know $a$ is zero. We also know $b_{n}$ converges, hence it is bounded. Thus $\lim (a_{n}b_{n}) = 0$.
+
+<a name="2310"></a>
+
+### [Exercise 2.3.10](#toc)
+
+Consider the following list of conjectures. Provide a short proof for those that are true and a counterexample for any that are false. 
+
+1. If $\lim (a_{n} −b_{n}) = 0$, then $\lim a_{n} = \lim b_{n}$.
+
+2. If $(b_{n}) \to b$, then $|b_{n}| \to |b|$.
+
+3. If $(a_{n}) \to a$ and $(b_{n} −a_{n}) \to 0$, then $(b_{n}) \to a$.
+
+4. If $(a_{n}) \to 0$ and $|bn −b|\leq a_{n}$ for all $n \in \mathbb N$, then $(b_{n}) \in b$.
+
+***
+
+1. False.
+
+<span style="color:red">Early draft. Wrong because i did not consider divergent sequences. $\lim (a_{n} −b_{n}) = \lim a_{n} - \lim b_{n} \text{ by algebraic limit theorem} =0$.</span>
+
+2. $|b_{n}-b| <\epsilon$ implies $|b_{n}|<|b|+\epsilon$ and $|b_{n}|>|b|-\epsilon$ (using triangle inequalities). This is just equal to saying $||b_{n}|-|b||<\epsilon$.
