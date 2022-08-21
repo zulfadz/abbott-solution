@@ -3192,18 +3192,132 @@ class="math inline">(b_{n}) \in b</span>.</p></li>
 </ol>
 <hr />
 <ol type="1">
-<li>False.</li>
+<li>False. For example, let <span class="math inline">a_{n} = n</span>
+and <span class="math inline">b_{n} =-n</span>.</li>
 </ol>
 <p><span style="color:red">Early draft. Wrong because i did not consider
 divergent sequences. <span class="math inline">\lim (a_{n} −b_{n}) =
 \lim a_{n} - \lim b_{n} \text{ by algebraic limit theorem}
 =0</span>.</span></p>
 <ol start="2" type="1">
-<li><span class="math inline">|b_{n}-b| &lt;\epsilon</span> implies
-<span class="math inline">|b_{n}|&lt;|b|+\epsilon</span> and <span
+<li>True. We will show <span class="math inline">||b_{n} -|b_{n}||\leq
+|b_{n}-b|</span>, from which the statement follows.</li>
+</ol>
+<p>By triangle inequality, <span class="math inline">|b_{n}|\leq
+|b_{n}-b|+|b| \implies |b_{n}|-|b|\leq|b_{n}-b|</span>.</p>
+<p>Similarly, <span class="math inline">|b|\leq |b-b_{n}| +
+|b_{n}|\implies |b|-|b_{n}|\leq|b-b_{n}|=|b_{n}-b|\implies
+|b_{n}|-|b|\geq -|b_{n}-b|.</span></p>
+<p>Therefore, <span class="math inline">-|b_{n}-b|\leq |b_{n}|-|b| \leq
+|b_{n}-b|</span>.</p>
+<p><span style="color:red">Early draft: <span
+class="math inline">|b_{n}-b| &lt;\epsilon</span> implies <span
+class="math inline">|b_{n}|&lt;|b|+\epsilon</span> and <span
 class="math inline">|b_{n}|&gt;|b|-\epsilon</span> (using triangle
 inequalities). This is just equal to saying <span
-class="math inline">||b_{n}|-|b||&lt;\epsilon</span>.</li>
+class="math inline">||b_{n}|-|b||&lt;\epsilon</span>.<span></p>
+<ol start="3" type="1">
+<li>True.</li>
 </ol>
+<ol type="a">
+<li>For all <span class="math inline">n\geq N_{1}</span>, <span
+class="math inline">-\epsilon&lt;a_{n}-a&lt;\epsilon</span></li>
+</ol>
+<p><span class="math inline">\implies
+\epsilon&gt;-a_{n}+a&gt;-\epsilon</span></p>
+<p><span class="math inline">\implies
+-\epsilon&lt;-a_{n}+a&lt;\epsilon</span> – (1)</p>
+<ol start="2" type="a">
+<li><p>For all <span class="math inline">n\geq N_{2}</span>, <span
+class="math inline">-\epsilon^{\prime}&lt;a_{n} -
+b_{n}&lt;\epsilon^{\prime}</span> – (2)</p></li>
+<li><p>Let <span class="math inline">x_{n} =a_{n}</span> and <span
+class="math inline">y_{n} = b_{n} −a_{n}</span>. Thus <span
+class="math inline">x_{n} \to a</span> and <span
+class="math inline">y_{n} \to 0</span>, therefore from Algebraic Limit
+Theorem, this implies <span class="math inline">x_{n} + y_{n} \to
+a</span>. But <span class="math inline">x_{n} +
+y_{n}=b_{n}</span>.</p></li>
+</ol>
+<p><span style="color:green">Alt answer: For all <span
+class="math inline">n\geq N=\max\{N_{1},N_{2}\}</span> , (1) + (2) <span
+class="math inline">\implies -\epsilon^{\prime} -\epsilon&lt;a -
+b_{n}&lt;\epsilon^{\prime} + \epsilon</span></p>
+<p><span class="math inline">\implies -\epsilon^{\prime} -
+\epsilon&lt;b_{n}-a&lt;\epsilon^{\prime} +\epsilon</span></p>
+<p><span class="math inline">\implies
+|b_{n}-a|&lt;\epsilon^{\prime\prime}</span>, for any given <span
+class="math inline">\epsilon^{\prime\prime}</span>, for all <span
+class="math inline">n&gt;N</span>. </span></p>
+<p><span style="color:red">Early draft: There exists <span
+class="math inline">N</span> such that <span class="math inline">|b_{n}
+-a_{n}|&lt;\epsilon</span> for all <span class="math inline">n \geq
+N</span>. By triangle inequality, <span class="math inline">|b_{n}
+-a+a-a_{n}|\leq |b_{n} -a|+|a-a_{n}|\leq |b_{n}
+-a|+\epsilon</span></span></p>
+<ol start="4" type="1">
+<li>True. <span class="math inline">|a_{n}|&lt;\epsilon</span> for all
+<span class="math inline">n\geq N</span> for some <span
+class="math inline">N</span>. Hence <span
+class="math inline">|b_{n}-b|\leq a_{n} \leq \epsilon</span> for all
+<span class="math inline">n\geq N</span>.</li>
+</ol>
+<p><a name="2311"></a></p>
+<h3 id="exercise-2.3.11-cesaro-means"><a href="#toc">Exercise 2.3.11</a>
+Cesaro Means</h3>
+<ol type="1">
+<li><p>Show that if <span class="math inline">(x_{n})</span> is a
+convergent sequence, then the sequence given by the averages <span
+class="math display">y_{n} = \frac{x_{1} +x_{2} +···+x_{n}}{n}</span>
+also converges to the same limit.</p></li>
+<li><p>Give an example to show that it is possible for the sequence
+<span class="math inline">(y_{n})</span> of averages to converge even if
+<span class="math inline">(x_{n})</span> does not.</p></li>
+</ol>
+<hr />
+<ol type="1">
+<li>Suppose <span class="math inline">x_{n} \to l</span>. Then, there
+exists <span class="math inline">N_{1}</span> such that <span
+class="math inline">|x_{n}-l|&lt;\epsilon</span> for all <span
+class="math inline">n&gt; N_{1}</span>. Thus,</li>
+</ol>
+<p><span class="math display">\begin{align*}
+|y_{n}-l| &amp;=  |\frac{x_{1} +x_{2}
++\cdots+x_{N_{1}}+\cdots+x_{n}-nl}{n}|\\
+&amp;\leq \frac{1}{n}(|x_{1}-l|+|x_{2}-l|+\cdots +
+|x_{N_{1}}-l|+\cdots+|x_{n}-l|) \text{ by triangle inequality}.
+\end{align*}</span></p>
+<p>Select <span class="math inline">M &gt; \max\{|x_{n}-l||\forall n \in
+\mathbb N\}</span> and <span class="math inline">\epsilon^{\prime} =
+\epsilon/2.</span> Hence <span
+class="math inline">M&gt;\epsilon^{\prime}</span>. It follows that</p>
+<p><span class="math display">\begin{align*}
+|y_{n}-l| &amp;\leq \frac{1}{n}(M+M+\cdots +
+\epsilon^{\prime}+\cdots+\epsilon^{\prime}) \\
+&amp;\leq \frac{1}{n}(N_{1}M+(n-N_{1})\epsilon^{\prime}) \\
+&amp;=\frac{N_{1}M}{n}-\frac{N_{1}\epsilon^{\prime}}{n}+\epsilon^{\prime}
+\\
+&amp;=\frac{N_{1}(M-\epsilon^{\prime})}{n} +\epsilon^{\prime}.
+\end{align*}</span></p>
+<p>Select <span class="math inline">N_{2}</span> such that for all <span
+class="math inline">n \geq N</span>, <span
+class="math inline">0&lt;\frac{N_{1}(M-\epsilon^{\prime})}{n}&lt;\epsilon^{\prime}.</span>
+Therefore, for all <span class="math inline">n \geq
+\max\{N_{1},N_{2}\}</span>,</p>
+<p><span class="math display">\begin{align*}
+|y_{n}-l| &amp;=\frac{N_{1}(M-\epsilon^{\prime})}{n} +\epsilon^{\prime}
+\\
+&amp;\leq \epsilon^{\prime} + \epsilon^{\prime} = 2\epsilon^{\prime} =
+\epsilon.
+\end{align*}</span></p>
+<p><span style="color:red"> Early draft: Suppose <span
+class="math inline">x_{n}</span> converges to <span
+class="math inline">l</span>, then there exists <span
+class="math inline">N</span> such that if <span class="math inline">n
+\geq N</span>, then <span class="math display">|y_{n}| \leq
+|1/n|(|x_{1}|+|x_{2}|+\cdots+|l|+1+|l|+1+\cdots |l|+1)</span></p>
+<p><span class="math inline">|y_n -l|=|\frac{x_{1} +x_{2}
++···+x_{n}}{n}-l|\leq n|\frac{x_{1} +x_{2} +···+x_{n}}{n}-l|</span>
+</span></p>
 </body>
 </html>
