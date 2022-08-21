@@ -1589,8 +1589,79 @@ Consider the following list of conjectures. Provide a short proof for those that
 
 ***
 
-1. False.
+1. False. For example, let $a_{n} = n$ and $b_{n} =-n$.
 
 <span style="color:red">Early draft. Wrong because i did not consider divergent sequences. $\lim (a_{n} −b_{n}) = \lim a_{n} - \lim b_{n} \text{ by algebraic limit theorem} =0$.</span>
 
-2. $|b_{n}-b| <\epsilon$ implies $|b_{n}|<|b|+\epsilon$ and $|b_{n}|>|b|-\epsilon$ (using triangle inequalities). This is just equal to saying $||b_{n}|-|b||<\epsilon$.
+2. True. We will show $||b_{n} -|b_{n}||\leq |b_{n}-b|$, from which the statement follows.
+
+By triangle inequality, $|b_{n}|\leq |b_{n}-b|+|b| \implies |b_{n}|-|b|\leq|b_{n}-b|$.
+
+Similarly, $|b|\leq |b-b_{n}| + |b_{n}|\implies |b|-|b_{n}|\leq|b-b_{n}|=|b_{n}-b|\implies |b_{n}|-|b|\geq -|b_{n}-b|.$
+
+Therefore, $-|b_{n}-b|\leq |b_{n}|-|b| \leq |b_{n}-b|$.
+
+<span style="color:red">Early draft: $|b_{n}-b| <\epsilon$ implies $|b_{n}|<|b|+\epsilon$ and $|b_{n}|>|b|-\epsilon$ (using triangle inequalities). This is just equal to saying $||b_{n}|-|b||<\epsilon$.<span>
+
+3. True. 
+
+a. For all $n\geq N_{1}$, $-\epsilon<a_{n}-a<\epsilon$
+
+$\implies \epsilon>-a_{n}+a>-\epsilon$
+
+$\implies -\epsilon<-a_{n}+a<\epsilon$ -- (1)
+
+
+b. For all $n\geq N_{2}$, $-\epsilon^{\prime}<a_{n} - b_{n}<\epsilon^{\prime}$ -- (2)
+
+c. Let $x_{n} =a_{n}$ and $y_{n} = b_{n} −a_{n}$. Thus $x_{n} \to a$ and $y_{n} \to 0$, therefore from Algebraic Limit Theorem, this implies $x_{n} + y_{n} \to a$. But $x_{n} + y_{n}=b_{n}$.
+
+<span style="color:green">Alt answer: For all $n\geq N=\max\{N_{1},N_{2}\}$ , (1) + (2) $\implies -\epsilon^{\prime} -\epsilon<a - b_{n}<\epsilon^{\prime} + \epsilon$
+
+$\implies -\epsilon^{\prime} - \epsilon<b_{n}-a<\epsilon^{\prime} +\epsilon$
+
+$\implies |b_{n}-a|<\epsilon^{\prime\prime}$, for any given $\epsilon^{\prime\prime}$, for all $n>N$.
+</span>
+
+
+<span style="color:red">Early draft: There exists $N$ such that $|b_{n} -a_{n}|<\epsilon$ for all $n \geq N$. By triangle inequality, $|b_{n} -a+a-a_{n}|\leq |b_{n} -a|+|a-a_{n}|\leq |b_{n} -a|+\epsilon$</span>
+
+4. True. $|a_{n}|<\epsilon$ for all $n\geq N$ for some $N$. Hence $|b_{n}-b|\leq a_{n} \leq \epsilon$ for all $n\geq N$.
+
+<a name="2311"></a>
+
+### [Exercise 2.3.11](#toc) Cesaro Means
+
+1. Show that if $(x_{n})$ is a convergent sequence, then the sequence given by the averages $$y_{n} = \frac{x_{1} +x_{2} +···+x_{n}}{n}$$ also converges to the same limit.
+
+2. Give an example to show that it is possible for the sequence $(y_{n})$ of averages to converge even if $(x_{n})$ does not.
+
+***
+
+1. Suppose $x_{n} \to l$. Then, there exists $N_{1}$ such that $|x_{n}-l|<\epsilon$ for all $n> N_{1}$. Thus,
+
+$$\begin{align*}
+|y_{n}-l| &=  |\frac{x_{1} +x_{2} +\cdots+x_{N_{1}}+\cdots+x_{n}-nl}{n}|\\
+&\leq \frac{1}{n}(|x_{1}-l|+|x_{2}-l|+\cdots + |x_{N_{1}}-l|+\cdots+|x_{n}-l|) \text{ by triangle inequality}.
+\end{align*}$$
+
+Select $M > \max\{|x_{n}-l||\forall n \in \mathbb N\}$ and $\epsilon^{\prime} = \epsilon/2.$ Hence $M>\epsilon^{\prime}$. It follows that
+
+$$\begin{align*}
+|y_{n}-l| &\leq \frac{1}{n}(M+M+\cdots + \epsilon^{\prime}+\cdots+\epsilon^{\prime}) \\
+&\leq \frac{1}{n}(N_{1}M+(n-N_{1})\epsilon^{\prime}) \\
+&=\frac{N_{1}M}{n}-\frac{N_{1}\epsilon^{\prime}}{n}+\epsilon^{\prime} \\
+&=\frac{N_{1}(M-\epsilon^{\prime})}{n} +\epsilon^{\prime}.
+\end{align*}$$
+
+Select $N_{2}$ such that for all $n \geq N$, $0<\frac{N_{1}(M-\epsilon^{\prime})}{n}<\epsilon^{\prime}.$ Therefore, for all $n \geq \max\{N_{1},N_{2}\}$,
+
+$$\begin{align*}
+|y_{n}-l| &=\frac{N_{1}(M-\epsilon^{\prime})}{n} +\epsilon^{\prime} \\
+&\leq \epsilon^{\prime} + \epsilon^{\prime} = 2\epsilon^{\prime} = \epsilon.
+\end{align*}$$
+
+<span style="color:red"> Early draft: Suppose $x_{n}$ converges to $l$, then there exists $N$ such that if $n \geq N$, then $$|y_{n}| \leq |1/n|(|x_{1}|+|x_{2}|+\cdots+|l|+1+|l|+1+\cdots |l|+1)$$
+
+$|y_n -l|=|\frac{x_{1} +x_{2} +···+x_{n}}{n}-l|\leq n|\frac{x_{1} +x_{2} +···+x_{n}}{n}-l|$
+</span>
