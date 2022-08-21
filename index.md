@@ -1645,7 +1645,7 @@ $$\begin{align*}
 &\leq \frac{1}{n}(|x_{1}-l|+|x_{2}-l|+\cdots + |x_{N_{1}}-l|+\cdots+|x_{n}-l|) \text{ by triangle inequality}.
 \end{align*}$$
 
-Select $M > \max\{|x_{n}-l||\forall n \in \mathbb N\}$ and $\epsilon^{\prime} = \epsilon/2.$ Hence $M>\epsilon^{\prime}$. It follows that
+Select $M > \max\{|x_{n}-l|:\forall n \in \mathbb N\}$ and $\epsilon^{\prime} = \epsilon/2.$ Hence $M>\epsilon^{\prime}$. It follows that
 
 $$\begin{align*}
 |y_{n}-l| &\leq \frac{1}{n}(M+M+\cdots + \epsilon^{\prime}+\cdots+\epsilon^{\prime}) \\
