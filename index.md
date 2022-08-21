@@ -1654,7 +1654,7 @@ $$\begin{align*}
 &=\frac{N_{1}(M-\epsilon^{\prime})}{n} +\epsilon^{\prime}.
 \end{align*}$$
 
-Select $N_{2}$ such that for all $n \geq N$, $0<\frac{N_{1}(M-\epsilon^{\prime})}{n}<\epsilon^{\prime}.$ Therefore, for all $n \geq \max\{N_{1},N_{2}\}$,
+Select $N_{2}$ such that for all $n \geq N_{2}$, $0<\frac{N_{1}(M-\epsilon^{\prime})}{n}<\epsilon^{\prime}.$ Therefore, for all $n \geq \max\{N_{1},N_{2}\}$,
 
 $$\begin{align*}
 |y_{n}-l| &=\frac{N_{1}(M-\epsilon^{\prime})}{n} +\epsilon^{\prime} \\
