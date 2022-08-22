@@ -270,15 +270,15 @@ are marked ❎</p>
 </tr>
 <tr class="even">
 <td><a href="#143">1.4.3</a></td>
-<td></td>
+<td><a href="#2310">2.3.10</a></td>
 </tr>
 <tr class="odd">
 <td><a href="#144">1.4.4</a></td>
-<td></td>
+<td><a href="#2311">2.3.11</a></td>
 </tr>
 <tr class="even">
 <td><a href="#145">1.4.5</a></td>
-<td></td>
+<td><a href="#2312">2.3.12</a></td>
 </tr>
 <tr class="odd">
 <td><a href="#146">1.4.6</a></td>
@@ -3319,5 +3319,68 @@ class="math inline">N</span> such that if <span class="math inline">n
 <p><span class="math inline">|y_n -l|=|\frac{x_{1} +x_{2}
 +···+x_{n}}{n}-l|\leq n|\frac{x_{1} +x_{2} +···+x_{n}}{n}-l|</span>
 </span></p>
+<ol start="2" type="1">
+<li><span class="math inline">\frac{-1+1-1+1-1+\cdots}{n}</span></li>
+</ol>
+<p><a name="2312"></a></p>
+<h3 id="exercise-2.3.12-cesaro-means"><a href="#toc">Exercise 2.3.12</a>
+Cesaro Means</h3>
+<p>A typical task in analysis is to decipher whether a property
+possessed by every term in a convergent sequence is necessarily
+inherited by the limit. Assume <span class="math inline">(a_{n}) \to
+a</span>, and determine the validity of each claim. Try to produce a
+counterexample for any that are false.</p>
+<ol type="1">
+<li><p>If every <span class="math inline">a_{n}</span> is an upper bound
+for a set <span class="math inline">B</span>, then <span
+class="math inline">a</span> is also an upper bound for <span
+class="math inline">B</span>.</p></li>
+<li><p>If every <span class="math inline">a_{n}</span> is in the
+complement of the interval <span class="math inline">(0, 1)</span>, then
+a is also in the complement of <span class="math inline">(0,
+1)</span>.</p></li>
+<li><p>If every <span class="math inline">a_{n}</span> is rational, then
+<span class="math inline">a</span> is rational. ***</p></li>
+<li><p>True. If <span class="math inline">a</span> is not an upper bound
+of <span class="math inline">B</span>, then there exists <span
+class="math inline">b\in B</span>, <span
+class="math inline">b&gt;a</span>. We also know that <span
+class="math inline">a_{n}\geq b</span> for all <span
+class="math inline">n</span>. Thus, <span
+class="math inline">a_{n}-a&gt;b-a&gt;0</span> for all <span
+class="math inline">n</span>, hence <span class="math inline">a_n</span>
+cannot converge to <span class="math inline">a</span>.</p></li>
+<li><p>I thought this is false, but I can’t think of an example. Let me
+try to prove the statement instead. By definition of limit, there exists
+<span class="math inline">N</span> such that for all <span
+class="math inline">n&gt;N</span>, <span class="math inline">a_{n}\in
+V_{\epsilon}(a)</span>. Suppose <span class="math inline">a</span> is in
+<span class="math inline">(0,1)</span>. Then there exist an entire
+neighborhood comprising of elements in <span
+class="math inline">(0,1)</span>. But this contradicts <span
+class="math inline">a_{n}</span> being a complement of <span
+class="math inline">(0,1)</span>.</p></li>
+</ol>
+<p><span style="color:green">Love this exercise!</span></p>
+<p><span style="color:red">Looking online, I can also make explicit
+about my choice of neighborhood. Select some <span
+class="math inline">0&lt;\epsilon&lt;\max(|a−0|,|a−1|)</span>. Source:
+<a
+href="https://math.stackexchange.com/questions/1647760/determine-whether-a-property-possessed-by-every-term-in-a-convergent-sequence-is">SE</a></span></p>
+<ol start="3" type="1">
+<li>False. Consider the interval <span class="math inline">I_{n} =
+(x-\pi,x+\pi)</span>. By density of rational numbers, there exists a
+rational number <span class="math inline">r_{n} \in I_{n}</span>. The
+sequence <span class="math inline">(r_{n})</span> converges to <span
+class="math inline">pi</span>. To prove this, given any <span
+class="math inline">\epsilon</span>, select <span
+class="math inline">N</span> such that <span
+class="math inline">1/N&lt;\epsilon</span>. Then for any <span
+class="math inline">n\geq N</span>, <span
+class="math inline">|r_{n}=x|&lt;1/n\leq 1/N&lt;\epsilon</span>.</li>
+</ol>
+<p><span style="color:green">Freaking love this exercise. Also, this
+prove works for not just <span class="math inline">\pi</span>, for any
+real number. Good stuff.</span></p>
 </body>
 </html>

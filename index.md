@@ -30,9 +30,9 @@ Solutions that need polishing are marked 🔄 and unfinished solutions are marke
 [1.3.11](#1311) 🔄 |[2.3.7](#237) |
 [1.4.1](#141) | [2.3.8](#238)|
 [1.4.2](#142)|[2.3.9](#239)|
-[1.4.3](#143)||
-[1.4.4](#144)||
-[1.4.5](#145)||
+[1.4.3](#143)|[2.3.10](#2310)|
+[1.4.4](#144)|[2.3.11](#2311)|
+[1.4.5](#145)|[2.3.12](#2312)|
 [1.4.6](#146)||
 [1.4.7](#147)||
 [1.4.8](#148)||
@@ -1665,3 +1665,30 @@ $$\begin{align*}
 
 $|y_n -l|=|\frac{x_{1} +x_{2} +···+x_{n}}{n}-l|\leq n|\frac{x_{1} +x_{2} +···+x_{n}}{n}-l|$
 </span>
+
+2. $\frac{-1+1-1+1-1+\cdots}{n}$
+
+<a name="2312"></a>
+
+### [Exercise 2.3.12](#toc) Cesaro Means
+
+A typical task in analysis is to decipher whether a property possessed by every term in a convergent sequence is necessarily inherited by the limit. Assume $(a_{n}) \to a$, and determine the validity of each claim. Try to produce a counterexample for any that are false.
+
+1. If every $a_{n}$ is an upper bound for a set $B$, then $a$ is also an upper bound for $B$.
+
+2. If every $a_{n}$ is in the complement of the interval $(0, 1)$, then a is also in the complement of $(0, 1)$.
+
+3. If every $a_{n}$ is rational, then $a$ is rational.
+***
+
+1. True. If $a$ is not an upper bound of $B$, then there exists $b\in B$, $b>a$. We also know that $a_{n}\geq b$ for all $n$. Thus, $a_{n}-a>b-a>0$ for all $n$, hence $a_n$ cannot converge to $a$.
+
+2. I thought this is false, but I can't think of an example. Let me try to prove the statement instead. By definition of limit, there exists $N$ such that for all $n>N$, $a_{n}\in V_{\epsilon}(a)$. Suppose $a$ is in $(0,1)$. Then there exist an entire neighborhood comprising of elements in $(0,1)$. But this contradicts $a_{n}$ being a complement of $(0,1)$.
+
+<span style="color:green">Love this exercise!</span>
+
+<span style="color:red">Looking online, I can also make explicit about my choice of neighborhood. Select some $0<\epsilon<\max(|a−0|,|a−1|)$. Source: [SE](https://math.stackexchange.com/questions/1647760/determine-whether-a-property-possessed-by-every-term-in-a-convergent-sequence-is)</span>
+
+3. False. Consider the interval $I_{n} = (x-\pi,x+\pi)$. By density of rational numbers, there exists a rational number $r_{n} \in I_{n}$. The sequence $(r_{n})$ converges to $pi$. To prove this, given any $\epsilon$, select $N$ such that $1/N<\epsilon$. Then for any $n\geq N$, $|r_{n}=x|<1/n\leq 1/N<\epsilon$.
+
+<span style="color:green">Freaking love this exercise. Also, this prove works for not just $\pi$, for any real number. Good stuff.</span>
