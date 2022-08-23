@@ -33,7 +33,7 @@ Solutions that need polishing are marked 🔄 and unfinished solutions are marke
 [1.4.3](#143)|[2.3.10](#2310)|
 [1.4.4](#144)|[2.3.11](#2311)|
 [1.4.5](#145)|[2.3.12](#2312)|
-[1.4.6](#146)||
+[1.4.6](#146)|[2.3.13](#2313)|
 [1.4.7](#147)||
 [1.4.8](#148)||
 [1.5.1](#151) ||
@@ -1670,7 +1670,7 @@ $|y_n -l|=|\frac{x_{1} +x_{2} +···+x_{n}}{n}-l|\leq n|\frac{x_{1} +x_{2} +·�
 
 <a name="2312"></a>
 
-### [Exercise 2.3.12](#toc) Cesaro Means
+### [Exercise 2.3.12](#toc) 
 
 A typical task in analysis is to decipher whether a property possessed by every term in a convergent sequence is necessarily inherited by the limit. Assume $(a_{n}) \to a$, and determine the validity of each claim. Try to produce a counterexample for any that are false.
 
@@ -1692,3 +1692,75 @@ A typical task in analysis is to decipher whether a property possessed by every 
 3. False. Consider the interval $I_{n} = (x-\pi,x+\pi)$. By density of rational numbers, there exists a rational number $r_{n} \in I_{n}$. The sequence $(r_{n})$ converges to $pi$. To prove this, given any $\epsilon$, select $N$ such that $1/N<\epsilon$. Then for any $n\geq N$, $|r_{n}=x|<1/n\leq 1/N<\epsilon$.
 
 <span style="color:green">Freaking love this exercise. Also, this prove works for not just $\pi$, for any real number. Good stuff.</span>
+
+<a name="2313"></a>
+
+### [Exercise 2.3.13](#toc) (Iterated Limits)
+
+Given a doubly indexed array $a_{mn}$ where $m, n \in \mathbb N$, what should $\lim_{m,n} \to \infty a_{mn}$ represent?
+
+1. Let $a_{mn} = m/(m + n)$ and compute the iterated limits 
+$$\lim_{n \to \infty} (\lim_{m \to \infty} a_{mn}) \text{ and} \lim_{m \to \infty} (\lim_{n \to \infty} a_{mn}).$$ 
+
+Define $\lim_{m,n \to \infty} a_{mn} =a$ to mean that for all $\epsilon >0$ there exists an $N \in \mathbb N$ such that if both $m,n \geq N$, then $|a_{mn} −a|<\epsilon$.
+
+2. Let $a_{mn} = 1/(m + n)$. Does $\lim_{m,n \to \infty} a_{mn}$ exist in this case? Do the two iterated limits exist? How do these three values compare? Answer these same questions for $a_{mn} =mn/(m^{2} +n^{2})$.
+
+3. Produce an example where $\lim_{m,n \to \infty} a_{mn}$ exists but where neither iterated limit can be computed.
+
+4. Assume $\lim_{m,n \to \infty} a_{mn} = a$, and assume that for each fixed $m \in \mathbb N, \lim_{n \to \infty}(a_{mn}) \to b_{m}$. Show $\lim_{m \to \infty} b_{m} = a$.
+
+5. Prove that if $\lim_{m,n \to \infty} a_{mn}$ exists and the iterated limits both exist, then all three limits must be equal.
+
+***
+
+1. $\lim_{n \to \infty} (\lim_{m \to \infty} a_{mn})=\lim_{n \to \infty} (1)=1$ and $\lim_{m \to \infty} (\lim_{n \to \infty} a_{mn})=\lim_{m \to \infty} (0)=0.$
+
+2. For sufficiently large $m$ or $n$, $\lim_{m,n \to \infty} a_{mn}=0$. To see this, assume the worst case scenario for $m$ (the smallest it could be is $1$), then we can find $n$ large enough to converge to $0$. Similar argument for $m$. Similar findings for $$\lim_{n \to \infty} (\lim_{m \to \infty} a_{mn}) \text{ and} \lim_{m \to \infty} (\lim_{n \to \infty} a_{mn}).$$ 
+
+Consider $a_{mn} =mn/(m^{2} +n^{2})$. The iterated limits give zero: WLOG, fixing $m$, $\lim_{n \to \infty}mn/(m^{2}+n^{2})=0$. Thus, $\lim_{m \to \infty} 0=0$.
+
+$\lim_{m,n \to \infty}a_{mn}$ doesn't exist in this case, as we can find different limits depending on how $n$ is defined relative to $m$. For instance, if $n=m$, then $a_{mn}=m^{2}/2m^{2}=1/2$. Meanwhile if $n = 2m$, then $2m^{2}/5m^{2}=2/5$.
+
+Note: I get a lot of clarity reading explanation of doubly indexed limits [here](https://math.stackexchange.com/questions/2658208/why-iterated-limits-are-different-from-simultaneous-limits).
+
+3. Consider the doubly-indexed array:
+
+ $$\begin{array}{llllll}(-1/1) +(-1/1)& (-1/2)+(1/1) & (-1/3)+(-1/1) & \cdots & (-1/n)+((-1)^{n}/1) & \cdots \\ 
+(1/1)+(-1/2) & (1/2)+(1/2) & (1/3)+(-1/2)& \cdots & (1/n)+((-1)^{n}/2) & \cdots\\ 
+(-1/1)+(-1/3) & (-1/2)+(1/3) & (-1/3)+(1/3) & \cdots & (-1/n)+((-1)^{n}/3) & \cdots\\
+\vdots & & & & & \end{array}$$
+
+Index the rows by $m$ and the columns by $n$. Then represent this array by the sequence $(\frac{(-1)^{m}}{n}+\frac{(-1)^{n}}{m})$. Then fixing $m$, taking the limit $n \to \infty$, we find that there is no limit. Similarly if we fix $n$.
+
+Meanwhile, if we consider both $m,n \to \infty$, the region of the array where the terms in the sequence will gravitate towards as $n,m \to \infty$ is somewhere in the bottom right, in which case, the terms can be made arbitrarily small and for any given $\epsilon$, they will be in the $\epsilon$-neighborhood around $0$ for all $m,n \geq N$ for some $N$.
+
+Footnote: Note that all elements in the array have absolute value below $2/N$, thus they are smaller than any given $\epsilon>0$ if $n,m >N = \epsilon/2$.
+
+<span style="color:green">Bro this is super interesting. Actually, easier sequence is $(-1)^{n}(1/m+1/n).$</span>
+
+<span style="color:red">Early draft: I don't think this is possible bruh, since if $\lim_{m,n \to \infty} a_{mn}$ exists, it should equal to the two iterated limits.</span>
+
+4. Taking the triangle inequality: $$|b_{m}-a| \leq |b_{m}-a_{mn}|+|a_{mn}-a|$$ for all $n,m$. 
+
+Suppose by contradiction, $\lim_{m \to \infty} b_{m} \neq a$. Given any $N$, there exists $M>0$ such that $|b_{m}-a| \geq M$ for some $m\geq N$. Thus,
+
+$$M \leq |b_{m}-a_{mn}|+|a_{mn}-a|.$$
+
+Select $0<\epsilon<M$. Since $\lim_{n \to \infty}(a_{mn}) \to b_{m}$ given a fixed $m$, there exists $N_{1}$ such that for all $n \geq N_{1}$, $|a_{mn}-b_{m}|<\epsilon<M$.
+
+
+It follows that $$M < |a_{mn}-a|+\epsilon$$ for some $m,n \geq N$.
+
+But this means that for any given $N$, there exists $M-\epsilon>0$ such that 
+$$|a_{mn}-a|>M-\epsilon>0$$ 
+
+for some $m,n>N$. Therefore $a_{mn} \not\to a.$
+
+
+Footnote: The negation of convergence: Given any $N$, there exist $K>0$ such that $|a_{mn}-a|>K$ for some $m,n>N$.
+
+<span style="color:red">Earlier draft: Consider any $\epsilon/2>0$. Since $\lim_{m,n \to \infty} a_{mn} = a$, there exist $N$ such that if both $n,m \geq N$, $|a_{mn}-a|<\epsilon/2$. Similarly, given fixed $m \in \mathbb N$, consider any $\epsilon/2$. Since $\lim_{n \to \infty}(a_{mn}) \to b_{m}$, there exists $N_{1}$ such if $n \geq N_{1}$, $|a_{mn}-b_{m}|<\epsilon/2$. Note that by triangle inequality, $$|b_{m}-a| \leq |b_{m}-a_{mn}|+|a_{mn}-a|$$ for all $n,m$. Select $N_{2} = \max \{N,N_{1}\}$ and $n\geq N_{2}$. Then for all $m \geq N_{2}$, $$|b_{m}-a| \leq \epsilon/2 + \epsilon/2 =\epsilon$$. </span>
+
+5. If iterated limits exist, then given a fixed $m$, $\lim_{n \to \infty}(a_{mn}) \to b_{m}$ is a well-defined sequence (otherwise, how could the iterated limits exist). Conversely, given a fixed $n$, $\lim_{m \to \infty}(a_{mn}) \to c_{n}$ is also a well-defined sequence. The proof follows from solution 4 above.
+

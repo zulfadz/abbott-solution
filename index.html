@@ -151,7 +151,7 @@
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: 1;}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -282,7 +282,7 @@ are marked ❎</p>
 </tr>
 <tr class="odd">
 <td><a href="#146">1.4.6</a></td>
-<td></td>
+<td><a href="#2313">2.3.13</a></td>
 </tr>
 <tr class="even">
 <td><a href="#147">1.4.7</a></td>
@@ -3323,8 +3323,7 @@ class="math inline">N</span> such that if <span class="math inline">n
 <li><span class="math inline">\frac{-1+1-1+1-1+\cdots}{n}</span></li>
 </ol>
 <p><a name="2312"></a></p>
-<h3 id="exercise-2.3.12-cesaro-means"><a href="#toc">Exercise 2.3.12</a>
-Cesaro Means</h3>
+<h3 id="exercise-2.3.12"><a href="#toc">Exercise 2.3.12</a></h3>
 <p>A typical task in analysis is to decipher whether a property
 possessed by every term in a convergent sequence is necessarily
 inherited by the limit. Assume <span class="math inline">(a_{n}) \to
@@ -3382,5 +3381,172 @@ class="math inline">|r_{n}=x|&lt;1/n\leq 1/N&lt;\epsilon</span>.</li>
 <p><span style="color:green">Freaking love this exercise. Also, this
 prove works for not just <span class="math inline">\pi</span>, for any
 real number. Good stuff.</span></p>
+<p><a name="2313"></a></p>
+<h3 id="exercise-2.3.13-iterated-limits"><a href="#toc">Exercise
+2.3.13</a> (Iterated Limits)</h3>
+<p>Given a doubly indexed array <span class="math inline">a_{mn}</span>
+where <span class="math inline">m, n \in \mathbb N</span>, what should
+<span class="math inline">\lim_{m,n} \to \infty a_{mn}</span>
+represent?</p>
+<ol type="1">
+<li>Let <span class="math inline">a_{mn} = m/(m + n)</span> and compute
+the iterated limits <span class="math display">\lim_{n \to \infty}
+(\lim_{m \to \infty} a_{mn}) \text{ and} \lim_{m \to \infty} (\lim_{n
+\to \infty} a_{mn}).</span></li>
+</ol>
+<p>Define <span class="math inline">\lim_{m,n \to \infty} a_{mn}
+=a</span> to mean that for all <span class="math inline">\epsilon
+&gt;0</span> there exists an <span class="math inline">N \in \mathbb
+N</span> such that if both <span class="math inline">m,n \geq N</span>,
+then <span class="math inline">|a_{mn} −a|&lt;\epsilon</span>.</p>
+<ol start="2" type="1">
+<li><p>Let <span class="math inline">a_{mn} = 1/(m + n)</span>. Does
+<span class="math inline">\lim_{m,n \to \infty} a_{mn}</span> exist in
+this case? Do the two iterated limits exist? How do these three values
+compare? Answer these same questions for <span
+class="math inline">a_{mn} =mn/(m^{2} +n^{2})</span>.</p></li>
+<li><p>Produce an example where <span class="math inline">\lim_{m,n \to
+\infty} a_{mn}</span> exists but where neither iterated limit can be
+computed.</p></li>
+<li><p>Assume <span class="math inline">\lim_{m,n \to \infty} a_{mn} =
+a</span>, and assume that for each fixed <span class="math inline">m \in
+\mathbb N, \lim_{n \to \infty}(a_{mn}) \to b_{m}</span>. Show <span
+class="math inline">\lim_{m \to \infty} b_{m} = a</span>.</p></li>
+<li><p>Prove that if <span class="math inline">\lim_{m,n \to \infty}
+a_{mn}</span> exists and the iterated limits both exist, then all three
+limits must be equal.</p></li>
+</ol>
+<hr />
+<ol type="1">
+<li><p><span class="math inline">\lim_{n \to \infty} (\lim_{m \to
+\infty} a_{mn})=\lim_{n \to \infty} (1)=1</span> and <span
+class="math inline">\lim_{m \to \infty} (\lim_{n \to \infty}
+a_{mn})=\lim_{m \to \infty} (0)=0.</span></p></li>
+<li><p>For sufficiently large <span class="math inline">m</span> or
+<span class="math inline">n</span>, <span class="math inline">\lim_{m,n
+\to \infty} a_{mn}=0</span>. To see this, assume the worst case scenario
+for <span class="math inline">m</span> (the smallest it could be is
+<span class="math inline">1</span>), then we can find <span
+class="math inline">n</span> large enough to converge to <span
+class="math inline">0</span>. Similar argument for <span
+class="math inline">m</span>. Similar findings for <span
+class="math display">\lim_{n \to \infty} (\lim_{m \to \infty} a_{mn})
+\text{ and} \lim_{m \to \infty} (\lim_{n \to \infty}
+a_{mn}).</span></p></li>
+</ol>
+<p>Consider <span class="math inline">a_{mn} =mn/(m^{2} +n^{2})</span>.
+The iterated limits give zero: WLOG, fixing <span
+class="math inline">m</span>, <span class="math inline">\lim_{n \to
+\infty}mn/(m^{2}+n^{2})=0</span>. Thus, <span
+class="math inline">\lim_{m \to \infty} 0=0</span>.</p>
+<p><span class="math inline">\lim_{m,n \to \infty}a_{mn}</span> doesn’t
+exist in this case, as we can find different limits depending on how
+<span class="math inline">n</span> is defined relative to <span
+class="math inline">m</span>. For instance, if <span
+class="math inline">n=m</span>, then <span
+class="math inline">a_{mn}=m^{2}/2m^{2}=1/2</span>. Meanwhile if <span
+class="math inline">n = 2m</span>, then <span
+class="math inline">2m^{2}/5m^{2}=2/5</span>.</p>
+<p>Note: I get a lot of clarity reading explanation of doubly indexed
+limits <a
+href="https://math.stackexchange.com/questions/2658208/why-iterated-limits-are-different-from-simultaneous-limits">here</a>.</p>
+<ol start="3" type="1">
+<li>Consider the doubly-indexed array:</li>
+</ol>
+<p><span class="math display">\begin{array}{llllll}(-1/1) +(-1/1)&amp;
+(-1/2)+(1/1) &amp; (-1/3)+(-1/1) &amp; \cdots &amp; (-1/n)+((-1)^{n}/1)
+&amp; \cdots \\
+(1/1)+(-1/2) &amp; (1/2)+(1/2) &amp; (1/3)+(-1/2)&amp; \cdots &amp;
+(1/n)+((-1)^{n}/2) &amp; \cdots\\
+(-1/1)+(-1/3) &amp; (-1/2)+(1/3) &amp; (-1/3)+(1/3) &amp; \cdots &amp;
+(-1/n)+((-1)^{n}/3) &amp; \cdots\\
+\vdots &amp; &amp; &amp; &amp; &amp; \end{array}</span></p>
+<p>Index the rows by <span class="math inline">m</span> and the columns
+by <span class="math inline">n</span>. Then represent this array by the
+sequence <span
+class="math inline">(\frac{(-1)^{m}}{n}+\frac{(-1)^{n}}{m})</span>. Then
+fixing <span class="math inline">m</span>, taking the limit <span
+class="math inline">n \to \infty</span>, we find that there is no limit.
+Similarly if we fix <span class="math inline">n</span>.</p>
+<p>Meanwhile, if we consider both <span class="math inline">m,n \to
+\infty</span>, the region of the array where the terms in the sequence
+will gravitate towards as <span class="math inline">n,m \to
+\infty</span> is somewhere in the bottom right, in which case, the terms
+can be made arbitrarily small and for any given <span
+class="math inline">\epsilon</span>, they will be in the <span
+class="math inline">\epsilon</span>-neighborhood around <span
+class="math inline">0</span> for all <span class="math inline">m,n \geq
+N</span> for some <span class="math inline">N</span>.</p>
+<p>Footnote: Note that all elements in the array have absolute value
+below <span class="math inline">2/N</span>, thus they are smaller than
+any given <span class="math inline">\epsilon&gt;0</span> if <span
+class="math inline">n,m &gt;N = \epsilon/2</span>.</p>
+<p><span style="color:green">Bro this is super interesting. Actually,
+easier sequence is <span
+class="math inline">(-1)^{n}(1/m+1/n).</span></span></p>
+<p><span style="color:red">Early draft: I don’t think this is possible
+bruh, since if <span class="math inline">\lim_{m,n \to \infty}
+a_{mn}</span> exists, it should equal to the two iterated
+limits.</span></p>
+<ol start="4" type="1">
+<li>Taking the triangle inequality: <span class="math display">|b_{m}-a|
+\leq |b_{m}-a_{mn}|+|a_{mn}-a|</span> for all <span
+class="math inline">n,m</span>.</li>
+</ol>
+<p>Suppose by contradiction, <span class="math inline">\lim_{m \to
+\infty} b_{m} \neq a</span>. Given any <span
+class="math inline">N</span>, there exists <span
+class="math inline">M&gt;0</span> such that <span
+class="math inline">|b_{m}-a| \geq M</span> for some <span
+class="math inline">m\geq N</span>. Thus,</p>
+<p><span class="math display">M \leq
+|b_{m}-a_{mn}|+|a_{mn}-a|.</span></p>
+<p>Select <span class="math inline">0&lt;\epsilon&lt;M</span>. Since
+<span class="math inline">\lim_{n \to \infty}(a_{mn}) \to b_{m}</span>
+given a fixed <span class="math inline">m</span>, there exists <span
+class="math inline">N_{1}</span> such that for all <span
+class="math inline">n \geq N_{1}</span>, <span
+class="math inline">|a_{mn}-b_{m}|&lt;\epsilon&lt;M</span>.</p>
+<p>It follows that <span class="math display">M &lt;
+|a_{mn}-a|+\epsilon</span> for some <span class="math inline">m,n \geq
+N</span>.</p>
+<p>But this means that for any given <span class="math inline">N</span>,
+there exists <span class="math inline">M-\epsilon&gt;0</span> such that
+<span class="math display">|a_{mn}-a|&gt;M-\epsilon&gt;0</span></p>
+<p>for some <span class="math inline">m,n&gt;N</span>. Therefore <span
+class="math inline">a_{mn} \not\to a.</span></p>
+<p>Footnote: The negation of convergence: Given any <span
+class="math inline">N</span>, there exist <span
+class="math inline">K&gt;0</span> such that <span
+class="math inline">|a_{mn}-a|&gt;K</span> for some <span
+class="math inline">m,n&gt;N</span>.</p>
+<p><span style="color:red">Earlier draft: Consider any <span
+class="math inline">\epsilon/2&gt;0</span>. Since <span
+class="math inline">\lim_{m,n \to \infty} a_{mn} = a</span>, there exist
+<span class="math inline">N</span> such that if both <span
+class="math inline">n,m \geq N</span>, <span
+class="math inline">|a_{mn}-a|&lt;\epsilon/2</span>. Similarly, given
+fixed <span class="math inline">m \in \mathbb N</span>, consider any
+<span class="math inline">\epsilon/2</span>. Since <span
+class="math inline">\lim_{n \to \infty}(a_{mn}) \to b_{m}</span>, there
+exists <span class="math inline">N_{1}</span> such if <span
+class="math inline">n \geq N_{1}</span>, <span
+class="math inline">|a_{mn}-b_{m}|&lt;\epsilon/2</span>. Note that by
+triangle inequality, <span class="math display">|b_{m}-a| \leq
+|b_{m}-a_{mn}|+|a_{mn}-a|</span> for all <span
+class="math inline">n,m</span>. Select <span class="math inline">N_{2} =
+\max \{N,N_{1}\}</span> and <span class="math inline">n\geq
+N_{2}</span>. Then for all <span class="math inline">m \geq
+N_{2}</span>, <span class="math display">|b_{m}-a| \leq \epsilon/2 +
+\epsilon/2 =\epsilon</span>. </span></p>
+<ol start="5" type="1">
+<li>If iterated limits exist, then given a fixed <span
+class="math inline">m</span>, <span class="math inline">\lim_{n \to
+\infty}(a_{mn}) \to b_{m}</span> is a well-defined sequence (otherwise,
+how could the iterated limits exist). Conversely, given a fixed <span
+class="math inline">n</span>, <span class="math inline">\lim_{m \to
+\infty}(a_{mn}) \to c_{n}</span> is also a well-defined sequence. The
+proof follows from solution 4 above.</li>
+</ol>
 </body>
 </html>
