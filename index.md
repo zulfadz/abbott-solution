@@ -1680,7 +1680,7 @@ A typical task in analysis is to decipher whether a property possessed by every 
 
 <span style="color:red">Looking online, I can also make explicit about my choice of neighborhood. Select some $0<\epsilon<\max(|a−0|,|a−1|)$. Source: [SE](https://math.stackexchange.com/questions/1647760/determine-whether-a-property-possessed-by-every-term-in-a-convergent-sequence-is)</span>
 
-3. False. Consider the interval $I_{n} = (x-\pi,x+\pi)$. By density of rational numbers, there exists a rational number $r_{n} \in I_{n}$. The sequence $(r_{n})$ converges to $pi$. To prove this, given any $\epsilon$, select $N$ such that $1/N<\epsilon$. Then for any $n\geq N$, $|r_{n}=x|<1/n\leq 1/N<\epsilon$.
+3. False. Consider the interval $I_{n} = (\pi -1/n,\pi + 1/n)$. By density of rational numbers, there exists a rational number $r_{n} \in I_{n}$. The sequence $(r_{n})$ converges to $pi$. To prove this, given any $\epsilon$, select $N$ such that $1/N<\epsilon$. Then for any $n\geq N$, $|r_{n}- \pi|<1/n\leq 1/N<\epsilon$.
 
 <span style="color:green">Freaking love this exercise. Also, this prove works for not just $\pi$, for any real number. Good stuff.</span>
 
