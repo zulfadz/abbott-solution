@@ -1585,7 +1585,7 @@ Consider the following list of conjectures. Provide a short proof for those that
 
 3. If $(a_{n}) \to a$ and $(b_{n} −a_{n}) \to 0$, then $(b_{n}) \to a$.
 
-4. If $(a_{n}) \to 0$ and $|bn −b|\leq a_{n}$ for all $n \in \mathbb N$, then $(b_{n}) \in b$.
+4. If $(a_{n}) \to 0$ and $|b_{n} −b|\leq a_{n}$ for all $n \in \mathbb N$, then $(b_{n}) \to b$.
 
 ***
 
@@ -1605,16 +1605,7 @@ Therefore, $-|b_{n}-b|\leq |b_{n}|-|b| \leq |b_{n}-b|$.
 
 3. True. 
 
-a. For all $n\geq N_{1}$, $-\epsilon<a_{n}-a<\epsilon$
-
-$\implies \epsilon>-a_{n}+a>-\epsilon$
-
-$\implies -\epsilon<-a_{n}+a<\epsilon$ -- (1)
-
-
-b. For all $n\geq N_{2}$, $-\epsilon^{\prime}<a_{n} - b_{n}<\epsilon^{\prime}$ -- (2)
-
-c. Let $x_{n} =a_{n}$ and $y_{n} = b_{n} −a_{n}$. Thus $x_{n} \to a$ and $y_{n} \to 0$, therefore from Algebraic Limit Theorem, this implies $x_{n} + y_{n} \to a$. But $x_{n} + y_{n}=b_{n}$.
+Let $x_{n} =a_{n}$ and $y_{n} = b_{n} −a_{n}$. Thus $x_{n} \to a$ and $y_{n} \to 0$, therefore from Algebraic Limit Theorem, this implies $x_{n} + y_{n} \to a$. But $x_{n} + y_{n}=b_{n}$.
 
 <span style="color:green">Alt answer: For all $n\geq N=\max\{N_{1},N_{2}\}$ , (1) + (2) $\implies -\epsilon^{\prime} -\epsilon<a - b_{n}<\epsilon^{\prime} + \epsilon$
 
