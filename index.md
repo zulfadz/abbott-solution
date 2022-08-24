@@ -1585,7 +1585,7 @@ Consider the following list of conjectures. Provide a short proof for those that
 
 3. If $(a_{n}) \to a$ and $(b_{n} −a_{n}) \to 0$, then $(b_{n}) \to a$.
 
-4. If $(a_{n}) \to 0$ and $|bn −b|\leq a_{n}$ for all $n \in \mathbb N$, then $(b_{n}) \to b$.
+4. If $(a_{n}) \to 0$ and $|b_{n} −b|\leq a_{n}$ for all $n \in \mathbb N$, then $(b_{n}) \to b$.
 
 ***
 
