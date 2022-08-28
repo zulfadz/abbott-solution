@@ -1438,8 +1438,12 @@ But we know that $|x_{n}-2|<3\epsilon$/2 for all $n \geq N$ for some $N$. Pluggi
 
 2. Similarly, $|\frac{1}{x_{n}}- \frac{1}{2}|=|\frac{2-x_{n}}{2x_{n}}|=|\frac{1}{2x_{n}}||2-x_{n}|$.
 
+Pick  $N_{1}$ such that  $|x_{n} -2|<1$. Thus,  $|x_{n}|>|2|-1=1$ . Pick  $N_{2}$  such that  $|x_{n}-2|=2\epsilon$. Picking the maximum of the two  $N$'s, we finish the proof.
 
-Since $x_{n}$ is convergent, it is bounded $|x_{n}| \leq M$, where $M>0$. Thus selecting $N$ such that $|2-x_{n}|<2\epsilon M$ for all $n \geq N$, we finish the proof by noting that $\frac{1}{2x_{n}}||2-x_{n}| < |\frac{1}{2M}||2\epsilon M| = \epsilon$
+
+
+<span style="color:red">Since $x_{n}$ is convergent, it is bounded $|x_{n}| \leq M$, where $M>0$. Thus selecting $N$ such that $|2-x_{n}|<2\epsilon M$ for all $n \geq N$, we finish the proof by noting that $\frac{1}{2x_{n}}||2-x_{n}| < |\frac{1}{2M}||2\epsilon M| = \epsilon$ 
+</span>
 
 
 <a name="233"></a>
@@ -1755,3 +1759,24 @@ Footnote: The negation of convergence: Given any $N$, there exist $K>0$ such tha
 
 5. If iterated limits exist, then given a fixed $m$, $\lim_{n \to \infty}(a_{mn}) \to b_{m}$ is a well-defined sequence (otherwise, how could the iterated limits exist). Conversely, given a fixed $n$, $\lim_{m \to \infty}(a_{mn}) \to c_{n}$ is also a well-defined sequence. The proof follows from solution 4 above.
 
+<a name="241"></a>
+
+### [Exercise 2.4.1](#toc) 
+
+1. Prove that the sequence defined by $x_{1}=3$ and $$x_{n+1} = \frac{1}{4-x_{n}}$$ and converges.
+
+2. Now that we know $\lim x_{n}$ exists, explain why $\lim x_{n+1}$ must also exist and equal the same value.
+
+3. Take the limit of each side of the recursive equation in part 1 to explicitly compute $\lim x_{n}$.
+
+***
+
+1. $x_{1}=3, x_{2}=1, x_{3} = \frac{1}{3}, x_{4}=\frac{3}{11}, ...$. I claim that $x_{n}$ is decreasing. Suppose $x_{n+1}<x_{n}$. Then $4-x_{n+1}>4-x_{n}$, which means $\frac{1}{4-x_{n}}<\frac{1}{4-x_{n+1}}$, hence $x_{n+1}<x_{n+2}$. Moreover, it is positive. Thus, it's bounded by $0$.
+
+<span style="color:green">The problem with the above answer is that the inequality would not hold if the two terms on each side are of opposite signs. Second problem is that it does not show it is bounded (above and below). Better if we proceed first showing that any $0<x_{k} \leq 3$ by induction. It is obviously true for $k=1$. Suppose it is true for $k$, then $0<1/4 \leq x_{k+1} = \frac{1}{4-x_{k}}\leq 1<3$. Next we show $x_{n+1}<x_{n}$ by induction. This follows from my answer above. Credit: [SE](https://math.stackexchange.com/questions/2858698/prove-that-x-n1-frac14-x-n-converges).
+</span>
+
+
+<span style="color:red">Earlier answer: $x_{n}$ is always positive, decreasing and bounded by $4$.</span>
+<span style="color:red">Note to myself: I should prove the decreasing bit via induction...</span>
+<span style="color:red">Note to myself: If $a$ and $b$ has the same sign, $a<b \implies \frac{1}{a}>\frac{1}{b}$. If they have the opposite sign, $a<b \implies \frac{1}{a}<\frac{1}{b}$ </span>
