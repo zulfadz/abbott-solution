@@ -2925,14 +2925,20 @@ class="math inline">N</span>. Plugging this in, we are done.</p>
 <li>Similarly, <span class="math inline">|\frac{1}{x_{n}}-
 \frac{1}{2}|=|\frac{2-x_{n}}{2x_{n}}|=|\frac{1}{2x_{n}}||2-x_{n}|</span>.</li>
 </ol>
-<p>Since <span class="math inline">x_{n}</span> is convergent, it is
-bounded <span class="math inline">|x_{n}| \leq M</span>, where <span
-class="math inline">M&gt;0</span>. Thus selecting <span
-class="math inline">N</span> such that <span
+<p>Pick  <span class="math inline">N_{1}</span> such that  <span
+class="math inline">|x_{n} -2|&lt;1</span>. Thus,  <span
+class="math inline">|x_{n}|&gt;|2|-1=1</span> . Pick  <span
+class="math inline">N_{2}</span> such that  <span
+class="math inline">|x_{n}-2|=2\epsilon</span>. Picking the maximum of
+the two  <span class="math inline">N</span>’s, we finish the proof.</p>
+<p><span style="color:red">Since <span class="math inline">x_{n}</span>
+is convergent, it is bounded <span class="math inline">|x_{n}| \leq
+M</span>, where <span class="math inline">M&gt;0</span>. Thus selecting
+<span class="math inline">N</span> such that <span
 class="math inline">|2-x_{n}|&lt;2\epsilon M</span> for all <span
 class="math inline">n \geq N</span>, we finish the proof by noting that
 <span class="math inline">\frac{1}{2x_{n}}||2-x_{n}| &lt;
-|\frac{1}{2M}||2\epsilon M| = \epsilon</span></p>
+|\frac{1}{2M}||2\epsilon M| = \epsilon</span> </span></p>
 <p><a name="233"></a></p>
 <h3 id="exercise-2.3.3"><a href="#toc">Exercise 2.3.3</a></h3>
 <p>(Squeeze Theorem). Show that if <span class="math inline">x_{n} \leq
@@ -3534,5 +3540,54 @@ class="math inline">n</span>, <span class="math inline">\lim_{m \to
 \infty}(a_{mn}) \to c_{n}</span> is also a well-defined sequence. The
 proof follows from solution 4 above.</li>
 </ol>
+<p><a name="241"></a></p>
+<h3 id="exercise-2.4.1"><a href="#toc">Exercise 2.4.1</a></h3>
+<ol type="1">
+<li><p>Prove that the sequence defined by <span
+class="math inline">x_{1}=3</span> and <span
+class="math display">x_{n+1} = \frac{1}{4-x_{n}}</span> and
+converges.</p></li>
+<li><p>Now that we know <span class="math inline">\lim x_{n}</span>
+exists, explain why <span class="math inline">\lim x_{n+1}</span> must
+also exist and equal the same value.</p></li>
+<li><p>Take the limit of each side of the recursive equation in part 1
+to explicitly compute <span class="math inline">\lim
+x_{n}</span>.</p></li>
+</ol>
+<hr />
+<ol type="1">
+<li><span class="math inline">x_{1}=3, x_{2}=1, x_{3} = \frac{1}{3},
+x_{4}=\frac{3}{11}, ...</span>. I claim that <span
+class="math inline">x_{n}</span> is decreasing. Suppose <span
+class="math inline">x_{n+1}&lt;x_{n}</span>. Then <span
+class="math inline">4-x_{n+1}&gt;4-x_{n}</span>, which means <span
+class="math inline">\frac{1}{4-x_{n}}&lt;\frac{1}{4-x_{n+1}}</span>,
+hence <span class="math inline">x_{n+1}&lt;x_{n+2}</span>. Moreover, it
+is positive. Thus, it’s bounded by <span
+class="math inline">0</span>.</li>
+</ol>
+<p><span style="color:green">The problem with the above answer is that
+the inequality would not hold if the two terms on each side are of
+opposite signs. Second problem is that it does not show it is bounded
+(above and below). Better if we proceed first showing that any <span
+class="math inline">0&lt;x_{k} \leq 3</span> by induction. It is
+obviously true for <span class="math inline">k=1</span>. Suppose it is
+true for <span class="math inline">k</span>, then <span
+class="math inline">0&lt;1/4 \leq x_{k+1} = \frac{1}{4-x_{k}}\leq
+1&lt;3</span>. Next we show <span
+class="math inline">x_{n+1}&lt;x_{n}</span> by induction. This follows
+from my answer above. Credit: <a
+href="https://math.stackexchange.com/questions/2858698/prove-that-x-n1-frac14-x-n-converges">SE</a>.
+</span></p>
+<p><span style="color:red">Earlier answer: <span
+class="math inline">x_{n}</span> is always positive, decreasing and
+bounded by <span class="math inline">4</span>.</span> <span
+style="color:red">Note to myself: I should prove the decreasing bit via
+induction…</span> <span style="color:red">Note to myself: If <span
+class="math inline">a</span> and <span class="math inline">b</span> has
+the same sign, <span class="math inline">a&lt;b \implies
+\frac{1}{a}&gt;\frac{1}{b}</span>. If they have the opposite sign, <span
+class="math inline">a&lt;b \implies \frac{1}{a}&lt;\frac{1}{b}</span>
+</span></p>
 </body>
 </html>
