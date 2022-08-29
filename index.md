@@ -1780,3 +1780,31 @@ Footnote: The negation of convergence: Given any $N$, there exist $K>0$ such tha
 <span style="color:red">Earlier answer: $x_{n}$ is always positive, decreasing and bounded by $4$.</span>
 <span style="color:red">Note to myself: I should prove the decreasing bit via induction...</span>
 <span style="color:red">Note to myself: If $a$ and $b$ has the same sign, $a<b \implies \frac{1}{a}>\frac{1}{b}$. If they have the opposite sign, $a<b \implies \frac{1}{a}<\frac{1}{b}$ </span>
+
+2. The induction above applies for any given $n$.
+
+3. Suppose the limit is $x$. Then $x = \frac{1}{4-x}$, which equals to $4x -x^{2} = 1$, which equals to $x^{2}-4x+1=0$, which has the roots $\frac{4 \pm \sqrt{16-4}}{2}=2\pm \sqrt{3}$. Since $x_{n} \leq 3$ for all $n$, so does $x$, therefore $x = 2 - \sqrt{3}$. 
+
+<a name="242"></a>
+
+### [Exercise 2.4.2](#toc) 
+
+1. Consider the recursively defined sequence $y_{1} = 1, y_{n+1} =3−y_{n}$,
+and set $y = \lim y_{n}$. Because $(y_{n})$ and $(y_{n+1})$ have the same limit, taking the limit across the recursive equation gives $y = 3 − y$. Solving for $y$, we conclude $\lim y_{n} = 3/2$. What is wrong with this argument?
+
+2. This time set $y_{1} = 1$ and $y_{n+1} = 3− 1$. Can the strategy in (a) be applied $y_{n}$ to compute the limit of this sequence?
+
+***
+
+1. $y_{1}=1, y_{2} = 2, y_{3}=1, y_{3}=2, y_{4}=1, \cdots$. It does not converge.
+
+2. $y_{1}=1, y_{2} = 2, y_{3}=2.5, y_{3}=2.6, y_{4}=2.61, \cdots$. It is increasing and bounded between $0$ and $3$. Therefore it is convergent. Thus, the formula applies.
+
+
+<a name="243"></a>
+
+### [Exercise 2.4.3](#toc) 
+
+1. Show that $$\sqrt{2},\sqrt{2+\sqrt{2}}, \sqrt{2}+\sqrt{2+\sqrt{2}}, \cdots$$ converges and find the limit.
+
+2. Does the sequence $$\sqrt{2}, \sqrt{2\sqrt{2}}, \sqrt{2\sqrt{2\sqrt{2}}}, \cdots$$ converge? If so, find the limit.
