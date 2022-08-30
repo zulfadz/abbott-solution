@@ -1543,9 +1543,12 @@ Let $(x_{n}) \to x$ and let $p(x)$ be a polynomial.
 
 ***
 
-1. Given any polynomial $p(x) = a_{m}x_{n}^{m} + a_{m-1}x_{n-1}^{m-1} + \cdots + a_{0}$, algebraic limit theorem implies it converges to a_{m}x^{m} + a_{m-1}x^{m-1} + \cdots + a_{0}$.
+1. Given any polynomial $p(x) = a_{m}x_{n}^{m} + a_{m-1}x_{n-1}^{m-1} + \cdots + a_{0}$, algebraic limit theorem implies it converges to $a_{m}x^{m} + a_{m-1}x^{m-1} + \cdots + a_{0}$.
 
-2. Let $x_{n}=0$ for all $n$ and $f(x_{n}) = x_{n}+1$. Then $f(x_{n}) \to 1$.
+2.  Let $x_{n}=1/n$. Let $f(x_{n}=1$ if $x \neq 0$ and $f(x_{n}=0$ if $x=0$. Thus $\lim f(x_{n})=1$ but $f(\lim x_{n})=0$.
+
+
+Let $x_{n}=0$ for all $n$ and $f(x_{n}) = x_{n}+1$. Then $f(x_{n}) \to 1$.
 
 <a name="239"></a>
 
