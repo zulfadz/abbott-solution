@@ -3646,5 +3646,39 @@ limit.</p></li>
 \sqrt{2\sqrt{2}}, \sqrt{2\sqrt{2\sqrt{2}}}, \cdots</span> converge? If
 so, find the limit.</p></li>
 </ol>
+<hr />
+<ol type="1">
+<li>The sequence can be recursively defined as <span
+class="math inline">x_{1}=\sqrt{2}</span>, and <span
+class="math inline">x_{n+1}= \sqrt{2+x_{n}}</span>. It is increasing
+(because square root is an increasing function), and bounded between
+<span class="math inline">0&lt;x_{n}&lt;3</span>. Too prove this, note
+that <span class="math inline">x_{n}</span> is positive for all <span
+class="math inline">n</span>. By induction, I will show that <span
+class="math inline">x_{n}&lt;3</span> for all <span
+class="math inline">n</span>. Suppose this relationship holds for a
+given <span class="math inline">x_{n}</span>. Then <span
+class="math inline">x_{n+1}^{2}-2=x_{n}&lt;3 \iff x_{n+1}^{2}&lt;6 \iff
+x_{n+1}&lt;\sqrt{6}&lt;\sqrt{9}=3.</span> Thus, this sequence is
+increasing and bounded, hence convergent.</li>
+</ol>
+<p>Let <span class="math inline">x</span> be the limit. Then <span
+class="math inline">x = \sqrt{2+x} \iff x^{2}-x-2=0 \iff
+(x-2)(x+1)=0</span>, hence <span class="math inline">x=2</span>.</p>
+<ol start="2" type="1">
+<li>Define the sequence recursively as <span
+class="math inline">x_{1}=\sqrt{2}</span> and <span
+class="math inline">x_{n+1} = \sqrt{2x_{n}}</span>. This sequence is
+bounded between <span class="math inline">0</span> and <span
+class="math inline">3</span>. Suppose this is true for a given <span
+class="math inline">x_{n}</span>. Then <span
+class="math inline">x_{n+1}=\sqrt{2x_{n}} \iff x_{n+1}^{2}/2=x_{n}&lt;3
+\iff x_{n+1}^{2}&lt;6</span> and the proof is completed using the same
+argument as the previous question. Since the sequence is increasing, it
+is therefore convergent.</li>
+</ol>
+<p>Let <span class="math inline">x</span> be the limit. <span
+class="math inline">x = \sqrt{2x} \iff x^{2}=2x \iff x^{2}-2x=0 \iff
+x(x-2)=0</span>, hence <span class="math inline">x=2</span>.</p>
 </body>
 </html>

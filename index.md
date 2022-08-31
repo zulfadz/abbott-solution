@@ -1811,3 +1811,13 @@ and set $y = \lim y_{n}$. Because $(y_{n})$ and $(y_{n+1})$ have the same limit,
 1. Show that $$\sqrt{2},\sqrt{2+\sqrt{2}}, \sqrt{2}+\sqrt{2+\sqrt{2}}, \cdots$$ converges and find the limit.
 
 2. Does the sequence $$\sqrt{2}, \sqrt{2\sqrt{2}}, \sqrt{2\sqrt{2\sqrt{2}}}, \cdots$$ converge? If so, find the limit.
+
+***
+
+1. The sequence can be recursively defined as $x_{1}=\sqrt{2}$, and $x_{n+1}= \sqrt{2+x_{n}}$. It is increasing (because square root is an increasing function), and bounded between $0<x_{n}<3$. Too prove this, note that $x_{n}$ is positive for all $n$.  By induction, I will show that $x_{n}<3$ for all $n$. Suppose this relationship holds for a given $x_{n}$. Then $x_{n+1}^{2}-2=x_{n}<3 \iff x_{n+1}^{2}<6 \iff x_{n+1}<\sqrt{6}<\sqrt{9}=3.$ Thus, this sequence is increasing and bounded, hence convergent.
+
+Let $x$ be the limit. Then $x = \sqrt{2+x} \iff x^{2}-x-2=0 \iff (x-2)(x+1)=0$, hence $x=2$.
+
+2. Define the sequence recursively as $x_{1}=\sqrt{2}$ and $x_{n+1} = \sqrt{2x_{n}}$. This sequence is bounded between $0$ and $3$. Suppose this is true for a given $x_{n}$. Then $x_{n+1}=\sqrt{2x_{n}} \iff x_{n+1}^{2}/2=x_{n}<3 \iff x_{n+1}^{2}<6$ and the proof is completed using the same argument as the previous question. Since the sequence is increasing, it is therefore convergent.
+
+Let $x$ be the limit. $x = \sqrt{2x} \iff x^{2}=2x \iff x^{2}-2x=0 \iff x(x-2)=0$, hence $x=2$.
