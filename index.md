@@ -1821,3 +1821,23 @@ Let $x$ be the limit. Then $x = \sqrt{2+x} \iff x^{2}-x-2=0 \iff (x-2)(x+1)=0$, 
 2. Define the sequence recursively as $x_{1}=\sqrt{2}$ and $x_{n+1} = \sqrt{2x_{n}}$. This sequence is bounded between $0$ and $3$. Suppose this is true for a given $x_{n}$. Then $x_{n+1}=\sqrt{2x_{n}} \iff x_{n+1}^{2}/2=x_{n}<3 \iff x_{n+1}^{2}<6$ and the proof is completed using the same argument as the previous question. Since the sequence is increasing, it is therefore convergent.
 
 Let $x$ be the limit. $x = \sqrt{2x} \iff x^{2}=2x \iff x^{2}-2x=0 \iff x(x-2)=0$, hence $x=2$.
+
+<a name="244"></a>
+
+### [Exercise 2.4.4](#toc) 
+
+1. In Section 1.4 we used the Axiom of Completeness (AoC) to prove the Archimedean Property of R (Theorem 1.4.2). Show that the Monotone Convergence Theorem can also be used to prove the Archimedean Property without making any use of AoC.
+
+2. Use the Monotone Convergence Theorem to supply a proof for the Nested Interval Property (Theorem 1.4.1) that doesn’t make use of AoC.
+
+These two results suggest that we could have used the Monotone Convergence Theorem in place of AoC as our starting axiom for building a proper theory of the real numbers.
+
+***
+
+1. We want to show, given any number $x \in \mathbb R$, there exists an $n \in \mathbb N$ satisfying $n > x$. Suppose there exists such $x$ where $n \leq x$ for all $n$. Since $(n)$ is monotone and bounded, it converges. But this is a contradiction since natural numbers do not converge.
+
+(If need to expand further): Let $K$ be the limit. Let $\epsilon=1/4$, thus there exists $N$ such that $|n-K|<1/4$ for all $n \geq N$. Take $N_{1}>N$, thus both $N_{1}$ and $N_{1}+1$ are in $(K-1/4,K+1/4)$. But this is impossible since the interval distance is less than $1/2$.
+
+2. Given nested intervals $[a_{n},b_{n}]$, $(a_{n})$ is monotone. It is also bounded by every $b_{n}$. Thus $(a_{n})$ converges to some limit $a$. Similarly, $(b_{n})$ is monotone and bounded, thus converges to some limit $b$. By algebraic order theorem, $a\leq b$. Morever, $a_{n}\leq a$ for all $n$ by proof below, and $b_{n}\geq b$ for all $n$. Therefore $a_{n}\leq a\leq b \leq b_{n}$ for all $n$.
+
+<span style="color:red">I want to show $a_{n}\leq a \leq b \leq b_{n}$ for all $n$. But how do I prove $a$ is greater than or equal to $a_{n}$ for all $n$? Suppose it isn't. Then there exists $a_{N}>a$. Since $a_{n}$ is increasing, if $n \geq N$,$a_{n} \geq a_{N}>a$. Thus, $|a_{n}-a|\geq |a_{N}-a|>0$ for all $n \geq N$. Letting $\epsilon= |a_{N}-a|/2$, it follows there is no $n_{0}$, such that for all $n\geq n_{0}$, $|a_{n}-a|<\epsilon$. Thus, $(a_{n})$ does not converge, which is a contradiction.</span>
