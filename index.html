@@ -3680,5 +3680,75 @@ is therefore convergent.</li>
 <p>Let <span class="math inline">x</span> be the limit. <span
 class="math inline">x = \sqrt{2x} \iff x^{2}=2x \iff x^{2}-2x=0 \iff
 x(x-2)=0</span>, hence <span class="math inline">x=2</span>.</p>
+<p><a name="244"></a></p>
+<h3 id="exercise-2.4.4"><a href="#toc">Exercise 2.4.4</a></h3>
+<ol type="1">
+<li><p>In Section 1.4 we used the Axiom of Completeness (AoC) to prove
+the Archimedean Property of R (Theorem 1.4.2). Show that the Monotone
+Convergence Theorem can also be used to prove the Archimedean Property
+without making any use of AoC.</p></li>
+<li><p>Use the Monotone Convergence Theorem to supply a proof for the
+Nested Interval Property (Theorem 1.4.1) that doesn’t make use of
+AoC.</p></li>
+</ol>
+<p>These two results suggest that we could have used the Monotone
+Convergence Theorem in place of AoC as our starting axiom for building a
+proper theory of the real numbers.</p>
+<hr />
+<ol type="1">
+<li>We want to show, given any number <span class="math inline">x \in
+\mathbb R</span>, there exists an <span class="math inline">n \in
+\mathbb N</span> satisfying <span class="math inline">n &gt; x</span>.
+Suppose there exists such <span class="math inline">x</span> where <span
+class="math inline">n \leq x</span> for all <span
+class="math inline">n</span>. Since <span class="math inline">(n)</span>
+is monotone and bounded, it converges. But this is a contradiction since
+natural numbers do not converge.</li>
+</ol>
+<p>(If need to expand further): Let <span class="math inline">K</span>
+be the limit. Let <span class="math inline">\epsilon=1/4</span>, thus
+there exists <span class="math inline">N</span> such that <span
+class="math inline">|n-K|&lt;1/4</span> for all <span
+class="math inline">n \geq N</span>. Take <span
+class="math inline">N_{1}&gt;N</span>, thus both <span
+class="math inline">N_{1}</span> and <span
+class="math inline">N_{1}+1</span> are in <span
+class="math inline">(K-1/4,K+1/4)</span>. But this is impossible since
+the interval distance is less than <span
+class="math inline">1/2</span>.</p>
+<ol start="2" type="1">
+<li>Given nested intervals <span
+class="math inline">[a_{n},b_{n}]</span>, <span
+class="math inline">(a_{n})</span> is monotone. It is also bounded by
+every <span class="math inline">b_{n}</span>. Thus <span
+class="math inline">(a_{n})</span> converges to some limit <span
+class="math inline">a</span>. Similarly, <span
+class="math inline">(b_{n})</span> is monotone and bounded, thus
+converges to some limit <span class="math inline">b</span>. By algebraic
+order theorem, <span class="math inline">a\leq b</span>. Morever, <span
+class="math inline">a_{n}\leq a</span> for all <span
+class="math inline">n</span> by proof below, and <span
+class="math inline">b_{n}\geq b</span> for all <span
+class="math inline">n</span>. Therefore <span
+class="math inline">a_{n}\leq a\leq b \leq b_{n}</span> for all <span
+class="math inline">n</span>.</li>
+</ol>
+<p><span style="color:red">I want to show <span
+class="math inline">a_{n}\leq a \leq b \leq b_{n}</span> for all <span
+class="math inline">n</span>. But how do I prove <span
+class="math inline">a</span> is greater than or equal to <span
+class="math inline">a_{n}</span> for all <span
+class="math inline">n</span>? Suppose it isn’t. Then there exists <span
+class="math inline">a_{N}&gt;a</span>. Since <span
+class="math inline">a_{n}</span> is increasing, if <span
+class="math inline">n \geq N</span>,<span class="math inline">a_{n} \geq
+a_{N}&gt;a</span>. Thus, <span class="math inline">|a_{n}-a|\geq
+|a_{N}-a|&gt;0</span> for all <span class="math inline">n \geq N</span>.
+Letting <span class="math inline">\epsilon= |a_{N}-a|/2</span>, it
+follows there is no <span class="math inline">n_{0}</span>, such that
+for all <span class="math inline">n\geq n_{0}</span>, <span
+class="math inline">|a_{n}-a|&lt;\epsilon</span>. Thus, <span
+class="math inline">(a_{n})</span> does not converge, which is a
+contradiction.</span></p>
 </body>
 </html>
