@@ -1836,7 +1836,7 @@ These two results suggest that we could have used the Monotone Convergence Theor
 
 1. We want to show, given any number $x \in \mathbb R$, there exists an $n \in \mathbb N$ satisfying $n > x$. Suppose there exists such $x$ where $n \leq x$ for all $n$. Since $(n)$ is monotone and bounded, it converges. But this is a contradiction since natural numbers do not converge.
 
-(If need to expand further): Let $K$ be the limit. Let $\epsilon=1/4$, thus there exists $N$ such that $|n-K|<1/4$ for all $n \geq N$. Take $N_{1}>N$, thus both $N_{1}$ and $N_{1}+1$ are in $(K-1/4,K+1/4)$. But this is impossible since the interval distance is less than $1/2$.
+(If need to expand further): Let $K$ be the limit. Let $\epsilon=1/2$, thus there exists $N$ such that $|n-K|<1/2$ for all $n \geq N$. Take $N_{1}>N$, thus both $N_{1}$ and $N_{1}+1$ are in $(K-1/2,K+1/2)$. But this is impossible since the interval distance is less than $1$.
 
 2. Given nested intervals $[a_{n},b_{n}]$, $(a_{n})$ is monotone. It is also bounded by every $b_{n}$. Thus $(a_{n})$ converges to some limit $a$. Similarly, $(b_{n})$ is monotone and bounded, thus converges to some limit $b$. By algebraic order theorem, $a\leq b$. Morever, $a_{n}\leq a$ for all $n$ by proof below, and $b_{n}\geq b$ for all $n$. Therefore $a_{n}\leq a\leq b \leq b_{n}$ for all $n$.
 
