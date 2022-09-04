@@ -286,23 +286,23 @@ are marked ❎</p>
 </tr>
 <tr class="even">
 <td><a href="#147">1.4.7</a></td>
-<td></td>
+<td><a href="#241">2.4.1</a></td>
 </tr>
 <tr class="odd">
 <td><a href="#148">1.4.8</a></td>
-<td></td>
+<td><a href="#242">2.4.2</a></td>
 </tr>
 <tr class="even">
 <td><a href="#151">1.5.1</a></td>
-<td></td>
+<td><a href="#243">2.4.3</a></td>
 </tr>
 <tr class="odd">
 <td><a href="#152">1.5.2</a></td>
-<td></td>
+<td><a href="#244">2.4.4</a></td>
 </tr>
 <tr class="even">
 <td><a href="#153">1.5.3</a></td>
-<td></td>
+<td><a href="#245">2.4.5</a></td>
 </tr>
 <tr class="odd">
 <td><a href="#154">1.5.4</a></td>
@@ -3716,6 +3716,10 @@ class="math inline">N_{1}+1</span> are in <span
 class="math inline">(K-1/2,K+1/2)</span>. But this is impossible since
 the interval distance is less than <span
 class="math inline">1</span>.</p>
+<p>(Alternative solution): Since <span class="math inline">x_{n+1} =
+1+x_{n}</span>, the limits of both sides implies <span
+class="math inline">x=1+x</span>, hence <span
+class="math inline">0=1</span>, which is a contradiction.</p>
 <ol start="2" type="1">
 <li>Given nested intervals <span
 class="math inline">[a_{n},b_{n}]</span>, <span
@@ -3750,5 +3754,66 @@ for all <span class="math inline">n\geq n_{0}</span>, <span
 class="math inline">|a_{n}-a|&lt;\epsilon</span>. Thus, <span
 class="math inline">(a_{n})</span> does not converge, which is a
 contradiction.</span></p>
+<p><a name="245"></a></p>
+<h3 id="exercise-2.4.5-calculating-square-roots"><a href="#toc">Exercise
+2.4.5, Calculating Square Roots</a></h3>
+<p>Let <span class="math inline">x_{1}=2</span>, and define</p>
+<p><span class="math inline">x_{n+1} = \frac{1}{2}(x_{n} +
+\frac{2}{x_{n}})</span></p>
+<ol type="1">
+<li><p>Show that <span class="math inline">x^{2}_{n}</span> is always
+greater than or equal to <span class="math inline">2</span>, and then
+use this to prove that <span class="math inline">x_{n} − x_{n+1} \geq
+0</span>. Conclude that <span class="math inline">\lim x_{n} =
+\sqrt{2}</span>.</p></li>
+<li><p>Modify the sequence <span class="math inline">(x_{n})</span> so
+that it converges to <span class="math inline">\sqrt{c}</span>.</p></li>
+</ol>
+<hr />
+<ol type="1">
+<li>We use induction. The statement is true when <span
+class="math inline">n=1</span>. Suppose it is true for a given <span
+class="math inline">n</span>. Then <span class="math inline">x_{n+1}^{2}
+= \frac{1}{4}(x_{n} + \frac{2}{x_{n}})^{2} =\frac{1}{4}(x_{n}^{2} +
+4+\frac{4}{x_{n}^{2}}) = \frac{1}{4}x_{n}^{2} + 1+\frac{1}{x_{n}^{2}}
+\geq \frac{2}{4}+1+\frac{1}{x_{n}^{2}}</span>, which is hard to do. But
+note that for <span class="math inline">\frac{1}{4}(x_{n}^{2} +
+4+\frac{4}{x_{n}^{2}})</span> to be greater than or equal to <span
+class="math inline">2</span>, <span class="math inline">x_{n}^{2}
++\frac{4}{x_{n}^{2}}-4 \geq 0</span>. This is equivalent to <span
+class="math inline">(x_{n}-\frac{2}{x_{n}})^{2}\geq 0</span>, which is
+true.</li>
+</ol>
+<p><span class="math inline">x_{n} \geq x_{n+1} \iff x_{n} \geq
+\frac{1}{2}(x_{n}+\frac{2}{x_{n}}) \iff x_{n} \geq \frac{2}{x_{n}} \iff
+x_{n}^{2} \geq 2</span>, which is true by the above.</p>
+<p>Thus, the sequence is monotone, and also bounded above by <span
+class="math inline">2</span> and bounded below by <span
+class="math inline">0</span>, therefore it converges to some <span
+class="math inline">x</span>. Setting this limit to both side of the
+recursive equation, <span class="math inline">x = \frac{1}{2}(x +
+\frac{2}{x}) \iff x^{2}=2 \iff x = \sqrt{2}</span>.</p>
+<p><span style="color:red">I don’t know how to proceed with <span
+class="math inline">\frac{1}{4}x_{n}^{2} + 1+\frac{1}{x_{n}^{2}} \geq
+\frac{2}{4}+1 + \frac{1}{x_{n}^{2}}</span>. We want <span
+class="math inline">\frac{1}{x_{n}^{2}} \geq \frac{1}{2} \iff 2 \geq
+x_{n}^{2}</span>, which does not work out.</span></p>
+<ol start="2" type="1">
+<li><span class="math inline">x_{n+1} = \frac{1}{2}(x_{n} +
+\frac{c}{x_{n}})</span>, and <span
+class="math inline">x_{1}=c</span>.</li>
+</ol>
+<p>Note that <span class="math inline">x_{n}&gt;0</span>, so we need
+only to show it’s monotone decreasing. <span class="math inline">x_{n}
+-x_{n+1} = x_{n} -\frac{1}{2}(x_{n} + \frac{a}{x_{n}}) =
+\frac{1}{2}\frac{(x^{2}-a)}{x_{n}}</span>. Note that <span
+class="math inline">x_{n}^{2}-a = \frac{1}{4}(x_{n-1} +
+\frac{a}{x_{n-1}})^{2}-a = \frac{1}{4}x_{n-1}^{2} -\frac{1}{2}a +
+\frac{1}{4}a^{2}/x_{n-1}^{2} = \frac{1}{4}(x_{n-1} -
+\frac{a}{x_{n-1}})^{2} \geq 0</span>. Thus limit <span
+class="math inline">x</span> exists. We proceed by setting the limit
+<span class="math inline">x</span> in the recursive equation above, and
+find the value of the limit. Source: <a
+href="https://mathcs.org/analysis/reals/numseq/answers/convseq3.html">mathcs</a>.</p>
 </body>
 </html>
