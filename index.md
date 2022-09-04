@@ -34,11 +34,11 @@ Solutions that need polishing are marked 🔄 and unfinished solutions are marke
 [1.4.4](#144)|[2.3.11](#2311)|
 [1.4.5](#145)|[2.3.12](#2312)|
 [1.4.6](#146)|[2.3.13](#2313)|
-[1.4.7](#147)||
-[1.4.8](#148)||
-[1.5.1](#151) ||
-[1.5.2](#152) ||
-[1.5.3](#153) ||
+[1.4.7](#147)|[2.4.1](#241)|
+[1.4.8](#148)|[2.4.2](#242)|
+[1.5.1](#151) |[2.4.3](#243)|
+[1.5.2](#152) |[2.4.4](#244)|
+[1.5.3](#153) |[2.4.5](#245)|
 [1.5.4](#154) ||
 [1.5.5](#155) ||
 [1.5.6](#156) ||
@@ -1838,6 +1838,36 @@ These two results suggest that we could have used the Monotone Convergence Theor
 
 (If need to expand further): Let $K$ be the limit. Let $\epsilon=1/2$, thus there exists $N$ such that $|n-K|<1/2$ for all $n \geq N$. Take $N_{1}>N$, thus both $N_{1}$ and $N_{1}+1$ are in $(K-1/2,K+1/2)$. But this is impossible since the interval distance is less than $1$.
 
+(Alternative solution): Since $x_{n+1} = 1+x_{n}$, the limits of both sides implies $x=1+x$, hence $0=1$, which is a contradiction.
+
 2. Given nested intervals $[a_{n},b_{n}]$, $(a_{n})$ is monotone. It is also bounded by every $b_{n}$. Thus $(a_{n})$ converges to some limit $a$. Similarly, $(b_{n})$ is monotone and bounded, thus converges to some limit $b$. By algebraic order theorem, $a\leq b$. Morever, $a_{n}\leq a$ for all $n$ by proof below, and $b_{n}\geq b$ for all $n$. Therefore $a_{n}\leq a\leq b \leq b_{n}$ for all $n$.
 
 <span style="color:red">I want to show $a_{n}\leq a \leq b \leq b_{n}$ for all $n$. But how do I prove $a$ is greater than or equal to $a_{n}$ for all $n$? Suppose it isn't. Then there exists $a_{N}>a$. Since $a_{n}$ is increasing, if $n \geq N$,$a_{n} \geq a_{N}>a$. Thus, $|a_{n}-a|\geq |a_{N}-a|>0$ for all $n \geq N$. Letting $\epsilon= |a_{N}-a|/2$, it follows there is no $n_{0}$, such that for all $n\geq n_{0}$, $|a_{n}-a|<\epsilon$. Thus, $(a_{n})$ does not converge, which is a contradiction.</span>
+
+<a name="245"></a>
+
+### [Exercise 2.4.5, Calculating Square Roots](#toc) 
+
+Let $x_{1}=2$, and define
+
+$x_{n+1} = \frac{1}{2}(x_{n} + \frac{2}{x_{n}})$
+
+1. Show that $x^{2}_{n}$ is always greater than or equal to $2$, and then use this to prove that $x_{n} − x_{n+1} \geq 0$. Conclude that $\lim x_{n} = \sqrt{2}$.
+
+2. Modify the sequence $(x_{n})$ so that it converges to $\sqrt{c}$.
+
+***
+
+1. We use induction. The statement is true when $n=1$. Suppose it is true for a given $n$. Then $x_{n+1}^{2} = \frac{1}{4}(x_{n} + \frac{2}{x_{n}})^{2} =\frac{1}{4}(x_{n}^{2} + 4+\frac{4}{x_{n}^{2}}) = \frac{1}{4}x_{n}^{2} + 1+\frac{1}{x_{n}^{2}} \geq \frac{2}{4}+1+\frac{1}{x_{n}^{2}}$, which is hard to do. But note that for $\frac{1}{4}(x_{n}^{2} + 4+\frac{4}{x_{n}^{2}})$ to be greater than or equal to $2$, $x_{n}^{2} +\frac{4}{x_{n}^{2}}-4 \geq 0$. This is equivalent to $(x_{n}-\frac{2}{x_{n}})^{2}\geq 0$, which is true.
+
+$x_{n} \geq x_{n+1} \iff x_{n} \geq \frac{1}{2}(x_{n}+\frac{2}{x_{n}}) \iff x_{n} \geq \frac{2}{x_{n}} \iff x_{n}^{2} \geq 2$, which is true by the above.
+
+Thus, the sequence is monotone, and also bounded above by $2$ and bounded below by $0$, therefore it converges to some $x$. Setting this limit to both side of the recursive equation, $x = \frac{1}{2}(x + \frac{2}{x}) \iff x^{2}=2 \iff x = \sqrt{2}$.
+
+<span style="color:red">I don't know how to proceed with $\frac{1}{4}x_{n}^{2} + 1+\frac{1}{x_{n}^{2}} \geq \frac{2}{4}+1 + \frac{1}{x_{n}^{2}}$. We want $\frac{1}{x_{n}^{2}} \geq \frac{1}{2} \iff 2 \geq x_{n}^{2}$, which does not work out.</span>
+
+2. $x_{n+1} = \frac{1}{2}(x_{n} + \frac{c}{x_{n}})$, and $x_{1}=c$.
+
+
+
+Note that $x_{n}>0$, so we need only to show it's monotone decreasing. $x_{n} -x_{n+1} = x_{n} -\frac{1}{2}(x_{n} + \frac{a}{x_{n}}) = \frac{1}{2}\frac{(x^{2}-a)}{x_{n}}$. Note that $x_{n}^{2}-a = \frac{1}{4}(x_{n-1} + \frac{a}{x_{n-1}})^{2}-a = \frac{1}{4}x_{n-1}^{2} -\frac{1}{2}a + \frac{1}{4}a^{2}/x_{n-1}^{2} = \frac{1}{4}(x_{n-1} - \frac{a}{x_{n-1}})^{2} \geq 0$. Thus limit $x$ exists. We proceed by setting the limit $x$ in the recursive equation above, and find the value of the limit. Source: [mathcs](https://mathcs.org/analysis/reals/numseq/answers/convseq3.html).
