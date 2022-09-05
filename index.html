@@ -3815,5 +3815,48 @@ class="math inline">x</span> exists. We proceed by setting the limit
 <span class="math inline">x</span> in the recursive equation above, and
 find the value of the limit. Source: <a
 href="https://mathcs.org/analysis/reals/numseq/answers/convseq3.html">mathcs</a>.</p>
+<p><a name="246"></a></p>
+<h3 id="exercise-2.4.6-arithmetic-geometric-mean"><a
+href="#toc">Exercise 2.4.6, Arithmetic-Geometric Mean</a></h3>
+<ol type="1">
+<li><p>Explain why <span class="math inline">\sqrt{(xy)} \leq
+(x+y)/2</span> for any two positive real numbers <span
+class="math inline">x</span> and <span class="math inline">y</span>.
+(The geometric mean is always less than the arithmetic mean.)</p></li>
+<li><p>Now let <span class="math inline">0\leq x_{1} \leq y_{1}</span>
+and define <span class="math display">x_{n+1}=\sqrt{x_{n}y_{n}}</span>
+and <span class="math display">y_{n+1} = \frac{x_{n}+y_{n}}{2}.</span>
+Show <span class="math inline">\lim x_{n}</span> and <span
+class="math inline">\lim y_{n}</span> both exist and equal.</p></li>
+</ol>
+<hr />
+<ol type="1">
+<li><span class="math inline">\sqrt{(xy)} \leq (x+y)/2 \iff xy \leq
+\frac{x^{2} + 2xy + y^{2}}{4} \iff x^{2} -2xy+y^{2} \geq 0 \iff
+(x-y)^{2} \geq 0</span>, which is true.</li>
+</ol>
+<p><span style="color:red">Early draft: <span
+class="math inline">\sqrt{(x+y)} \leq (x+y)/2 \iff x+y \leq \frac{x^{2}
++ 2xy + y^{2}}{4} \iff (x+y)^{2} - 4(x+y) \geq 0</span>. I’m stuck at
+<span class="math inline">(x+y)^{2} - 4(x+y) \geq 0</span> Oh f i
+wrongly typed the geometric mean.</p>
+<ol start="2" type="1">
+<li><span class="math inline">x_{n+1} \geq x_{n} \iff \sqrt{x_{n}y_{n}}
+\geq x_{n} \iff x_{n}y_{n} \geq x_{n}^{2} \iff y_{n} \geq x_{n}</span>
+which follows from the fact that arithmetic mean is always greater than
+equal to geometric mean. Thus <span class="math inline">(x_{n})</span>
+is monotone increasing.</li>
+</ol>
+<p><span class="math inline">y_{n+1} \leq y_{n} \iff \frac{x_{n} +
+y_{n}}{2} \leq y_{n} \iff x_{n} + y_{n} \leq 2y_{n} \iff x_{n} \leq
+y_{n}</span> which follows from the same argument. Thus <span
+class="math inline">(y_{n})</span> is monotone decreasing.</p>
+<p>Thus <span class="math inline">0 \leq x_{1} \leq x_{2} \leq \cdots
+\leq x_{n-1} \leq x_{n} \leq \cdots \leq y_{n} \leq y_{n-1} \leq \cdots
+\leq y_{2} \leq y_{1}.</span> It follows that <span
+class="math inline">(x_{n})</span> is bounded above by <span
+class="math inline">(y_{n})</span> and vice versa. By monotone
+convergence theorem, they converge. And setting the limits into the
+respective equations, we know they are equal.</p>
 </body>
 </html>

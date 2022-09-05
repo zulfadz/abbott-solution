@@ -1871,3 +1871,23 @@ Thus, the sequence is monotone, and also bounded above by $2$ and bounded below 
 
 
 Note that $x_{n}>0$, so we need only to show it's monotone decreasing. $x_{n} -x_{n+1} = x_{n} -\frac{1}{2}(x_{n} + \frac{a}{x_{n}}) = \frac{1}{2}\frac{(x^{2}-a)}{x_{n}}$. Note that $x_{n}^{2}-a = \frac{1}{4}(x_{n-1} + \frac{a}{x_{n-1}})^{2}-a = \frac{1}{4}x_{n-1}^{2} -\frac{1}{2}a + \frac{1}{4}a^{2}/x_{n-1}^{2} = \frac{1}{4}(x_{n-1} - \frac{a}{x_{n-1}})^{2} \geq 0$. Thus limit $x$ exists. We proceed by setting the limit $x$ in the recursive equation above, and find the value of the limit. Source: [mathcs](https://mathcs.org/analysis/reals/numseq/answers/convseq3.html).
+
+<a name="246"></a>
+
+### [Exercise 2.4.6, Arithmetic-Geometric Mean](#toc) 
+
+1. Explain why $\sqrt{(xy)} \leq (x+y)/2$ for any two positive real numbers $x$ and $y$. (The geometric mean is always less than the arithmetic mean.)
+
+2. Now let $0\leq x_{1} \leq y_{1}$ and define $$x_{n+1}=\sqrt{x_{n}y_{n}}$$ and $$y_{n+1} = \frac{x_{n}+y_{n}}{2}.$$ Show $\lim x_{n}$ and $\lim y_{n}$ both exist and equal.
+
+***
+
+1. $\sqrt{(xy)} \leq (x+y)/2 \iff xy \leq \frac{x^{2} + 2xy + y^{2}}{4} \iff x^{2} -2xy+y^{2} \geq 0 \iff (x-y)^{2} \geq 0$, which is true.
+
+<span style="color:red">Early draft: $\sqrt{(x+y)} \leq (x+y)/2 \iff x+y \leq \frac{x^{2} + 2xy + y^{2}}{4} \iff (x+y)^{2} - 4(x+y) \geq 0$. I'm stuck at $(x+y)^{2} - 4(x+y) \geq 0$ Oh f i wrongly typed the geometric mean.
+
+2. $x_{n+1} \geq x_{n} \iff \sqrt{x_{n}y_{n}} \geq x_{n} \iff x_{n}y_{n} \geq x_{n}^{2} \iff y_{n} \geq x_{n}$ which follows from the fact that arithmetic mean is always greater than equal to geometric mean. Thus $(x_{n})$ is monotone increasing.
+
+$y_{n+1} \leq y_{n} \iff \frac{x_{n} + y_{n}}{2} \leq y_{n} \iff x_{n} + y_{n} \leq 2y_{n} \iff x_{n} \leq y_{n}$ which follows from the same argument. Thus $(y_{n})$ is monotone decreasing. 
+
+Thus $0 \leq x_{1} \leq x_{2} \leq \cdots \leq x_{n-1} \leq x_{n} \leq \cdots \leq y_{n} \leq y_{n-1} \leq \cdots \leq y_{2} \leq y_{1}.$ It follows that $(x_{n})$ is bounded above by $(y_{n})$ and vice versa. By monotone convergence theorem, they converge. And setting the limits into the respective equations, we know they are equal.
