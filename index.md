@@ -1891,3 +1891,24 @@ Note that $x_{n}>0$, so we need only to show it's monotone decreasing. $x_{n} -x
 $y_{n+1} \leq y_{n} \iff \frac{x_{n} + y_{n}}{2} \leq y_{n} \iff x_{n} + y_{n} \leq 2y_{n} \iff x_{n} \leq y_{n}$ which follows from the same argument. Thus $(y_{n})$ is monotone decreasing. 
 
 Thus $0 \leq x_{1} \leq x_{2} \leq \cdots \leq x_{n-1} \leq x_{n} \leq \cdots \leq y_{n} \leq y_{n-1} \leq \cdots \leq y_{2} \leq y_{1}.$ It follows that $(x_{n})$ is bounded above by $(y_{n})$ and vice versa. By monotone convergence theorem, they converge. And setting the limits into the respective equations, we know they are equal.
+
+<a name="247"></a>
+
+### [Exercise 2.4.7, Limit Superior](#toc) 
+
+Let $(a_{n})$ be a bounded sequence.
+
+1. Prove that the sequence defined by $y_{n} = \sup \{a_{k} : k \geq n\}$ converges.
+2. The limit superior of $(a_{n})$, or $\lim \sup a_{n}$, is defined by $$\lim \sup a_{n} =\lim y_{n},$$ where $y_{n}$ is the sequence from part (a) of this exercise. Provide a reasonable definition for $\lim \inf a_{n}$ and briefly explain why it always exists for any bounded sequence.
+3.
+
+***
+
+1. $y_{1}$ refers to the supremum of $\{a_{1},a_{2}, \cdots\}$, $y_{2}$ refers to the supremum of $\{a_{2},a_{3}, \cdots\}$, and so on. I claim that $(y_{n})$ is monotone decreasing. Note that $$y_{1} = \sup\{a_{1}, a_{2}, a_{3},\cdots\}=\max \{a_{1},\sup\{a_{2}, a_{3},\cdots\}\} = \max \{a_{1},y_{2}\}.$$
+
+If $a_{1}> y_{2}$, then $y_{1} > y_{2}$. If $a_{1}< y_{2}$ or $a_{1}= y_{2}$, then $y_{1} =y_{2}$. Thus $y_{1} \geq y_{2}$ in all cases. Similarly, given any $n$, $y_{n} \geq y_{n+1}$ using the same argument.
+
+Next, I claim that $(y_{n})$ is bounded. As it is monotone decreasing, it is bounded above by $y_{1}$. As $(a_{n})$ is bounded, there exists $M>0$ such that $-M \leq a_{n} \leq M$ for all $n$. Suppose there exists some $y_{N}<-M$. This is a contradiction since $y_{N}$ is less than all $a_{n}$. Therefore, $-M \leq y_{n}$ for all $n$. 
+
+By Monotone Convergence Theorem, we know that $(y_{n})$ converges.
+
