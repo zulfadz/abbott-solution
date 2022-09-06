@@ -3858,5 +3858,55 @@ class="math inline">(x_{n})</span> is bounded above by <span
 class="math inline">(y_{n})</span> and vice versa. By monotone
 convergence theorem, they converge. And setting the limits into the
 respective equations, we know they are equal.</p>
+<p><a name="247"></a></p>
+<h3 id="exercise-2.4.7-limit-superior"><a href="#toc">Exercise 2.4.7,
+Limit Superior</a></h3>
+<p>Let <span class="math inline">(a_{n})</span> be a bounded
+sequence.</p>
+<ol type="1">
+<li>Prove that the sequence defined by <span class="math inline">y_{n} =
+\sup \{a_{k} : k \geq n\}</span> converges.</li>
+<li>The limit superior of <span class="math inline">(a_{n})</span>, or
+<span class="math inline">\lim \sup a_{n}</span>, is defined by <span
+class="math display">\lim \sup a_{n} =\lim y_{n},</span> where <span
+class="math inline">y_{n}</span> is the sequence from part (a) of this
+exercise. Provide a reasonable definition for <span
+class="math inline">\lim \inf a_{n}</span> and briefly explain why it
+always exists for any bounded sequence.</li>
+<li></li>
+</ol>
+<hr />
+<ol type="1">
+<li><span class="math inline">y_{1}</span> refers to the supremum of
+<span class="math inline">\{a_{1},a_{2}, \cdots\}</span>, <span
+class="math inline">y_{2}</span> refers to the supremum of <span
+class="math inline">\{a_{2},a_{3}, \cdots\}</span>, and so on. I claim
+that <span class="math inline">(y_{n})</span> is monotone decreasing.
+Note that <span class="math display">y_{1} = \sup\{a_{1}, a_{2},
+a_{3},\cdots\}=\max \{a_{1},\sup\{a_{2}, a_{3},\cdots\}\} = \max
+\{a_{1},y_{2}\}.</span></li>
+</ol>
+<p>If <span class="math inline">a_{1}&gt; y_{2}</span>, then <span
+class="math inline">y_{1} &gt; y_{2}</span>. If <span
+class="math inline">a_{1}&lt; y_{2}</span> or <span
+class="math inline">a_{1}= y_{2}</span>, then <span
+class="math inline">y_{1} =y_{2}</span>. Thus <span
+class="math inline">y_{1} \geq y_{2}</span> in all cases. Similarly,
+given any <span class="math inline">n</span>, <span
+class="math inline">y_{n} \geq y_{n+1}</span> using the same
+argument.</p>
+<p>Next, I claim that <span class="math inline">(y_{n})</span> is
+bounded. As it is monotone decreasing, it is bounded above by <span
+class="math inline">y_{1}</span>. As <span
+class="math inline">(a_{n})</span> is bounded, there exists <span
+class="math inline">M&gt;0</span> such that <span class="math inline">-M
+\leq a_{n} \leq M</span> for all <span class="math inline">n</span>.
+Suppose there exists some <span class="math inline">y_{N}&lt;-M</span>.
+This is a contradiction since <span class="math inline">y_{N}</span> is
+less than all <span class="math inline">a_{n}</span>. Therefore, <span
+class="math inline">-M \leq y_{n}</span> for all <span
+class="math inline">n</span>.</p>
+<p>By Monotone Convergence Theorem, we know that <span
+class="math inline">(y_{n})</span> converges.</p>
 </body>
 </html>
