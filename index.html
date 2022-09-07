@@ -3873,7 +3873,12 @@ class="math inline">y_{n}</span> is the sequence from part (a) of this
 exercise. Provide a reasonable definition for <span
 class="math inline">\lim \inf a_{n}</span> and briefly explain why it
 always exists for any bounded sequence.</li>
-<li></li>
+<li>Prove that <span class="math inline">\lim \inf a_{n} \leq \lim \sup
+a_{n}</span> for every bounded sequence, and give an example of a
+sequence for which the inequality is strict.</li>
+<li>Show that <span class="math inline">\lim \inf a_{n} = \lim \sup
+a_{n}</span> if and only if <span class="math inline">\lim a_{n}</span>
+exists. In this case, all three share the same value.</li>
 </ol>
 <hr />
 <ol type="1">
@@ -3908,5 +3913,36 @@ class="math inline">-M \leq y_{n}</span> for all <span
 class="math inline">n</span>.</p>
 <p>By Monotone Convergence Theorem, we know that <span
 class="math inline">(y_{n})</span> converges.</p>
+<ol start="2" type="1">
+<li>Define <span class="math inline">\lim \inf a_{n}</span> as <span
+class="math inline">\lim x_{n}</span> where <span
+class="math inline">x_{n}= \inf \{a_{k} : k \geq n\}</span>. The same
+argument as above shows that <span class="math inline">(x_{n})</span> is
+monotone increasing and bounded, hence the limit exists.</li>
+</ol>
+<p><span style="color:red">It exists for any bounded sequence because
+<span class="math inline">\inf a_{n} = \sup -a_{n}</span>, hence <span
+class="math inline">\lim \inf a_{n} = \lim \sup -a_{n}</span>, which
+follows from the argument in (1).</span></p>
+<p><span style="color:red">Early draft: <span class="math display">y_{2}
+= \inf\{a_{1}, a_{2}\}=\min \{a_{2},\sup\{a_{1}\}\} = \min
+\{a_{2},y_{1}\}.</span> If <span class="math inline">a_{2}&gt;
+y_{1}</span> or <span class="math inline">a_{2}=y_{1}</span>, then <span
+class="math inline">y_{2} = y_{1}</span>. If <span
+class="math inline">a_{2}&lt; y_{1}</span>, then <span
+class="math inline">y_{2}&lt;y_{1}.</span> Thus <span
+class="math inline">y_{1} \geq y_{2}</span> in all cases. Similarly,
+given any <span class="math inline">n</span>, <span
+class="math inline">y_{n} \geq y_{n+1}</span> using the same
+argument.</span></p>
+<ol start="3" type="1">
+<li>I claim that <span class="math inline">\inf a_{n} \leq \sup
+a_{n}</span> for all <span class="math inline">n</span>, from which the
+proof is completed using algebraic limit theorem. <span
+class="math inline">\inf a_{n} \leq \sup a_{n} \iff \inf \{a_{k} : k
+\geq n\} \leq \sup \{a_{k} : k \geq n\}</span> which is obvious for all
+<span class="math inline">n</span>. Strict inequality for <span
+class="math inline">((-1)^{n})</span>.</li>
+</ol>
 </body>
 </html>
