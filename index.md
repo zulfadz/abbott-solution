@@ -1900,7 +1900,8 @@ Let $(a_{n})$ be a bounded sequence.
 
 1. Prove that the sequence defined by $y_{n} = \sup \{a_{k} : k \geq n\}$ converges.
 2. The limit superior of $(a_{n})$, or $\lim \sup a_{n}$, is defined by $$\lim \sup a_{n} =\lim y_{n},$$ where $y_{n}$ is the sequence from part (a) of this exercise. Provide a reasonable definition for $\lim \inf a_{n}$ and briefly explain why it always exists for any bounded sequence.
-3.
+3. Prove that $\lim \inf a_{n} \leq \lim \sup a_{n}$ for every bounded sequence, and give an example of a sequence for which the inequality is strict.
+4. Show that $\lim \inf a_{n} = \lim \sup a_{n}$ if and only if $\lim a_{n}$ exists. In this case, all three share the same value.
 
 ***
 
@@ -1911,4 +1912,12 @@ If $a_{1}> y_{2}$, then $y_{1} > y_{2}$. If $a_{1}< y_{2}$ or $a_{1}= y_{2}$, th
 Next, I claim that $(y_{n})$ is bounded. As it is monotone decreasing, it is bounded above by $y_{1}$. As $(a_{n})$ is bounded, there exists $M>0$ such that $-M \leq a_{n} \leq M$ for all $n$. Suppose there exists some $y_{N}<-M$. This is a contradiction since $y_{N}$ is less than all $a_{n}$. Therefore, $-M \leq y_{n}$ for all $n$. 
 
 By Monotone Convergence Theorem, we know that $(y_{n})$ converges.
+
+2. Define $\lim \inf a_{n}$ as $\lim x_{n}$ where $x_{n}= \inf \{a_{k} : k \geq n\}$. The same argument as above shows that $(x_{n})$ is monotone increasing and bounded, hence the limit exists.
+
+<span style="color:red">It exists for any bounded sequence because $\inf a_{n} = \sup -a_{n}$, hence $\lim \inf a_{n} = \lim \sup -a_{n}$, which follows from the argument in (1).</span>
+
+<span style="color:red">Early draft: $$y_{2} = \inf\{a_{1}, a_{2}\}=\min \{a_{2},\sup\{a_{1}\}\} = \min \{a_{2},y_{1}\}.$$ If $a_{2}> y_{1}$ or $a_{2}=y_{1}$, then $y_{2} = y_{1}$. If $a_{2}< y_{1}$, then $y_{2}<y_{1}.$ Thus $y_{1} \geq y_{2}$ in all cases. Similarly, given any $n$, $y_{n} \geq y_{n+1}$ using the same argument.</span>
+
+3. I claim that $\inf a_{n} \leq \sup a_{n}$ for all $n$, from which the proof is completed using algebraic limit theorem. $\inf a_{n} \leq \sup a_{n} \iff \inf \{a_{k} : k \geq n\} \leq \sup \{a_{k} : k \geq n\}$ which is obvious for all $n$. Strict inequality for $((-1)^{n})$.
 
