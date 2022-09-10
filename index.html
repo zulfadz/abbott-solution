@@ -3888,13 +3888,13 @@ class="math inline">y_{2}</span> refers to the supremum of <span
 class="math inline">\{a_{2},a_{3}, \cdots\}</span>, and so on. I claim
 that <span class="math inline">(y_{n})</span> is monotone decreasing.
 Note that <span class="math display">y_{1} = \sup\{a_{1}, a_{2},
-a_{3},\cdots\}=\max \{a_{1},\sup\{a_{2}, a_{3},\cdots\}\} = \max
-\{a_{1},y_{2}\}.</span></li>
+a_{3},\cdots\}=\max \{\sup a_{1},\sup\{a_{2}, a_{3},\cdots\}\} = \max
+\{\sup a_{1},y_{2}\}.</span></li>
 </ol>
-<p>If <span class="math inline">a_{1}&gt; y_{2}</span>, then <span
+<p>If <span class="math inline">\sup a_{1}&gt; y_{2}</span>, then <span
 class="math inline">y_{1} &gt; y_{2}</span>. If <span
-class="math inline">a_{1}&lt; y_{2}</span> or <span
-class="math inline">a_{1}= y_{2}</span>, then <span
+class="math inline">\sup a_{1}&lt; y_{2}</span> or <span
+class="math inline">\sup a_{1}= y_{2}</span>, then <span
 class="math inline">y_{1} =y_{2}</span>. Thus <span
 class="math inline">y_{1} \geq y_{2}</span> in all cases. Similarly,
 given any <span class="math inline">n</span>, <span
@@ -3905,12 +3905,9 @@ bounded. As it is monotone decreasing, it is bounded above by <span
 class="math inline">y_{1}</span>. As <span
 class="math inline">(a_{n})</span> is bounded, there exists <span
 class="math inline">M&gt;0</span> such that <span class="math inline">-M
-\leq a_{n} \leq M</span> for all <span class="math inline">n</span>.
-Suppose there exists some <span class="math inline">y_{N}&lt;-M</span>.
-This is a contradiction since <span class="math inline">y_{N}</span> is
-less than all <span class="math inline">a_{n}</span>. Therefore, <span
-class="math inline">-M \leq y_{n}</span> for all <span
-class="math inline">n</span>.</p>
+\leq a_{n} \leq M</span> for all <span class="math inline">n</span>. By
+definition of supremum, <span class="math inline">-M \leq y_{n}</span>
+for all <span class="math inline">n</span>.</p>
 <p>By Monotone Convergence Theorem, we know that <span
 class="math inline">(y_{n})</span> converges.</p>
 <ol start="2" type="1">
@@ -3920,10 +3917,10 @@ class="math inline">x_{n}= \inf \{a_{k} : k \geq n\}</span>. The same
 argument as above shows that <span class="math inline">(x_{n})</span> is
 monotone increasing and bounded, hence the limit exists.</li>
 </ol>
-<p><span style="color:red">It exists for any bounded sequence because
-<span class="math inline">\inf a_{n} = \sup -a_{n}</span>, hence <span
-class="math inline">\lim \inf a_{n} = \lim \sup -a_{n}</span>, which
-follows from the argument in (1).</span></p>
+<p><span style="color:red">Wrong answer: It exists for any bounded
+sequence because <span class="math inline">\inf a_{n} = \sup
+-a_{n}</span>, hence <span class="math inline">\lim \inf a_{n} = \lim
+\sup -a_{n}</span>, which follows from the argument in (1).</span></p>
 <p><span style="color:red">Early draft: <span class="math display">y_{2}
 = \inf\{a_{1}, a_{2}\}=\min \{a_{2},\sup\{a_{1}\}\} = \min
 \{a_{2},y_{1}\}.</span> If <span class="math inline">a_{2}&gt;
@@ -3942,8 +3939,8 @@ class="math inline">n</span>. Proof is completed using algebraic limit
 theorem. Strict inequality for <span
 class="math inline">((-1)^{n})</span>.</p></li>
 <li><p>Suppose <span class="math inline">\lim a_{n}=L</span> exists.
-Then for all <span class="math inline">\epsilon&gt;0</span>, there
-exists some <span class="math inline">N</span> such that for all <span
+Consider <span class="math inline">\epsilon/2&gt;0</span>, there exists
+some <span class="math inline">N</span> such that for all <span
 class="math inline">n \geq N</span>, <span
 class="math display">-L-\epsilon/2&lt;a_{n}&lt;L+\epsilon/2.</span> Then
 for <span class="math inline">\sup a_{n} =\sup \{a_{k}: k \geq n \geq
@@ -3974,5 +3971,13 @@ N</span>, thus <span class="math inline">a_{n} \to L</span>.</p>
 class="math inline">\lim \inf a_{n} \leq a_{n} \leq \lim \sup
 a_{n}</span>. This is not right, e.g. <span
 class="math inline">(-1)^{n}(1/n)</span></span></p>
+<p><span style="color:green">I took sometime to finish this question.
+The key really is understanding what <span class="math inline">\sup
+a_{n}</span> and <span class="math inline">\inf a_{n}</span> mean. We
+define <span class="math inline">\sup a_{n}</span> and <span
+class="math inline">\inf a_{n}</span> as the supremum and infimum of all
+the terms after <span class="math inline">a_{n}</span>. The major
+implication is that <span class="math inline">\inf a_{n} \leq a_{n} \leq
+\sup a_{n}.</span></span></p>
 </body>
 </html>

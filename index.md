@@ -1905,29 +1905,31 @@ Let $(a_{n})$ be a bounded sequence.
 
 ***
 
-1. $y_{1}$ refers to the supremum of $\{a_{1},a_{2}, \cdots\}$, $y_{2}$ refers to the supremum of $\{a_{2},a_{3}, \cdots\}$, and so on. I claim that $(y_{n})$ is monotone decreasing. Note that $$y_{1} = \sup\{a_{1}, a_{2}, a_{3},\cdots\}=\max \{a_{1},\sup\{a_{2}, a_{3},\cdots\}\} = \max \{a_{1},y_{2}\}.$$
+1. $y_{1}$ refers to the supremum of $\{a_{1},a_{2}, \cdots\}$, $y_{2}$ refers to the supremum of $\{a_{2},a_{3}, \cdots\}$, and so on. I claim that $(y_{n})$ is monotone decreasing. Note that $$y_{1} = \sup\{a_{1}, a_{2}, a_{3},\cdots\}=\max \{\sup a_{1},\sup\{a_{2}, a_{3},\cdots\}\} = \max \{\sup a_{1},y_{2}\}.$$
 
-If $a_{1}> y_{2}$, then $y_{1} > y_{2}$. If $a_{1}< y_{2}$ or $a_{1}= y_{2}$, then $y_{1} =y_{2}$. Thus $y_{1} \geq y_{2}$ in all cases. Similarly, given any $n$, $y_{n} \geq y_{n+1}$ using the same argument.
+If $\sup a_{1}> y_{2}$, then $y_{1} > y_{2}$. If $\sup a_{1}< y_{2}$ or $\sup a_{1}= y_{2}$, then $y_{1} =y_{2}$. Thus $y_{1} \geq y_{2}$ in all cases. Similarly, given any $n$, $y_{n} \geq y_{n+1}$ using the same argument.
 
-Next, I claim that $(y_{n})$ is bounded. As it is monotone decreasing, it is bounded above by $y_{1}$. As $(a_{n})$ is bounded, there exists $M>0$ such that $-M \leq a_{n} \leq M$ for all $n$. Suppose there exists some $y_{N}<-M$. This is a contradiction since $y_{N}$ is less than all $a_{n}$. Therefore, $-M \leq y_{n}$ for all $n$. 
+Next, I claim that $(y_{n})$ is bounded. As it is monotone decreasing, it is bounded above by $y_{1}$. As $(a_{n})$ is bounded, there exists $M>0$ such that $-M \leq a_{n} \leq M$ for all $n$. By definition of supremum, $-M \leq y_{n}$ for all $n$. 
 
 By Monotone Convergence Theorem, we know that $(y_{n})$ converges.
 
 2. Define $\lim \inf a_{n}$ as $\lim x_{n}$ where $x_{n}= \inf \{a_{k} : k \geq n\}$. The same argument as above shows that $(x_{n})$ is monotone increasing and bounded, hence the limit exists.
 
-<span style="color:red">It exists for any bounded sequence because $\inf a_{n} = \sup -a_{n}$, hence $\lim \inf a_{n} = \lim \sup -a_{n}$, which follows from the argument in (1).</span>
+<span style="color:red">Wrong answer: It exists for any bounded sequence because $\inf a_{n} = \sup -a_{n}$, hence $\lim \inf a_{n} = \lim \sup -a_{n}$, which follows from the argument in (1).</span>
 
 <span style="color:red">Early draft: $$y_{2} = \inf\{a_{1}, a_{2}\}=\min \{a_{2},\sup\{a_{1}\}\} = \min \{a_{2},y_{1}\}.$$ If $a_{2}> y_{1}$ or $a_{2}=y_{1}$, then $y_{2} = y_{1}$. If $a_{2}< y_{1}$, then $y_{2}<y_{1}.$ Thus $y_{1} \geq y_{2}$ in all cases. Similarly, given any $n$, $y_{n} \geq y_{n+1}$ using the same argument.</span>
 
 3. $\inf \{a_{k} : k \geq n\} \leq \sup \{a_{k} : k \geq n\}$ which is obvious for all $n$. Proof is completed using algebraic limit theorem. Strict inequality for $((-1)^{n})$.
 
-4. Suppose $\lim a_{n}=L$ exists. Then for all $\epsilon>0$, there exists some $N$ such that for all $n \geq N$, $$-L-\epsilon/2<a_{n}<L+\epsilon/2.$$ Then for $\sup a_{n} =\sup \{a_{k}: k \geq n \geq N\}$, $$-L - \epsilon<-L-\epsilon/2 \leq \sup a_{n} \leq L+\epsilon/2 <L+ \epsilon,$$ thus $\sup a_{n} \to L$. Similarly, for $\inf a_{n} =\inf \{a_{k}: k \geq n \geq N\}$, $$-L - \epsilon<-L-\epsilon/2 \leq \inf a_{n} \leq L+\epsilon/2 <L+ \epsilon,$$ thus $\inf a_{n} \to L.$ 
+4. Suppose $\lim a_{n}=L$ exists. Consider $\epsilon/2>0$, there exists some $N$ such that for all $n \geq N$, $$-L-\epsilon/2<a_{n}<L+\epsilon/2.$$ Then for $\sup a_{n} =\sup \{a_{k}: k \geq n \geq N\}$, $$-L - \epsilon<-L-\epsilon/2 \leq \sup a_{n} \leq L+\epsilon/2 <L+ \epsilon,$$ thus $\sup a_{n} \to L$. Similarly, for $\inf a_{n} =\inf \{a_{k}: k \geq n \geq N\}$, $$-L - \epsilon<-L-\epsilon/2 \leq \inf a_{n} \leq L+\epsilon/2 <L+ \epsilon,$$ thus $\inf a_{n} \to L.$ 
 
 Suppose $\lim \inf a_{n} = \lim \sup a_{n}=L$. It follows that given any $\epsilon>0$, there exists $N_{1}$ and $N_{2}$ such that, $$-L-\epsilon < \inf a_{n} < L + \epsilon, \forall n \geq N_{1}$$ and $$-L-\epsilon < \sup a_{n} < L + \epsilon, \forall n \geq N_{2}.$$
 
 Taking $N = \max \{N_{1},N_{2}\}$, for all $k \geq N$, $$-L-\epsilon < \inf a_{n} \leq a_{k}.$$ Similarly, $$a_{k} \leq \sup a_{n} < L + \epsilon.$$ Thus $$-L-\epsilon <a_{k}<L+\epsilon$$ for all $k \geq N$, thus $a_{n} \to L$.
 
 <span style="color:red">Potential mistake: Propose $\lim \inf a_{n} \leq a_{n} \leq \lim \sup a_{n}$. This is not right, e.g. $(-1)^{n}(1/n)$</span>
+
+<span style="color:green">I took sometime to finish this question. The key really is understanding what $\sup a_{n}$ and $\inf a_{n}$ mean. We define $\sup a_{n}$ and $\inf a_{n}$ as the supremum and infimum of all the terms after $a_{n}$. The major implication is that $\inf a_{n} \leq a_{n} \leq \sup a_{n}.$</span>
 
 
 
