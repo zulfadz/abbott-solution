@@ -3936,13 +3936,43 @@ given any <span class="math inline">n</span>, <span
 class="math inline">y_{n} \geq y_{n+1}</span> using the same
 argument.</span></p>
 <ol start="3" type="1">
-<li>I claim that <span class="math inline">\inf a_{n} \leq \sup
-a_{n}</span> for all <span class="math inline">n</span>, from which the
-proof is completed using algebraic limit theorem. <span
-class="math inline">\inf a_{n} \leq \sup a_{n} \iff \inf \{a_{k} : k
-\geq n\} \leq \sup \{a_{k} : k \geq n\}</span> which is obvious for all
-<span class="math inline">n</span>. Strict inequality for <span
-class="math inline">((-1)^{n})</span>.</li>
+<li><p><span class="math inline">\inf \{a_{k} : k \geq n\} \leq \sup
+\{a_{k} : k \geq n\}</span> which is obvious for all <span
+class="math inline">n</span>. Proof is completed using algebraic limit
+theorem. Strict inequality for <span
+class="math inline">((-1)^{n})</span>.</p></li>
+<li><p>Suppose <span class="math inline">\lim a_{n}=L</span> exists.
+Then for all <span class="math inline">\epsilon&gt;0</span>, there
+exists some <span class="math inline">N</span> such that for all <span
+class="math inline">n \geq N</span>, <span
+class="math display">-L-\epsilon/2&lt;a_{n}&lt;L+\epsilon/2.</span> Then
+for <span class="math inline">\sup a_{n} =\sup \{a_{k}: k \geq n \geq
+N\}</span>, <span class="math display">-L - \epsilon&lt;-L-\epsilon/2
+\leq \sup a_{n} \leq L+\epsilon/2 &lt;L+ \epsilon,</span> thus <span
+class="math inline">\sup a_{n} \to L</span>. Similarly, for <span
+class="math inline">\inf a_{n} =\inf \{a_{k}: k \geq n \geq N\}</span>,
+<span class="math display">-L - \epsilon&lt;-L-\epsilon/2 \leq \inf
+a_{n} \leq L+\epsilon/2 &lt;L+ \epsilon,</span> thus <span
+class="math inline">\inf a_{n} \to L.</span></p></li>
 </ol>
+<p>Suppose <span class="math inline">\lim \inf a_{n} = \lim \sup
+a_{n}=L</span>. It follows that given any <span
+class="math inline">\epsilon&gt;0</span>, there exists <span
+class="math inline">N_{1}</span> and <span
+class="math inline">N_{2}</span> such that, <span
+class="math display">-L-\epsilon &lt; \inf a_{n} &lt; L + \epsilon,
+\forall n \geq N_{1}</span> and <span class="math display">-L-\epsilon
+&lt; \sup a_{n} &lt; L + \epsilon, \forall n \geq N_{2}.</span></p>
+<p>Taking <span class="math inline">N = \max \{N_{1},N_{2}\}</span>, for
+all <span class="math inline">k \geq N</span>, <span
+class="math display">-L-\epsilon &lt; \inf a_{n} \leq a_{k}.</span>
+Similarly, <span class="math display">a_{k} \leq \sup a_{n} &lt; L +
+\epsilon.</span> Thus <span class="math display">-L-\epsilon
+&lt;a_{k}&lt;L+\epsilon</span> for all <span class="math inline">k \geq
+N</span>, thus <span class="math inline">a_{n} \to L</span>.</p>
+<p><span style="color:red">Potential mistake: Propose <span
+class="math inline">\lim \inf a_{n} \leq a_{n} \leq \lim \sup
+a_{n}</span>. This is not right, e.g. <span
+class="math inline">(-1)^{n}(1/n)</span></span></p>
 </body>
 </html>
