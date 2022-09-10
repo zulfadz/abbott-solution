@@ -1919,5 +1919,17 @@ By Monotone Convergence Theorem, we know that $(y_{n})$ converges.
 
 <span style="color:red">Early draft: $$y_{2} = \inf\{a_{1}, a_{2}\}=\min \{a_{2},\sup\{a_{1}\}\} = \min \{a_{2},y_{1}\}.$$ If $a_{2}> y_{1}$ or $a_{2}=y_{1}$, then $y_{2} = y_{1}$. If $a_{2}< y_{1}$, then $y_{2}<y_{1}.$ Thus $y_{1} \geq y_{2}$ in all cases. Similarly, given any $n$, $y_{n} \geq y_{n+1}$ using the same argument.</span>
 
-3. I claim that $\inf a_{n} \leq \sup a_{n}$ for all $n$, from which the proof is completed using algebraic limit theorem. $\inf a_{n} \leq \sup a_{n} \iff \inf \{a_{k} : k \geq n\} \leq \sup \{a_{k} : k \geq n\}$ which is obvious for all $n$. Strict inequality for $((-1)^{n})$.
+3. $\inf \{a_{k} : k \geq n\} \leq \sup \{a_{k} : k \geq n\}$ which is obvious for all $n$. Proof is completed using algebraic limit theorem. Strict inequality for $((-1)^{n})$.
+
+4. Suppose $\lim a_{n}=L$ exists. Then for all $\epsilon>0$, there exists some $N$ such that for all $n \geq N$, $$-L-\epsilon/2<a_{n}<L+\epsilon/2.$$ Then for $\sup a_{n} =\sup \{a_{k}: k \geq n \geq N\}$, $$-L - \epsilon<-L-\epsilon/2 \leq \sup a_{n} \leq L+\epsilon/2 <L+ \epsilon,$$ thus $\sup a_{n} \to L$. Similarly, for $\inf a_{n} =\inf \{a_{k}: k \geq n \geq N\}$, $$-L - \epsilon<-L-\epsilon/2 \leq \inf a_{n} \leq L+\epsilon/2 <L+ \epsilon,$$ thus $\inf a_{n} \to L.$ 
+
+Suppose $\lim \inf a_{n} = \lim \sup a_{n}=L$. It follows that given any $\epsilon>0$, there exists $N_{1}$ and $N_{2}$ such that, $$-L-\epsilon < \inf a_{n} < L + \epsilon, \forall n \geq N_{1}$$ and $$-L-\epsilon < \sup a_{n} < L + \epsilon, \forall n \geq N_{2}.$$
+
+Taking $N = \max \{N_{1},N_{2}\}$, for all $k \geq N$, $$-L-\epsilon < \inf a_{n} \leq a_{k}.$$ Similarly, $$a_{k} \leq \sup a_{n} < L + \epsilon.$$ Thus $$-L-\epsilon <a_{k}<L+\epsilon$$ for all $k \geq N$, thus $a_{n} \to L$.
+
+<span style="color:red">Potential mistake: Propose $\lim \inf a_{n} \leq a_{n} \leq \lim \sup a_{n}$. This is not right, e.g. $(-1)^{n}(1/n)$</span>
+
+
+
+
 
