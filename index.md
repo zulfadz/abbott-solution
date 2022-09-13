@@ -1933,5 +1933,18 @@ Taking $N = \max \{N_{1},N_{2}\}$, for all $k \geq N$, $$-L-\epsilon < \inf a_{n
 
 
 
+<a name="248"></a>
 
+### [Exercise 2.4.8](#toc) 
 
+For each series, find an explicit formula for the sequence of partial sums and determine if the series converges.
+
+1. $\sum_{n=1}^{\infty}\frac{1}{2^{n}}$
+2. $\sum_{n=1}^{\infty}\frac{1}{n(n+1)}$
+3. $\sum_{n=1}^{\infty}\log (\frac{n+1}{n})$
+
+(In (c), $\log(x)$ refers to the natural logarithm function from calculus.)
+
+***
+
+1. The partial sums are $t_{1}=\frac{1}{2}, t_{2} = \frac{3}{4}, t_{3}=\frac{7}{8}, \cdots.$ Thus $t_{n} = \frac{2^{n}-1}{2^{n}}$
