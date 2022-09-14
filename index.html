@@ -3995,9 +3995,75 @@ class="math inline">\sum_{n=1}^{\infty}\frac{1}{n(n+1)}</span></li>
 natural logarithm function from calculus.)</p>
 <hr />
 <ol type="1">
-<li>The partial sums are <span class="math inline">t_{1}=\frac{1}{2},
-t_{2} = \frac{3}{4}, t_{3}=\frac{7}{8}, \cdots.</span> Thus <span
-class="math inline">t_{n} = \frac{2^{n}-1}{2^{n}}</span></li>
+<li><span class="math inline">t_{n}=\frac{1}{2} + \frac{1}{4} +
+\frac{1}{8} + \cdots + \frac{1}{2^{n}}</span> which means <span
+class="math inline">2t_{n} = \frac{2}{2} + \frac{2}{4} + \frac{2}{8} +
+\cdots + \frac{2}{2^{n}}= 1+(t_{n} -\frac{1}{2^{n}})</span>, thus, <span
+class="math display">t_{n} = 1 -\frac{1}{2^{n}}.</span> Thus it
+converges to 1.</li>
 </ol>
+<p>Alternative answer: The partial sums are <span
+class="math inline">t_{1}=\frac{1}{2}, t_{2} = \frac{3}{4},
+t_{3}=\frac{7}{8}, \cdots.</span> Thus <span class="math inline">t_{n} =
+\frac{2^{n}-1}{2^{n}}</span>. It is monotone increasing and bounded
+above by 1. Thus it converges.</p>
+<ol start="2" type="1">
+<li>Note that <span class="math inline">\frac{1}{n(n+1)}=
+\frac{n+1-1}{n(n+1)}=\frac{1}{n} - \frac{1}{n+1}</span>. Thus the terms
+in partial sum <span class="math inline">\sum_{n=1}^{N}\frac{1}{n} -
+\frac{1}{n+1}</span> will cancel out, leaving <span
+class="math inline">1-\frac{1}{N+1}</span>. As <span
+class="math inline">N</span> gets larger, it converges to <span
+class="math inline">1</span>.</li>
+</ol>
+<p>Alternative answer: The partial sums are <span
+class="math inline">t_{1}=\frac{1}{2}, t_{2} = \frac{4}{6}, t_{3} =
+\frac{9}{12}, t_{4} = \frac{48}{60}, \cdots</span>. It is monotone
+increasing and bounded above by 1. Thus it converges.</p>
+<ol start="3" type="1">
+<li>Note that <span class="math inline">\log (\frac{n+1}{n})=\log (n+1)
+- \log n</span>. Thus the terms in the partial sum <span
+class="math inline">\sum_{n=1}^{N}\log (n+1) - \log n</span> will cancel
+out, <span class="math inline">(\log 2 - \log 1) + (\log 3 - \log 2) +
+(\log 4 - \log 3)+ \cdots + (\log (N+1) - \log N) = -\log 1 +
+\log(N+1)</span>. This does not converge as <span
+class="math inline">N</span> gets larger.</li>
+</ol>
+<p>Alternative answer: The partial sums are <span
+class="math inline">t_{1} = \log 2, t_{2} = \log 2 + \log \frac{3}{2},
+\cdots</span>. It is strictly increasing and does not converge.</p>
+<p><a name="249"></a></p>
+<h3 id="exercise-2.4.9"><a href="#toc">Exercise 2.4.9</a></h3>
+<p>Complete the proof of Theorem 2.4.6 by showing that if the series
+<span class="math inline">\sum_{n=0}^{\infty} 2^{n}b_{2^{n}}</span>
+diverges, then so does <span class="math inline">\sum_{n=1}^{\infty}
+b_{n}</span>. Example 2.4.5 may be useful reference.</p>
+<hr />
+<p>Let partial sum of <span class="math inline">\sum_{n=0}^{\infty}
+2^{n}b_{2^{n}}</span> be</p>
+<p><span class="math display">t_{k}=\sum_{n=0}^{k} 2^{n}b_{2^{n}} =
+b_{1} + 2b_{2} + 4b_{4} + \cdots + 2^{k}b_{2^{k}}.</span></p>
+<p>Consider partial sum <span class="math inline">s_{n}= \sum_{0}^{n}
+b_{n}</span>. Fixing <span class="math inline">n</span>, select <span
+class="math inline">k</span> large enough such that <span
+class="math inline">n&lt;2^{k}</span>. Thus, <span
+class="math inline">s_{n}&lt;s_{2^{k}}= \sum_{n=0}^{2^{k}} b_{n},</span>
+which if expanded,</p>
+<p>$$<span class="math display">\begin{align*}
+\sum_{n=0}^{2^{k}} b_{n} &amp;= b_{1} + b_{2} + (b_{3} + b_{4}) + (b_{5}
++ \cdots + b_{8}) +\cdots + (b_{2^{k-1}}  + \cdots + b_{2^{k}})\\
+
+&amp;&gt; b_{1} + b_{2} + (b_{4} + b_{4}) + (b_{8} + \cdots + b_{8})+
+\cdots +  (b_{2^{k}}  + \cdots + b_{2^{k}}) \\
+&amp;=b_{1} + 2^{0}(b_{2}) + 2^{1}(b_{4})+ 2^{4}(b_{8})\cdots +
+2^{k-1}(b_{2^{k}}) \\
+\end{align*}</span>$$</p>
+<p>Note that this last expression is equal to <span
+class="math inline">t_{k}/2</span>. Thus, <span
+class="math display">s_{n} &gt; s_{2^k}&gt;t_{k}/2 \geq t_{k}.</span>
+Since <span class="math inline">t_{k}</span> diverges, and <span
+class="math inline">s_{n}</span> is larger than <span
+class="math inline">t_{k}</span>, it follows that <span
+class="math inline">s_{n}</span> diverges.</p>
 </body>
 </html>

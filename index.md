@@ -1947,4 +1947,41 @@ For each series, find an explicit formula for the sequence of partial sums and d
 
 ***
 
-1. The partial sums are $t_{1}=\frac{1}{2}, t_{2} = \frac{3}{4}, t_{3}=\frac{7}{8}, \cdots.$ Thus $t_{n} = \frac{2^{n}-1}{2^{n}}$
+1. $t_{n}=\frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \cdots + \frac{1}{2^{n}}$ which means $2t_{n} = \frac{2}{2} + \frac{2}{4} + \frac{2}{8} + \cdots + \frac{2}{2^{n}}= 1+(t_{n} -\frac{1}{2^{n}})$, thus, $$t_{n} = 1 -\frac{1}{2^{n}}.$$ Thus it converges to 1.
+
+Alternative answer: The partial sums are $t_{1}=\frac{1}{2}, t_{2} = \frac{3}{4}, t_{3}=\frac{7}{8}, \cdots.$ Thus $t_{n} = \frac{2^{n}-1}{2^{n}}$. It is monotone increasing and bounded above by 1. Thus it converges.
+
+2. Note that $\frac{1}{n(n+1)}= \frac{n+1-1}{n(n+1)}=\frac{1}{n} - \frac{1}{n+1}$. Thus the terms in partial sum $\sum_{n=1}^{N}\frac{1}{n} - \frac{1}{n+1}$ will cancel out, leaving $1-\frac{1}{N+1}$. As $N$ gets larger, it converges to $1$.
+
+Alternative answer: The partial sums are $t_{1}=\frac{1}{2}, t_{2} = \frac{4}{6}, t_{3} = \frac{9}{12}, t_{4} = \frac{48}{60}, \cdots$. It is monotone increasing and bounded above by 1. Thus it converges.
+
+3. Note that $\log (\frac{n+1}{n})=\log (n+1) - \log n$. Thus the terms in the partial sum $\sum_{n=1}^{N}\log (n+1) - \log n$ will cancel out, $(\log 2 - \log 1) + (\log 3 - \log 2) + (\log 4 - \log 3)+ \cdots + (\log (N+1) - \log N) = -\log 1 + \log(N+1)$. This does not converge as $N$ gets larger.
+
+Alternative answer: The partial sums are $t_{1} = \log 2, t_{2} = \log 2 + \log \frac{3}{2}, \cdots$. It is strictly increasing and does not converge.
+
+<a name="249"></a>
+
+### [Exercise 2.4.9](#toc) 
+
+Complete the proof of Theorem 2.4.6 by showing that if the series $\sum_{n=0}^{\infty} 2^{n}b_{2^{n}}$ diverges, then so does $\sum_{n=1}^{\infty} b_{n}$. Example 2.4.5 may be useful reference.
+
+***
+
+Let partial sum of $\sum_{n=0}^{\infty} 2^{n}b_{2^{n}}$ be
+
+
+$$t_{k}=\sum_{n=0}^{k} 2^{n}b_{2^{n}} = b_{1} + 2b_{2} + 4b_{4} + \cdots + 2^{k}b_{2^{k}}.$$
+
+Consider partial sum $s_{n}= \sum_{0}^{n} b_{n}$. Fixing $n$, select $k$ large enough such that $n<2^{k}$. Thus, $s_{n}<s_{2^{k}}= \sum_{n=0}^{2^{k}} b_{n},$ which if expanded,
+
+$$\begin{align*} 
+\sum_{n=0}^{2^{k}} b_{n} &= b_{1} + b_{2} + (b_{3} + b_{4}) + (b_{5} + \cdots + b_{8}) +\cdots + (b_{2^{k-1}}  + \cdots + b_{2^{k}})\\
+
+&> b_{1} + b_{2} + (b_{4} + b_{4}) + (b_{8} + \cdots + b_{8})+ \cdots +  (b_{2^{k}}  + \cdots + b_{2^{k}}) \\
+&=b_{1} + 2^{0}(b_{2}) + 2^{1}(b_{4})+ 2^{4}(b_{8})\cdots + 2^{k-1}(b_{2^{k}}) \\
+\end{align*}$$
+
+Note that this last expression is equal to $t_{k}/2$. Thus, $$s_{n} > s_{2^k}>t_{k}/2 \geq t_{k}.$$ Since $t_{k}$ diverges, and $s_{n}$ is larger than $t_{k}$, it follows that $s_{n}$ diverges.
+
+
+
