@@ -1972,16 +1972,50 @@ Let partial sum of $\sum_{n=0}^{\infty} 2^{n}b_{2^{n}}$ be
 
 $$t_{k}=\sum_{n=0}^{k} 2^{n}b_{2^{n}} = b_{1} + 2b_{2} + 4b_{4} + \cdots + 2^{k}b_{2^{k}}.$$
 
-Consider partial sum $s_{n}= \sum_{0}^{n} b_{n}$. Fixing $n$, select $k$ large enough such that $n<2^{k}$. Thus, $s_{n}<s_{2^{k}}= \sum_{n=0}^{2^{k}} b_{n},$ which if expanded,
+Consider partial sum $s_{2^{k}}= \sum_{n=0}^{2^{k}} b_{n},$ which if expanded,
 
 $$\begin{align*} 
 \sum_{n=0}^{2^{k}} b_{n} &= b_{1} + b_{2} + (b_{3} + b_{4}) + (b_{5} + \cdots + b_{8}) +\cdots + (b_{2^{k-1}}  + \cdots + b_{2^{k}})\\
 
 &> b_{1} + b_{2} + (b_{4} + b_{4}) + (b_{8} + \cdots + b_{8})+ \cdots +  (b_{2^{k}}  + \cdots + b_{2^{k}}) \\
-&=b_{1} + 2^{0}(b_{2}) + 2^{1}(b_{4})+ 2^{4}(b_{8})\cdots + 2^{k-1}(b_{2^{k}}) \\
+&=b_{1} + 2^{0}(b_{2}) + 2^{1}(b_{4})+ 2^{2}(b_{8})\cdots + 2^{k-1}(b_{2^{k}}) \\
 \end{align*}$$
 
-Note that this last expression is equal to $t_{k}/2$. Thus, $$s_{n} > s_{2^k}>t_{k}/2 \geq t_{k}.$$ Since $t_{k}$ diverges, and $s_{n}$ is larger than $t_{k}$, it follows that $s_{n}$ diverges.
+Note that this last expression is equal to $t_{k}/2$. Thus, $$s_{2^k}>t_{k}/2 \geq t_{k}.$$ Since $t_{k}$ diverges, and $s_{n}$ is larger than $t_{k}$, it follows that $s_{n}$ diverges.
 
 
+<a name="2410"></a>
 
+### [Exercise 2.4.10, Infinite Products](#toc) 
+
+A close relative of infinite series is the infinite product $$\prod_{n=1}^{\infty} b_{n} = b_{1}b_{2}b_{3}\cdots$$ which is understood in terms of its sequence of partial products $$p_{m}=\prod_{n=1}^{m} b_{n} = b_{1}b_{2}b_{3}\cdots b_{m}.$$ Consider the special class of infinite products of the form $$\prod_{n=1}^{\infty}(1+a_{n}) = (1+a_{1})(1+a_{2})(1+a_{3})\cdots,\text{ where $a_{n} \geq 0$.}$$
+
+1. Find an explicit formula for the sequence of partial products in the case where $a_{n} = 1/n$ and decide whether the sequence converges. Write out the first few terms in the sequence of partial products in the case where $a_{n} = 1/n^{2}$ and make a conjecture about the convergence of this sequence.
+2. Show, in general, that the sequence of partial products converges if and only if $\sum_{n=1}^{\infty} a_{n}$ converges. (The inequality $1 + x \leq 3x$ for positive $x$ will be useful in one direction.)
+
+***
+
+1. $\prod_{n=1}^{m} (1+1/n) = \prod_{n=1}^{m} ((n+1)/n)=\frac{2}{1}\frac{3}{2}\frac{4}{3}\cdots \frac{m+1}{m}=m+1$. Thus this series is not bounded, hence not converging.
+
+$p_{1} =2,p_{2} =\prod_{n=1}^{2} \frac{n^{2}+1}{n^{2}}=\frac{10}{4}=2.5, p_{3}=\frac{100}{36}=2.7777$. Seems like the increase rate is slowing down, so I suspect it will converge.
+
+<span style="color:red">Old answer: $p_{1}=2$ and $p_{n}=(1+1/n)(p_{n-1})$.</span>
+
+2. $$\prod_{n=1}^{m}(1+a_{n})\leq 3^{a_{1}}3^{a_{2}}3^{a_{3}}\cdots = 3^{a_{1} + a_{2} + a_{3} + \cdots}$$ 
+Suppose $\sum_{n=1}^{\infty} a_{n}$ converges. Then it is bounded by some $M>0$. Thus, $$3^{a_{1} + a_{2} + a_{3} + \cdots} \leq 3^{M}.$$ It follows that $\prod_{n=1}^{m}(1+a_{n})$ is bounded above. The sequence is also  monotone increasing. Therefore, it converges by Monotone Converging Theorem.
+
+Suppose $\prod_{n=1}^{\infty}(1+a_{n})$ converges, thus it is bounded by some $M>0$. Note that, $$\prod_{n=1}^{2}(1+a_{n})=(1+a_{1})(1+a_{2})=1+a_{1}+a_{2}+a_{1}a_{2}\geq 1+\sum_{n=1}^{2} a_{n}.$$ By induction, I show that for any $m$, $\prod_{n=1}^{m}(1+a_{n})\geq 1+\sum_{n=1}^{m} a_{n}.$ This is true for $m=1$. Suppose it is true for some $m \geq 2$.
+
+$$\begin{align*}
+\prod_{n=1}^{m+1}(1+a_{n}) &= \prod_{n=1}^{m}(1+a_{n})(1+a_{m+1}) \\
+&\geq (1+\sum_{n=1}^{m} a_{n})(1+a_{m+1}) \\
+&=1+a_{m+1} + \sum_{n=1}^{m} a_{n}+(\sum_{n=1}^{m} a_{n})a_{m+1} \\
+&\geq 1+a_{m+1} + \sum_{n=1}^{m} a_{n} \text{, since $(\sum_{n=1}^{m} a_{n})a_{m+1}\geq 0$} \\
+&=1+\sum_{n=1}^{m+1}a_{n}.
+\end{align*}$$
+
+Therefore as $\prod_{n=1}^{m}(1+a_{n})$ is monotone increasing, and bounded, $\prod_{n=1}^{\infty}(1+a_{n})$ converges by Monotone Converging Theorem.
+
+Source for induction proof: [SE](https://math.stackexchange.com/questions/2866395/equivalent-condition-for-convergent-partial-products).
+
+<span style="color:red">Old answer: $$\prod_{n=1}^{m}(1+a_{n})\leq3(1)3(1/2)3(1/3)3(1/4)\cdots 3(1/m) = 3^{m}/m!.$$ If $m$ is sufficiently large, $m!$ will grow faster than $3^{m}$, thus $3^{m}/m! \to 0$.</span>

@@ -4043,27 +4043,106 @@ b_{n}</span>. Example 2.4.5 may be useful reference.</p>
 2^{n}b_{2^{n}}</span> be</p>
 <p><span class="math display">t_{k}=\sum_{n=0}^{k} 2^{n}b_{2^{n}} =
 b_{1} + 2b_{2} + 4b_{4} + \cdots + 2^{k}b_{2^{k}}.</span></p>
-<p>Consider partial sum <span class="math inline">s_{n}= \sum_{0}^{n}
-b_{n}</span>. Fixing <span class="math inline">n</span>, select <span
-class="math inline">k</span> large enough such that <span
-class="math inline">n&lt;2^{k}</span>. Thus, <span
-class="math inline">s_{n}&lt;s_{2^{k}}= \sum_{n=0}^{2^{k}} b_{n},</span>
-which if expanded,</p>
+<p>Consider partial sum <span class="math inline">s_{2^{k}}=
+\sum_{n=0}^{2^{k}} b_{n},</span> which if expanded,</p>
 <p>$$<span class="math display">\begin{align*}
 \sum_{n=0}^{2^{k}} b_{n} &amp;= b_{1} + b_{2} + (b_{3} + b_{4}) + (b_{5}
 + \cdots + b_{8}) +\cdots + (b_{2^{k-1}}  + \cdots + b_{2^{k}})\\
 
 &amp;&gt; b_{1} + b_{2} + (b_{4} + b_{4}) + (b_{8} + \cdots + b_{8})+
 \cdots +  (b_{2^{k}}  + \cdots + b_{2^{k}}) \\
-&amp;=b_{1} + 2^{0}(b_{2}) + 2^{1}(b_{4})+ 2^{4}(b_{8})\cdots +
+&amp;=b_{1} + 2^{0}(b_{2}) + 2^{1}(b_{4})+ 2^{2}(b_{8})\cdots +
 2^{k-1}(b_{2^{k}}) \\
 \end{align*}</span>$$</p>
 <p>Note that this last expression is equal to <span
 class="math inline">t_{k}/2</span>. Thus, <span
-class="math display">s_{n} &gt; s_{2^k}&gt;t_{k}/2 \geq t_{k}.</span>
-Since <span class="math inline">t_{k}</span> diverges, and <span
+class="math display">s_{2^k}&gt;t_{k}/2 \geq t_{k}.</span> Since <span
+class="math inline">t_{k}</span> diverges, and <span
 class="math inline">s_{n}</span> is larger than <span
 class="math inline">t_{k}</span>, it follows that <span
 class="math inline">s_{n}</span> diverges.</p>
+<p><a name="2410"></a></p>
+<h3 id="exercise-2.4.10-infinite-products"><a href="#toc">Exercise
+2.4.10, Infinite Products</a></h3>
+<p>A close relative of infinite series is the infinite product <span
+class="math display">\prod_{n=1}^{\infty} b_{n} =
+b_{1}b_{2}b_{3}\cdots</span> which is understood in terms of its
+sequence of partial products <span
+class="math display">p_{m}=\prod_{n=1}^{m} b_{n} = b_{1}b_{2}b_{3}\cdots
+b_{m}.</span> Consider the special class of infinite products of the
+form <span class="math display">\prod_{n=1}^{\infty}(1+a_{n}) =
+(1+a_{1})(1+a_{2})(1+a_{3})\cdots,\text{ where $a_{n} \geq
+0$.}</span></p>
+<ol type="1">
+<li>Find an explicit formula for the sequence of partial products in the
+case where <span class="math inline">a_{n} = 1/n</span> and decide
+whether the sequence converges. Write out the first few terms in the
+sequence of partial products in the case where <span
+class="math inline">a_{n} = 1/n^{2}</span> and make a conjecture about
+the convergence of this sequence.</li>
+<li>Show, in general, that the sequence of partial products converges if
+and only if <span class="math inline">\sum_{n=1}^{\infty} a_{n}</span>
+converges. (The inequality <span class="math inline">1 + x \leq
+3x</span> for positive <span class="math inline">x</span> will be useful
+in one direction.)</li>
+</ol>
+<hr />
+<ol type="1">
+<li><span class="math inline">\prod_{n=1}^{m} (1+1/n) = \prod_{n=1}^{m}
+((n+1)/n)=\frac{2}{1}\frac{3}{2}\frac{4}{3}\cdots
+\frac{m+1}{m}=m+1</span>. Thus this series is not bounded, hence not
+converging.</li>
+</ol>
+<p><span class="math inline">p_{1} =2,p_{2} =\prod_{n=1}^{2}
+\frac{n^{2}+1}{n^{2}}=\frac{10}{4}=2.5,
+p_{3}=\frac{100}{36}=2.7777</span>. Seems like the increase rate is
+slowing down, so I suspect it will converge.</p>
+<p><span style="color:red">Old answer: <span
+class="math inline">p_{1}=2</span> and <span
+class="math inline">p_{n}=(1+1/n)(p_{n-1})</span>.</span></p>
+<ol start="2" type="1">
+<li><span class="math display">\prod_{n=1}^{m}(1+a_{n})\leq
+3^{a_{1}}3^{a_{2}}3^{a_{3}}\cdots = 3^{a_{1} + a_{2} + a_{3} +
+\cdots}</span> Suppose <span class="math inline">\sum_{n=1}^{\infty}
+a_{n}</span> converges. Then it is bounded by some <span
+class="math inline">M&gt;0</span>. Thus, <span
+class="math display">3^{a_{1} + a_{2} + a_{3} + \cdots} \leq
+3^{M}.</span> It follows that <span
+class="math inline">\prod_{n=1}^{m}(1+a_{n})</span> is bounded above.
+The sequence is also monotone increasing. Therefore, it converges by
+Monotone Converging Theorem.</li>
+</ol>
+<p>Suppose <span
+class="math inline">\prod_{n=1}^{\infty}(1+a_{n})</span> converges, thus
+it is bounded by some <span class="math inline">M&gt;0</span>. Note
+that, <span
+class="math display">\prod_{n=1}^{2}(1+a_{n})=(1+a_{1})(1+a_{2})=1+a_{1}+a_{2}+a_{1}a_{2}\geq
+1+\sum_{n=1}^{2} a_{n}.</span> By induction, I show that for any <span
+class="math inline">m</span>, <span
+class="math inline">\prod_{n=1}^{m}(1+a_{n})\geq 1+\sum_{n=1}^{m}
+a_{n}.</span> This is true for <span class="math inline">m=1</span>.
+Suppose it is true for some <span class="math inline">m \geq
+2</span>.</p>
+<p><span class="math display">\begin{align*}
+\prod_{n=1}^{m+1}(1+a_{n}) &amp;= \prod_{n=1}^{m}(1+a_{n})(1+a_{m+1}) \\
+&amp;\geq (1+\sum_{n=1}^{m} a_{n})(1+a_{m+1}) \\
+&amp;=1+a_{m+1} + \sum_{n=1}^{m} a_{n}+(\sum_{n=1}^{m} a_{n})a_{m+1} \\
+&amp;\geq 1+a_{m+1} + \sum_{n=1}^{m} a_{n} \text{, since
+$(\sum_{n=1}^{m} a_{n})a_{m+1}\geq 0$} \\
+&amp;=1+\sum_{n=1}^{m+1}a_{n}.
+\end{align*}</span></p>
+<p>Therefore as <span
+class="math inline">\prod_{n=1}^{m}(1+a_{n})</span> is monotone
+increasing, and bounded, <span
+class="math inline">\prod_{n=1}^{\infty}(1+a_{n})</span> converges by
+Monotone Converging Theorem.</p>
+<p>Source for induction proof: <a
+href="https://math.stackexchange.com/questions/2866395/equivalent-condition-for-convergent-partial-products">SE</a>.</p>
+<p><span style="color:red">Old answer: <span
+class="math display">\prod_{n=1}^{m}(1+a_{n})\leq3(1)3(1/2)3(1/3)3(1/4)\cdots
+3(1/m) = 3^{m}/m!.</span> If <span class="math inline">m</span> is
+sufficiently large, <span class="math inline">m!</span> will grow faster
+than <span class="math inline">3^{m}</span>, thus <span
+class="math inline">3^{m}/m! \to 0</span>.</span></p>
 </body>
 </html>
