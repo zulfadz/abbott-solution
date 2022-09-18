@@ -2014,7 +2014,7 @@ $$\begin{align*}
 &=1+\sum_{n=1}^{m+1}a_{n}.
 \end{align*}$$
 
-Therefore as $\prod_{n=1}^{m}(1+a_{n})$ is monotone increasing, and bounded, $\prod_{n=1}^{\infty}(1+a_{n})$ converges by Monotone Converging Theorem.
+Therefore as $\sum_{n=1}^{m}a_{n}$ is monotone increasing, and bounded, $\sum_{n=1}^{\infty}a_{n}$ converges by Monotone Converging Theorem.
 
 Source for induction proof: [SE](https://math.stackexchange.com/questions/2866395/equivalent-condition-for-convergent-partial-products).
 
